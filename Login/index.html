@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+</style>
+</style>
+
+<body>
+
+  <button onclick="document.getElementById('modal-wrapper').style.display='block'" style="width:200px; margin-top:200px; margin-left:160px;">
+กดสิไอเบิ้ม</button>
+
+  <div id="modal-wrapper" class="modal">
+  
+      <form class="modal-content animate" action="#"> 
+        <!-- #หน้าหลังล็อกอิน -->
+        
+          <div class="imgcontainer">
+              <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
+              <img src="logo.png" alt="Avatar" class="avatar">
+              <h1 style="text-align:center">เข้าสู่ระบบ</h1>
+          </div>
+          <div style="text-align:center;">
+              <h3>——————————  หรือ  ——————————</h3>
+          </div>
+          <div class="facebook">
+          <button class="loginBtn loginBtn--facebook">
+            เข้าสู่ระบบด้วย Facebook</button>
+        </div>
+          <div class="container">
+              <input type="text" placeholder="อีเมล์" name="uname">
+              <input type="password" placeholder="รหัสผ่าน" name="psw">        
+              <button type="submit">เข้าสู่ระบบ</button>
+              <input type="checkbox" style="margin:26px 30px;"> จดจำฉัน      
+              <a href="#" style="text-decoration:none; float:right; margin-right:34px; margin-top:26px;">ลืมรหัสผ่าน ?</
+          </div>
+    
+      </form>
+  
+  </div>
+
+<script>
+// If user clicks anywhere outside of the modal, Modal will close
+
+var modal = document.getElementById('modal-wrapper');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</body>
+</html>

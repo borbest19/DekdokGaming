@@ -1,0 +1,123 @@
+body { /*ไม่มีไรนำหน้าคือ tag ปกติ*/
+	background: #202020;
+	/*font:100% RSU text;*/
+}
+
+.headcontainer { /*จุดคือเรียกใช้ class*/
+	width: 1174px;
+	height: 142px;
+	margin: 0 auto;
+}
+
+.navcontainer {
+	height: 57px;
+	background: #8c0009;
+}
+
+nav a {
+	width: 200px;
+	color: white !important;
+	display: block;
+	text-decoration: none;
+	font: 25px Superspace !important;
+	padding: 10px !important;
+	border-radius: 5px;
+	font-weight: bold !important; 
+}
+
+nav a:hover {
+	margin-top: 5px;
+	color: white;
+	background: #202020;
+	transition: 0.3s
+}
+
+.container {
+	width: 1206px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	background: white;
+	padding:33px 33px 33 33px !important;
+}
+
+.column h1{
+	line-height: 1px;
+	color: #000000;
+  font: 60px Superspace !important;
+  font-weight: bold !important;
+  margin-bottom: 10px;
+  }
+
+.column hr{
+	height: 2px;
+	margin: auto;
+	background-color: #000000;
+	margin-bottom: 10px
+}
+
+.date h6{
+	font: 16px Superspace !important;
+	font-weight: bold !important;
+	margin-left: 17px;
+}
+
+/*.columns{
+	margin-left: 17px;
+	position: absolute;
+	transform: perspective(600px) rotateY(0deg);
+	width: 446px;
+	height: 441px;
+	backface-visibility: hidden;
+	transition: transform 0.5s linear 0s;
+	background-image: url("/assets/images/home/we-preset/img-1.jpg");
+}
+
+.columns{
+	font-size: 49px;
+	justify-content: center;
+	text-align: center;
+	display: flex;
+}
+
+.columns{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.columns .card-image1 img{
+	width: 100%;
+	transition: 0.5s;
+}
+
+.columns:hover .columns img{
+	opacity: .5;
+	transform: translateY(-20%);
+}*/
+
+.columns{
+	margin: 17px;
+}
+
+.numcontainer{
+	width: 908px;
+	height: 163px;
+}
+
+.card{
+	border: 1px;
+	margin: auto;
+	width: 908px;
+	height: 163px;
+}
+
+footer {
+	background: #8c0009 ;
+}
+
+.footercontainerbg {
+	width: 1174px;
+	height: 142px;
+	margin: 0 auto;
+}
+

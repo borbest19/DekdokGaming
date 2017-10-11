@@ -1,17 +1,17 @@
 style{
-	margin:0px; 
-	padding:0px; 
-	font-family:Helvetica, Arial, sans-serif;
+  margin:0px;
+  padding:0px;
+  font-family:Helvetica, Arial, sans-serif;
 }
 /* Full-width input fields */
 input[type=text], input[type=password] {
-    width: 90%;
+    width: 80%;
     padding: 12px 20px;
     margin: 8px 26px;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
-	font-size:16px;
+  font-size:16px;
 }
 
 /* Set a style for all buttons */
@@ -22,8 +22,8 @@ button {
     margin: 8px 26px;
     border: none;
     cursor: pointer;
-    width: 90%;
-	font-size:20px;
+    width: 60%;
+  font-size:20px;
 }
 button:hover {
     opacity: 0.8;
@@ -36,11 +36,11 @@ button:hover {
 }
 .avatar {
     width: 200px;
-	height:200px;
+  height:160px;
 }
 /* The Modal (background) */
 .modal {
-	display:none;
+  display:none;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -50,14 +50,20 @@ button:hover {
     overflow: auto;
     background-color: rgba(0,0,0,0.4);
 }
+.modal-body {
+    position: relative;
+    overflow-y: auto;
+    max-height: 400px;
+    padding: 15px;
+}
 
 /* Modal Content Box */
 .modal-content {
     background-color: #fefefe;
     margin: 4% auto 15% auto;
     border: 1px solid #888;
-    width: 40%; 
-	padding-bottom: 30px;
+    width: 40%;
+  padding-bottom: 30px;
 }
 
 /* The Close Button (x) */
@@ -78,28 +84,6 @@ button:hover {
 .animate {
     animation: zoom 0.6s
 }
-/* The Modal (background) */
-.modal {
-	display:none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
-}
-
-/* Modal Content Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 4% auto 15% auto;
-    border: 1px solid #888;
-    width: 40%; 
-	padding-bottom: 30px;
-}
-
 /* The Close Button (x) */
 .close {
     position: absolute;
@@ -119,7 +103,7 @@ button:hover {
     animation: zoom 0.6s
 }
 @keyframes zoom {
-    from {transform: scale(0)} 
+    from {transform: scale(0)}
     to {transform: scale(1)}
 }
 /*FaceBook*/
@@ -170,4 +154,7 @@ button:hover {
 .loginBtn--facebook:focus {
   background-color: #5B7BD5;
   background-image: linear-gradient(#5B7BD5, #4864B1);
+}
+.regis{
+  background-color: green;
 }

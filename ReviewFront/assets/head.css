@@ -1,0 +1,102 @@
+body { /*ไม่มีไรนำหน้าคือ tag ปกติ*/
+	background: #202020;
+	/*font:100% RSU text;*/
+}
+
+.headcontainer { /*จุดคือเรียกใช้ class*/
+	width: 1174px;
+	height: 142px;
+	margin: 0 auto;
+}
+
+.navcontainer {
+	height: 57px;
+	background: #8c0009;
+}
+
+nav a {
+	width: 150px;
+	color: white ! important;
+	display: block;
+	text-decoration: none;
+	font: 25px Superspace;
+	padding: 10px;
+	border-radius: 10px;
+	font-weight: bold;
+}
+
+nav a:hover {
+	margin-top: 5px;
+	color: white;
+	background: #232323;
+	transition: 0.3s
+}
+.thumbnail {
+  border-top: 3px solid #ffffff;
+  border-left: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  border-right: 3px solid #ffffff;
+  margin-right:200px;
+  margin-left:200px;
+}
+.thumbnail .thumbnail-item{
+  border-right: 3px solid #ffffff;
+}
+.thumbnail .thumbnai-item:last-child {
+  border: none;
+}
+.thumbnail .thumbnail-item {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color:#ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+}
+.footer{
+   background : #8c0009;
+}
+.reviewtitle 
+{
+	font : 30px Superspace  ;
+	color: white;
+}
+.headnews2{
+	height: 645px;
+	width: auto;
+}
+.headnews{
+	height: 305px;
+	width: auto;
+}
+.container2 {
+    border: 15px solid #ffffff;
+    float: right;
+    position: relative;
+}
+.card{
+	margin-bottom: 50px !important;
+	margin-top: 50px !important;
+}
+
+.line
+{
+  height: 1px;
+  background-color: #ffffff;
+  margin-top: 20px;
+}
+.section{
+	padding-bottom: 0px !important;
+}
+.title
+{
+	font : 30px Superspace !important;
+	font-weight: bold !important;
+	font-color: #ffffff;
+}
+
+.subtitle
+{
+	font : 26px RSU text !important;}

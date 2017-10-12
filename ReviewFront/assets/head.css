@@ -58,7 +58,7 @@ nav a:hover {
 .footer{
    background : #8c0009;
 }
-.reviewtitle 
+.reviewtitle
 {
 	font : 30px Superspace  ;
 	color: white;
@@ -100,3 +100,32 @@ nav a:hover {
 .subtitle
 {
 	font : 26px RSU text !important;}
+
+	.pagination .pagination-link
+	{
+		width: 2px !important;
+
+	}
+	.pagination .is-current
+	{
+		background:#8C0009;
+		border-color: #ffffff;
+	}
+	.pagination .pagination-link:hover
+	{
+		background: #8C0009;
+
+	}
+	.pagination .pagination-previous
+	{
+		width: 2px !important;
+
+	}
+.pagination .pagination-next
+{
+	width: 2px !important;
+}
+nav .pagination
+{
+	align-items: center;
+}

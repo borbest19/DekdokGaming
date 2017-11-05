@@ -4,32 +4,12 @@
 	<meta charset="UTF-8">
 	<title>Top Chart</title>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
 	<link rel="stylesheet" href="main.css">
 </head>
 <body>
 	<header>
-		<div class="headcontainer">
-		<!--ถ้าใช้ id จะอ้าง java script ได้-->
-			<div class="has-text-left">
-				<img src="/assets/images/dekdoklogo.png" alt="" width="145" height="auto" style="margin-top: 41px"> <!--แทรกรูป กำหนดขนาด-->
-			</div>
-		</div>
-
-		<div class="navcontainer">
-			<div class="nav-center">
-			<nav class="navbar-tabs">
-
-				<a class="link1" href="#">หน้าแรก</a>
-				<a class="link2" href="#">ข่าว</a>	
-				<a class="link3" href="#">รีวิวเกม</a>	
-				<a class="link4" href="#">เกมยอดนิยม</a>	
-				<a class="link5" href="#">เกี่ยวกับเรา</a>	
-
-			</nav>
-			</div>
-		</div>
-
-		<script>
+  <script>
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
@@ -72,6 +52,63 @@
     });
   }
 </script>
+<div class="headcontainer">
+		<!--ถ้าใช้ id จะอ้าง java script ได้-->
+			<div class="has-text-left">
+				<img src="/assets/images/dekdoklogo.png" alt="" width="145" height="auto" style="margin-top: 41px"> <!--แทรกรูป กำหนดขนาด-->
+			</div>
+		</div>
+  <div id="modal-wrapper" class="modal">
+
+      <form class="modal-content animate" action="#">
+        <!-- #หน้าหลังล็อกอิน-->
+
+          <div class="imgcontainer">
+              <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
+              <img src="assets/images/logo.png" alt="Avatar" class="avatar">
+              <h1 style="text-align:center">เข้าสู่ระบบ</h1>
+          </div>
+                <div class="has-text-centered">
+                    <h3>——————————  หรือ  ——————————</h3>
+                          <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div>
+                          <div id="status"></div>
+                          <input type="text" placeholder="อีเมล์" name="uname">
+                          <input type="password" placeholder="รหัสผ่าน" name="psw">
+                          <br></br>
+                          <button type="submit">เข้าสู่ระบบ</button><br>
+                          <input type="checkbox" style="margin:26px 30px;"> จดจำฉัน</input>
+                          <a class="has-text-centered" href="#" style="text-align:center;">ลืมรหัสผ่าน?</a>
+                          <br><button class="regis" type="submit">สมัครเลย</button>
+              </div>
+      </form>
+
+  </div>
+
+<script>
+// If user clicks anywhere outside of the modal, Modal will close
+var modal = document.getElementById('modal-wrapper');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+		
+
+		<div class="navcontainer">
+			<div class="nav-center">
+			<nav class="navbar-tabs">
+
+				<a class="link1" href="#">หน้าแรก</a>
+				<a class="link2" href="#">ข่าว</a>	
+				<a class="link3" href="#">รีวิวเกม</a>	
+				<a class="link4" href="#">เกมยอดนิยม</a>	
+				<a class="link5" href="#">เกี่ยวกับเรา</a>	
+
+			</nav>
+			</div>
+		</div>
 	</header>
 
 	<main>

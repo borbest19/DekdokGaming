@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Top Chart</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<header>
+		<div class="headcontainer">
+		<!--ถ้าใช้ id จะอ้าง java script ได้-->
+			<div class="has-text-left">
+				<img src="/assets/images/dekdoklogo.png" alt="" width="145" height="auto" style="margin-top: 41px"> <!--แทรกรูป กำหนดขนาด-->
+			</div>
+		</div>
+
+		<div class="navcontainer">
+			<div class="nav-center">
+			<nav class="navbar-tabs">
+
+				<a class="link1" href="#">หน้าแรก</a>
+				<a class="link2" href="#">ข่าว</a>	
+				<a class="link3" href="#">รีวิวเกม</a>	
+				<a class="link4" href="#">เกมยอดนิยม</a>	
+				<a class="link5" href="#">เกี่ยวกับเรา</a>	
+
+			</nav>
+			</div>
+		</div>
+
+		<script>
+  function statusChangeCallback(response) {
+    console.log('statusChangeCallback');
+    console.log(response);
+    if (response.status === 'connected') {
+      testAPI();
+    } else {
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into this app.';
+    }
+  }
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+  window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '1490167914363614',
+    cookie     : true,
+    xfbml      : true,
+    version    : 'v2.8'
+  });
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+  };
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('status').innerHTML =
+        'Thanks for logging in, ' + response.name + '!';
+    });
+  }
+</script>
+	</header>
+
+	<main>
+	<div class="container">
+		<h1>10 อันดับเกมยอดนิยมประจำสัปดาห์</h1>
+		<hr>
+		<div class="date">NOVEMBER 5-11, 2017</div>
+
+		<div id="chart" >
+			<div>
+				<figure>
+					<a href="#">
+						<img src="/assets/images/home/we-preset/img-1.jpg" alt="image-1" width="362" height="441">
+					</a>
+				</figure>
+  			</div>
+
+  			<div>
+				<figure>
+					<a href="#"><img src="/assets/images/home/we-preset/img-1.jpg" alt="image-1" width="362" height="441">
+					</a>
+				</figure>
+  			</div>	
+
+  			<div>
+				<figure>
+					<a href="#"><img src="/assets/images/home/we-preset/img-1.jpg" alt="image-1" width="362" height="441">
+					</a>
+				</figure>
+  			</div>	
+
+  			<div>
+				<figure1>
+					<img src="/assets/images/home/we-preset/img-1.jpg" alt="image-1" width="362" height="441" style="float: left; padding-right: 22px">
+				</figure1>
+  			</div>
+
+  			<div>
+				<figure>
+					<a href="#">
+						<img src="/assets/images/home/we-preset/img-1.jpg" alt="image-1" width="362" height="441">
+					</a>
+				</figure>
+  			</div>
+
+  			<div>
+				<figure>
+					<a href="#">
+						<img src="/assets/images/home/we-preset/img-1.jpg" alt="image-1" width="362" height="441" style="padding-right: none;">
+					</a>
+				</figure>
+  			</div>
+  		</div>
+  		ห่า
+
+
+	</div>
+	</main>
+
+		<footer>
+		<div class="footercontainerbg">
+			<div class="has-text-left">
+				<img src="/assets/images/dekdoklogo.png" alt="" width="145" height="auto" style="margin-top: 41px"> <!--แทรกรูป กำหนดขนาด-->
+			</div>
+	    	<div class="content has-text-centered has-text-white">
+	      		<p>
+	        		<strong>DEKDOK</strong> by <a href="#">DEKDOK GAMING</a>. The source code is licensed
+	        		<a href="#">DEKDOK 2017</a>. The website contentis licensed <a href="#"> dekdok.com</a>.
+	      		</p>
+	    	</div>
+	    </div>
+	</footer>
+
+</body>
+</html>

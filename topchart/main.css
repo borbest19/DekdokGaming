@@ -1,0 +1,140 @@
+body { /*ไม่มีไรนำหน้าคือ tag ปกติ*/
+	background: #202020;
+	/*font:100% RSU text;*/
+}
+
+.headcontainer { /*จุดคือเรียกใช้ class*/
+	width: 1174px;
+	height: 142px;
+	margin: 0 auto;
+}
+
+.navcontainer {
+	height: 57px;
+	background: #8c000a;
+}
+
+nav a {
+	width: 200px;
+	color: white !important;
+	display: block;
+	text-decoration: none;
+	font: 25pt Superspace !important;
+	border-radius: 5px;
+	font-weight: bold !important; ]
+}
+
+.link1 {
+	text-align: center;
+	margin-top: 10px ;
+	margin-bottom: 10px ;
+}
+.link1:hover {
+	text-align: center;
+	background: #202020;
+	transition: 0.3s
+}
+
+.link2 {
+	text-align: center;
+	margin-top: 10px ;
+	margin-bottom: 10px ;
+}
+.link2:hover {
+	text-align: center;
+	background: #202020;
+	transition: 0.3s
+}
+
+.link3 {
+	text-align: center;
+	margin-top: 10px ;
+	margin-bottom: 10px ;
+}
+.link3:hover {
+	text-align: center;
+	background: #202020;
+	transition: 0.3s
+}
+
+.link4 {
+	text-align: center;
+	margin-top: 10px ;
+	margin-bottom: 10px ;
+}
+.link4:hover {
+	text-align: center;
+	background: #202020;
+	transition: 0.3s
+}
+
+.link5 {
+	text-align: center;
+	margin-top: 10px ;
+	margin-bottom: 10px ;
+}
+.link5:hover {
+	text-align: center;
+	background: #202020;
+	transition: 0.3s
+}
+
+.container {
+	width: 1206px;
+	height: auto;
+	background: white; 
+	margin-top: 22px;
+	margin-bottom: 22px;
+	padding: 33px;
+}
+
+h1 {
+	font: bold 50pt Superspace; 
+	color: #000000;
+	text-align: center;
+}
+
+hr{
+	height: 2px; 
+	background-color: #000000; 
+}
+
+.date {
+	font: bold 14pt Superspace; 
+	color: #000000; 
+	margin-bottom: 33px;
+	
+}
+
+#chart figure img {
+
+	float: left;
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	padding-bottom: 22px;
+	padding-right: 22px;
+}
+
+#chart figure:hover img {
+	opacity: .5;
+}
+
+#chart figure1 img {
+	opacity: .5;
+}
+
+#tile {
+	width: 908px;
+	height: 163px;
+}
+
+footer {
+	background: #8c000a ;
+}
+
+.footercontainerbg {
+	width: 1174px;
+	height: 142px;
+	margin: 0 auto;
+}

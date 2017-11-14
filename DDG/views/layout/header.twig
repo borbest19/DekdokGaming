@@ -1,0 +1,106 @@
+{% block header %}
+
+
+  <header>
+    <script>
+      function statusChangeCallback(response) {
+        console.log('statusChangeCallback');
+        console.log(response);
+        if (response.status === 'connected') {
+          testAPI();
+        } else {
+          document.getElementById('status').innerHTML = 'Please log into this app.';
+        }
+      }
+      function checkLoginState() {
+        FB.getLoginStatus(function(response) {
+          statusChangeCallback(response);
+        });
+      }
+      window.fbAsyncInit = function() {
+        FB.init({appId: '1490167914363614', cookie: true, xfbml: true, version: 'v2.8'});
+        FB.getLoginStatus(function(response) {
+          statusChangeCallback(response);
+        });
+      };
+      (function(d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id))
+          return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+      function testAPI() {
+        console.log('Welcome!  Fetching your information.... ');
+        FB.api('/me', function(response) {
+          console.log('Successful login for: ' + response.name);
+          document.getElementById('status').innerHTML = 'Thanks for logging in, ' + response.name + '!';
+        });
+      }
+    </script>
+    <div class="column is-multiline">
+      <div class="headcontainer">
+        <!--ถ้าใช้ id จะอ้าง java script ได้-->
+        <br>
+        <img src="/static/assets/LogoWeb/dekdoklogowhite.png" alt="" width="145" height="auto">
+        <!--แทรกรูป กำหนดขนาด-->
+        <a onclick="document.getElementById('modal-wrapper').style.display='block'">
+          <img align="right" src="/static/assets/images/Homepage/log-in.png" alt="" width="100px">
+        </a>
+      </div>
+    </div>
+    <div id="modal-wrapper" class="modal">
+
+      <form class="modal-content animate" action="#">
+        <!-- #หน้าหลังล็อกอิน -->
+
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
+          <img src="/static/assets/LogoWeb/dekdoklogowhite.png" alt="Avatar" class="avatar">
+          <h1 style="text-align:center">เข้าสู่ระบบ</h1>
+        </div>
+        <div class="has-text-centered">
+          <h3>—————————— หรือ ——————————</h3>
+          <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div>
+          <div id="status"></div>
+          <input type="text" placeholder="อีเมล์" name="uname">
+          <input type="password" placeholder="รหัสผ่าน" name="psw">
+          <br></br>
+          <button type="submit">เข้าสู่ระบบ</button><br>
+          <input type="checkbox" style="margin:26px 30px;">
+            จดจำฉัน</input>
+          <a class="has-text-centered" href="#" style="text-align:center;">ลืมรหัสผ่าน?</a>
+          <br>
+          <button class="regis" type="submit">สมัครเลย</button>
+        </div>
+      </form>
+
+    </div>
+
+    <script>
+      // If user clicks anywhere outside of the modal, Modal will close
+      var modal = document.getElementById('modal-wrapper');
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+
+    <div class="navcontainer">
+      <div class="nav-center">
+        <nav class="navbar-tabs">
+          <a href="#" class="nav-item">หน้าแรก</a>
+          <a href="#" class="nav-item">ข่าว</a>
+          <a href="#" class="nav-item">รีวิวเกม</a>
+          <a href="#" class="nav-item">เกมยอดนิยม</a>
+          <a href="#" class="nav-item">เกี่ยวกับเรา</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  {% endblock %}

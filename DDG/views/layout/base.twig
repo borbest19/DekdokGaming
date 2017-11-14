@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <title>Dek-Dok Gaming</title>
+    <metaname="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
+      <link rel="stylesheet" type="text/css" href="/static/assets/home.css">
+      <link rel="stylesheet" type="text/css" href="/static/assets/home.js">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+      {% block stylesheet %}{% endblock %}
+
+    </head>
+
+    <body>
+      {% include 'layout/header.twig' ignore missing %}
+
+      {% block content %}{% endblock %}
+
+    </body>
+  </html>

@@ -72,13 +72,13 @@ nav a:hover {
 	width: auto;
 }
 .container2 {
-    border: 15px solid #ffffff;
+    border: 5px solid #ffffff;
     float: right;
     position: relative;
 }
 .card{
-	margin-bottom: 50px !important;
-	margin-top: 50px !important;
+	margin-bottom: 5px !important;
+	margin-top: 5px !important;
 }
 
 .line

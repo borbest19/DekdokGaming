@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Dek-Dok Gaming</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
-    <link rel="stylesheet" href="/assets/home.css">
-    <link rel="stylesheet" href="/assets/home.js">
+    <link rel="stylesheet" href="/HomePage/assets/home.css">
+    <link rel="stylesheet" href="/HomePage/assets/home.js">
   </head>
 
     <header>
@@ -59,9 +59,9 @@
   <div class="headcontainer">
       <!--ถ้าใช้ id จะอ้าง java script ได้-->
              <br>
-              <img  src="/assets/images/we preset/logo.png" alt="" width="200" height="auto"> <!--แทรกรูป กำหนดขนาด-->
+              <img  src="/DDG/static/assets/LogoWeb/dekdoklogowhite.png" alt="" width="200" height="auto"> <!--แทรกรูป กำหนดขนาด-->
                 <a onclick="document.getElementById('modal-wrapper').style.display='block'"  >
-                    <img align="right" src="/assets/images/log-in.png" alt="" width="100px">
+                    <img align="right" src="/DDG/static/assets/images/log-in.png" alt="" width="100px">
                </a>
   </div>
 </div>
@@ -72,7 +72,7 @@
 
           <div class="imgcontainer">
               <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
-              <img src="assets/images/logo.png" alt="Avatar" class="avatar">
+              <img src="/DDG/static/assets/LogoWeb/dekdoklogowhite.png" alt="Avatar" class="avatar">
               <h1 style="text-align:center">เข้าสู่ระบบ</h1>
           </div>
                 <div class="has-text-centered">
@@ -118,19 +118,19 @@ window.onclick = function(event) {
   <div class="slideshow-container is-paddingless">
     <div class="mySlides fade">
       <div class="numbertext"></div>
-      <img src="/assets/images/B1.jpg" style="width:100%">
+      <img src="/DDG/static/assets/images/B1.jpg" style="width:100%">
 
     </div>
 
     <div class="mySlides fade">
       <div class="numbertext"></div>
-      <img src="/assets/images/B2.jpg" style="width:100%">
+      <img src="/DDG/static/assets/images/B2.jpg" style="width:100%">
 
     </div>
 
     <div class="mySlides fade">
       <div class="numbertext"></div>
-      <img src="/assets/images/B3.jpg" style="width:100%">
+      <img src="/DDG/static/assets/images/B3.jpg" style="width:100%">
 
     </div>
 
@@ -173,7 +173,8 @@ function showSlides(n) {
 }
 </script>
   <body class="bodyScope">
-    <img src="/assets/images/NewNews.png">
+    <h2 color="white">ข่าวล่าสุด</h2>
+    <div class="line"></div>
     <section class="section game">
       <div class="columns is-multiline">
                 <a href="#" class="column is-6">
@@ -181,11 +182,11 @@ function showSlides(n) {
                     <div class="card-image">
                       <figure class="image is-4by2">
                         <div class="img-resize">
-                          <img class="photo" src="assets/images/news1 pic1.jpg" alt="image-1">
+                          <img class="photo" src="/DDG/static/assets/images/news1 pic1.jpg" alt="image-1">
                         </div>
                       </figure>
                     </div>
-                    <div class="card-content">
+                    <div class="card-content0">
                       <h3 class="title is-spaced is-4">แอบส่องตัวละครจากเกม Battle Carnival ว่าที่เกม FPS สุดมันส์แห่งปี</h3>
                       <h5 class="category">2 HOUR AGO</h5>
                       <p>
@@ -198,7 +199,7 @@ function showSlides(n) {
                       <div class="card-image">
                         <figure class="image is-4by2">
                           <div class="img1-resize">
-                            <img class="photo" src="assets/images/news1 pic2.png" alt="image-1">
+                            <img class="photo" src="/DDG/static/assets/images/news1 pic2.png" alt="image-1">
                           </div>
                         </figure>
                       </div>
@@ -207,10 +208,29 @@ function showSlides(n) {
                         <h5 class="category">2 DAYS AGO</h5>
                         <p>
                            เหล่านักศึกษาเตรียมตัวมันกันให้พร้อมกับการ
-แข่งขัน E-Sports ในระดับมหาวิทยาลัยกับเกม Overwatch ในรายการ Overwatch Thailand University Tournament 2017 ซึ่งเป็นการ...
+แข่งขัน E-Sports ในระดับมหาวิทยาลัยกับเกม Overwatch ในรายการ Overwatch Thailand...
                         </p>
                       </div>
                     </div>
+
+                    <div class="card">
+                      <div class="card-image">
+                        <figure class="image is-4by2">
+                          <div class="img1-resize">
+                            <img class="photo" src="/DDG/static/assets/images/news1 pic4.jpg" alt="image-1">
+                          </div>
+                        </figure>
+                      </div>
+                      <div class="card-content">
+                        <h3 class="title is-spaced is-4">เผยโฉมอีกหนึ่งตัวร้ายกับบาทหลวงผู้บิด
+                    เบี้ยวในตัวอย่างใหม่ของ The Evil Within 2</h3>
+                        <h5 class="category">4 DAYS AGO</h5>
+                        <p>
+                           หลังจากที่ The Evil Within 2 เกมสยองขวัญภาคต่อได้ปล่อยเทรลเลอร์ออกมาเมื่อเดือนก่อนที่เผยให้เห็นตัวร้ายอย่าง Stefano ศิลปินโรคจิตออกมาให้ชมกัน วันนี้ทาง Bethesda...
+                        </p>
+                      </div>
+                    </div>
+
                   </a>
 
                   <a href="#" class="column is-one-quarter">
@@ -218,7 +238,7 @@ function showSlides(n) {
                       <div class="card-image">
                         <figure class="image is-4by2">
                           <div class="img1-resize">
-                            <img class="photo" src="assets/images/news1 pic3.jpg" alt="image-1">
+                            <img class="photo" src="/DDG/static/assets/images/news1 pic3.jpg" alt="image-1">
                           </div>
                         </figure>
                       </div>
@@ -231,103 +251,44 @@ function showSlides(n) {
                         </p>
                       </div>
                     </div>
+
+                    <div class="card">
+                      <div class="card-image">
+                        <figure class="image is-4by2">
+                          <div class="img1-resize">
+                            <img class="photo" src="/DDG/static/assets/images/news1 pic5.jpg" alt="image-1">
+                          </div>
+                        </figure>
+                      </div>
+                      <div class="card-content">
+                        <h3 class="title is-spaced is-4">งานนี้มีหลอน! เมื่อพี่แป้ง zbing z. แคสเกม Home Sweet Home</h3>
+                        <h5 class="category">5 DAYS AGO</h5>
+                        <p>
+                           ถือว่ามาแรงมากๆ กับเกมสยองขวัญสายเลือดไทยอย่าง Home Sweet Home ที่ในตอนนี้เหล่าแคสเตอร์ชื่อดังต่างก็แคสเกมนี้กันอย่างมาก
+                    มาย ไม่เว้นพีแป้ง zbing z. ของเราที่ดูพี่เขา...
+                        </p>
+                      </div>
+                    </div>
                   </a>
-                </a>
-
-                <a href="#" class="column is-one-quarter">
-                  <div class="card">
-                    <div class="card-image">
-                      <figure class="image is-4by2">
-                        <div class="img1-resize">
-                          <img class="photo" src="assets/images/news1 pic4.jpg" alt="image-1">
-                        </div>
-                      </figure>
-                    </div>
-                    <div class="card-content">
-                      <h3 class="title is-spaced is-4">เผยโฉมอีกหนึ่งตัวร้ายกับบาทหลวงผู้บิด
-เบี้ยวในตัวอย่างใหม่ของ The Evil Within 2</h3>
-                      <h5 class="category">4 DAYS AGO</h5>
-                      <p>
-                         หลังจากที่ The Evil Within 2 เกมสยองขวัญภาคต่อได้ปล่อยเทรลเลอร์ออกมาเมื่อเดือนก่อนที่เผยให้เห็นตัวร้ายอย่าง Stefano ศิลปินโรคจิตออกมาให้ชมกัน วันนี้ทาง Bethesda...
-                      </p>
-                    </div>
-                  </div>
-                </a>
-
-                <a href="#" class="column is-one-quarter">
-                  <div class="card">
-                    <div class="card-image">
-                      <figure class="image is-4by2">
-                        <div class="img1-resize">
-                          <img class="photo" src="assets/images/news1 pic5.jpg" alt="image-1">
-                        </div>
-                      </figure>
-                    </div>
-                    <div class="card-content">
-                      <h3 class="title is-spaced is-4">งานนี้มีหลอน! เมื่อพี่แป้ง zbing z. แคสเกม Home Sweet Home</h3>
-                      <h5 class="category">5 DAYS AGO</h5>
-                      <p>
-                         ถือว่ามาแรงมากๆ กับเกมสยองขวัญสายเลือดไทยอย่าง Home Sweet Home ที่ในตอนนี้เหล่าแคสเตอร์ชื่อดังต่างก็แคสเกมนี้กันอย่างมาก
-มาย ไม่เว้นพีแป้ง zbing z. ของเราที่ดูพี่เขาหลอนเอามากๆ จนถึงขั้นต้องหาเพื่อน...
-                      </p>
-                    </div>
-                  </div>
-                </a>
-                <a href="#" class="column is-one-quarter">
-                  <div class="card">
-                    <div class="card-image">
-                      <figure class="image is-4by2">
-                        <div class="img1-resize">
-                          <img class="photo" src="assets/images/news1 pic3.jpg" alt="image-1">
-                        </div>
-                      </figure>
-                    </div>
-                    <div class="card-content">
-                      <h3 class="title is-spaced is-4">งานนี้กระเป๋าแฟ้บ เมื่อซีรี่ส์ Assassin's Creed กำลังลดราคาแบบจัดหนักบน Steam!</h3>
-                      <h5 class="category">6 DAYS AGO</h5>
-                      <p>
-                         Assassin's Creed ถือเป็นอีกหนึ่งซีรี่ส์ของทาง Ubisoft ที่ได้รับความนิยมมานาน และเพื่อเป็นการต้อนรับการมาของภาคใหม่ของนัก
-ฆ่าแห่งกาลเวลา ทาง Ubisoft จึงได้จัด...
-                      </p>
-                    </div>
-                  </div>
-                </a>
-                <a href="#" class="column is-one-quarter">
-                  <div class="card">
-                    <div class="card-image">
-                      <figure class="image is-4by2">
-                        <div class="img1-resize">
-                          <img class="photo" src="assets/images/news1 pic3.jpg" alt="image-1">
-                        </div>
-                      </figure>
-                    </div>
-                    <div class="card-content">
-                      <h3 class="title is-spaced is-4">งานนี้กระเป๋าแฟ้บ เมื่อซีรี่ส์ Assassin's Creed กำลังลดราคาแบบจัดหนักบน Steam!</h3>
-                      <h5 class="category">7 DAYS AGO</h5>
-                      <p>
-                         Assassin's Creed ถือเป็นอีกหนึ่งซีรี่ส์ของทาง Ubisoft ที่ได้รับความนิยมมานาน และเพื่อเป็นการต้อนรับการมาของภาคใหม่ของนัก
-ฆ่าแห่งกาลเวลา ทาง Ubisoft จึงได้จัด...
-                      </p>
-                    </div>
-                  </div>
                 </a>
       </div>
     </section>
 </div>
-    <img src="/assets/images/Review.png">
+    <h2 color="white">รีวิวเกมจากเว็บมาสเตอร์ล่าสุด</h2>
+    <div class="line"></div>
     <section>
       <div class="columns is-multiline">
       <a href="#" class="column is-one-quarter">
         <div class="card">
           <div class="card-image">
             <figure class="image is-4by2">
-              <div class="img1-resize">
-                <img class="photo" src="assets/images/review1 pic1.jpg" alt="image-1">
+              <div class="img2-resize">
+                <img class="photo" src="/DDG/static/assets/images/review1 pic1.jpg" alt="image-1">
               </div>
             </figure>
           </div>
-          <div class="card-content">
-            <h5 class="category has-text-left">7 HOURS AGO____________________200 VIEWS</h5>
+          <div class="card-content2">
+            <h5 class="category has-text-left">&nbsp;7 HOURS AGO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;200 VIEWS</h5>
           </div>
         </div>
       </a>
@@ -336,11 +297,13 @@ function showSlides(n) {
         <div class="card">
           <div class="card-image">
             <figure class="image is-4by2">
-              <img class="photo" src="assets/images/review1 pic2.jpg" alt="image-1">
+              <div class="img2-resize">
+                <img class="photo" src="/DDG/static/assets/images/review1 pic2.jpg" alt="image-1">
+              </div>
             </figure>
           </div>
-          <div class="card-content">
-            <h5 class="category has-text-left">18 HOURS AGO___________________500 VIEWS</h5>
+          <div class="card-content2">
+            <h5 class="category has-text-left">&nbsp;18 HOURS AGO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;500 VIEWS</h5>
           </div>
         </div>
       </a>
@@ -349,11 +312,13 @@ function showSlides(n) {
         <div class="card">
           <div class="card-image">
             <figure class="image is-4by2">
-              <img class="photo" src="assets/images/review1 pic3.jpg" alt="image-1">
+              <div class="img2-resize">
+                <img class="photo" src="/DDG/static/assets/images/review1 pic3.jpg" alt="image-1">
+              </div>
             </figure>
           </div>
-          <div class="card-content">
-            <h5 class="category has-text-left">4 DAYS AGO______________________580 VIEWS</h5>
+          <div class="card-content2">
+            <h5 class="category has-text-left">&nbsp;4 DAYS AGO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;580 VIEWS</h5>
           </div>
         </div>
       </a>
@@ -362,11 +327,13 @@ function showSlides(n) {
         <div class="card">
           <div class="card-image">
             <figure class="image is-4by2">
-              <img class="photo" src="assets/images/review1 pic4.jpg" alt="image-1">
+              <div class="img2-resize">
+                <img class="photo" src="/DDG/static/assets/images/review1 pic4.jpg" alt="image-1">
+              </div>
             </figure>
           </div>
-          <div class="card-content">
-            <h5 class="category has-text-left">7 DAYS AGO______________________690 VIEWS</h5>
+          <div class="card-content2">
+            <h5 class="category has-text-left">&nbsp;7 DAYS AGO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;690 VIEWS</h5>
           </div>
         </div>
       </a>
@@ -375,7 +342,7 @@ function showSlides(n) {
  <div class="container">
      <div class="content has-text-centered has-text-white">
        <p>
-          <img src="/assets/images/logo.png" alt="logo" width="145px">
+          <img src="/DDG/static/assets/LogoWeb/dekdoklogowhite.png" alt="logo" width="145px">
          <strong>DEKDOK</strong> by <a href="#">DEKDOK GAMING</a>. The source code is licensed
          <a href="#">DEKDOK 2017</a>. The website content
          is licensed <a href="#"> dekdok.com</a>.

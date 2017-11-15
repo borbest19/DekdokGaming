@@ -1,0 +1,89 @@
+body {
+  /*ไม่มีไรนำหน้าคือ tag ปกติ*/
+  background: #202020;
+  /*font:100% RSU text;*/
+}
+
+.headcontainer {
+  /*จุดคือเรียกใช้ class*/
+  width: 1174px;
+  height: 142px;
+  margin: 0 auto;
+}
+
+.navcontainer {
+  height: 57px;
+  background: #8c0009;
+}
+
+.footer {
+  background: #8c0009;
+  margin-top: 5rem;
+}
+
+nav a {
+  width: 200px;
+  color: white !important;
+  display: block;
+  text-decoration: none;
+  font: 25px Superspace !important;
+  padding: 10px !important;
+  border-radius: 5px;
+  font-weight: bold !important;
+}
+
+nav a:hover {
+  margin-top: 5px;
+  color: white;
+  background: #232323;
+  transition: 0.3s
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+
+  margin: auto;
+  text-align: center;
+  font-family: Superspace;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+  font-family: RSU;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  font-family: rsu;
+  color: black;
+}
+
+i {
+  text-decoration: none;
+  font-size: 22px;
+  font-family: rsu;
+  color: black;
+}
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+h1 {
+   font-family: Superspace;
+ }

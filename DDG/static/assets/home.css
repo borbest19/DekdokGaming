@@ -3,6 +3,8 @@ body { /*ไม่มีไรนำหน้าคือ tag ปกติ*/
  /*font:100% RSU text;*/
 }
 
+
+
 .headcontainer { /*จุดคือเรียกใช้ class*/
  width: 1174px;
  height: 142px;

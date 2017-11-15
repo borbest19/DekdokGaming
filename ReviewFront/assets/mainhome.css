@@ -31,6 +31,17 @@ nav a:hover {
 	background: #232323;
 	transition: 0.3s
 }
+body b2
+{
+  width: auto;
+  color: white !important;
+  display: block;
+  text-decoration: none;
+  font: 30pt Superspace !important;
+  padding: 5px !important;
+  border-radius: 5px;
+  font-weight: bold !important;
+}
 .thumbnail {
   border-top: 3px solid #ffffff;
   border-left: 3px solid #ffffff;

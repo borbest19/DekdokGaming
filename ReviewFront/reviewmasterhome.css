@@ -1,0 +1,193 @@
+body{
+	background-color:#202020;}
+
+footer{
+	background-color:#8c0009 !important;
+	height: 250px !important;}
+
+section .section{
+	margin-bottom: -30px;
+}
+.headcontainer {
+	width: 1174px;
+	height: 142px;
+	margin: 0 auto;
+}
+
+.footercontainer {
+	width: 1174px;
+	height: auto;
+	margin: 0 auto;
+	background-color: #8c0009;
+}
+.column{
+	margin-right: -10px;
+}
+.footer2
+{
+	width: 100%;
+	height: 200px;
+	background-color: #8c0009;
+	margin: 0 auto;
+}
+
+.navcontainer {
+	height: 57px;
+	background: #8c0009;
+}
+
+nav a {
+	width: 200px;
+	color: white !important;
+	display: block;
+	font: 25px Superspace !important;
+	padding: 10px !important;
+	border-radius: 5px;
+	font-weight: bold !important;
+}
+
+nav a:hover {
+	margin-top: 5px;
+	color: white;
+	background: #232323;
+	transition: 0.3s
+}
+div.img-resize img{
+height: 370px;
+width: 440;	
+}
+div.img-resize {
+	width: 440px;
+	height: 370px;
+	overflow: hidden;
+	text-align: center;
+}
+.container1 {
+	width: 900px;
+	margin: auto;
+}
+
+.title
+{
+	font : 30px Superspace !important;
+	font-weight: bold !important;
+}
+
+.subtitle
+{
+	font : 26px RSU text !important;
+}
+.pagination .pagination-link
+	{
+		width: 2px !important;
+
+	}
+	.pagination .is-current
+	{
+		background:#8C0009;
+		border-color: #ffffff;
+	}
+	.pagination .pagination-link:hover
+	{
+		background: #8C0009;
+
+	}
+	.pagination .pagination-previous
+	{
+		width: 2px !important;
+
+	}
+.pagination .pagination-next
+{
+	width: 2px !important;
+}
+nav .pagination
+{
+	align-items: center;
+}
+
+.time
+{
+	color: black;
+	font : 20px Superspace !important;
+	font-weight: bold !important;
+	margin-top: -10px;
+	margin-bottom: -20px;
+}
+.cardtop{
+	margin-top: -20px;
+
+}
+.LOGO
+{
+	margin-top: 30px;
+}
+
+.logofooter
+{
+margin-top: 50px;
+}
+
+.card{
+	margin-bottom: 20px;
+}
+.card:hover{
+	opacity: .5;
+	transition: 0.2s;
+}
+.container3{
+	background-color: #acacac;
+	position: absolute !important;
+	width: auto;
+	margin : 0px;
+	padding : 0px;
+}
+
+.section{
+	padding-bottom: 0px !important;
+}
+
+.line
+{
+  height: 2px;
+  background-color: #ffffff;
+  margin-top: 20px;
+}
+
+.card-content{
+	margin-top: -25px;
+}
+.eiei {
+	font : 30px Superspace  ;
+	color: white;
+}
+
+.container2:hover{
+	opacity: 0.5;
+	transition: 0.2s;
+}
+
+.headnews{
+	height: 315px;
+	width: auto;
+}
+.container2 {
+    border: 0px;
+    float: left;
+    position: relative;
+}
+
+.container2 > div {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 0px;
+    background: #000;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    overflow: hidden;
+    font: bold 14px Arial, sans-serif;
+    padding-bottom: 80px;
+    padding-top: 10px;
+}

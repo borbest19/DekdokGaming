@@ -20,5 +20,8 @@
 
       {% block content %}{% endblock %}
 
+  {% include 'layout/footer.twig' ignore missing %}
+  {% block footer %}
+  {% endblock %}
     </body>
   </html>

@@ -1,7 +1,13 @@
-{% block header %}
+<link rel="stylesheet" href="/assets/home.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-
+<body>
   <header>
+
+    <!-- <div class="headcontainer"> <div class="has-text-left"> <img src="/assets/LogoWeb/dekdoklogowhite.png" alt="" width="145" height="auto" style="margin-top: 41px"> </div> </div> <nav class="navbar"> <div class="container is-left"> <a href="/home"
+    class="logo"> <img src="assets/Logoweb/dekdoklogowhite.png" alt="" width="145" height="auto" style="margi-top:-10px;"> </a> </div> </nav> <nav class="navbar is-transparent"> <div class="navbar-brand"> <a class="navbar-item" href="/home"> <img
+    src="assets/Logoweb/logow.png" alt="" width="112" height="28"> </a> <button class="button navbar-burger"> <span></span> <span></span> <span></span> </button> </div> </nav> <div class="navcontainer"> <div class="nav-center"> <nav class="navbar-tabs">
+    <a href="#" class="nav-item">หน้าแรก</a> <a href="#" class="nav-item">ข่าว</a> <a href="#" class="nav-item">รีวิวเกม</a> <a href="#" class="nav-item">เกมยอดนิยม</a> <a href="#" class="nav-item">เกี่ยวกับเรา</a> </nav> </div> </div> -->
     <script>
       function statusChangeCallback(response) {
         console.log('statusChangeCallback');
@@ -40,15 +46,28 @@
           document.getElementById('status').innerHTML = 'Thanks for logging in, ' + response.name + '!';
         });
       }
+      FB.Event.subscribe('auth.login', function() {
+        window.location.reload();
+      });
     </script>
+
+
+
+
+
+
+
     <div class="column is-multiline">
+
       <div class="headcontainer">
         <!--ถ้าใช้ id จะอ้าง java script ได้-->
         <br>
-        <img src="/static/assets/LogoWeb/dekdoklogowhite.png" alt="" width="145" height="auto">
+
+        <a href="/home"> <img src="/assets/Logoweb/dekdoklogowhite.png" alt="" width="200" height="auto" style="margin-top:-20px;"> </a>
         <!--แทรกรูป กำหนดขนาด-->
+
         <a onclick="document.getElementById('modal-wrapper').style.display='block'">
-          <img align="right" src="/static/assets/images/Homepage/log-in.png" alt="" width="100px">
+          <img align="right" src="/assets/images/log-in.png" alt="" width="100px">
         </a>
       </div>
     </div>
@@ -59,7 +78,7 @@
 
         <div class="imgcontainer">
           <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
-          <img src="/static/assets/LogoWeb/dekdoklogowhite.png" alt="Avatar" class="avatar">
+          <img src="/assets/Logoweb/dekdoklogoblack.png" alt="Avatar" class="avatar">
           <h1 style="text-align:center">เข้าสู่ระบบ</h1>
         </div>
         <div class="has-text-centered">
@@ -93,14 +112,13 @@
     <div class="navcontainer">
       <div class="nav-center">
         <nav class="navbar-tabs">
-          <a href="#" class="nav-item">หน้าแรก</a>
-          <a href="#" class="nav-item">ข่าว</a>
-          <a href="#" class="nav-item">รีวิวเกม</a>
-          <a href="#" class="nav-item">เกมยอดนิยม</a>
-          <a href="#" class="nav-item">เกี่ยวกับเรา</a>
+          <a href="/home" class="nav-item">หน้าแรก</a>
+          <a href="/news" class="nav-item">ข่าว</a>
+          <a href="/review" class="nav-item">รีวิวเกม</a>
+          <a href="/topchart" class="nav-item">เกมยอดนิยม</a>
+          <a href="/aboutus" class="nav-item">เกี่ยวกับเรา</a>
         </nav>
       </div>
     </div>
-  </header>
 
-  {% endblock %}
+  </header>

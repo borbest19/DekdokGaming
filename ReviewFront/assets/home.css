@@ -80,7 +80,6 @@ nav a:hover {
 	margin-bottom: 5px !important;
 	margin-top: 5px !important;
 }
-
 .line
 {
   height: 1px;
@@ -128,4 +127,35 @@ nav a:hover {
 nav .pagination
 {
 	align-items: center;
+}
+div.img-resize {
+	width: auto;
+	height: 370px;
+	overflow: hidden;
+	text-align: center;
+}
+div.img-resize img{
+height: 370px;
+width: auto;	
+}
+div.img1-resize {
+	width: 300px;
+	height: 180px;
+	overflow: hidden;
+	text-align: center;
+}
+div.img1-resize img{
+height: 180px;
+width: 300px;	
+}
+line {
+  height: 3px;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+}
+.pagination-list {
+	position: centered;
+}
+.nav1{
+	position: centered;
 }

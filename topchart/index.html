@@ -5,7 +5,7 @@
 	<title>Top Chart</title>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
-	<link rel="stylesheet" href="/topchart/main.css">
+	<link rel="stylesheet" href="/main.css">
 </head>
 <body>
 	<header>
@@ -32,6 +32,9 @@
     xfbml      : true,
     version    : 'v2.8'
   });
+	FB.Event.subscribe('auth.login', function() {
+window.location.reload();
+});
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
   });
@@ -110,46 +113,45 @@ window.onclick = function(event) {
 			</div>
 		</div>
 	</header>
-
 	<main>
 	<div class="container">
 		<h1>10 อันดับเกมยอดนิยมประจำสัปดาห์</h1>
 		<hr>
 		<div class="date">NOVEMBER 5-11, 2017</div>
 
-		<div id="chart" >
+		<div id="chart">
 			<div>
 				<figure>
 					<a href="#">
-						<img src="/topchart/assets/images/home/we-preset/img-1.jpg" alt="image-1" width="362" height="441">
+						<img src="/assets/images/home/we-preset/img-1.jpg" alt="image-1" width="362" height="441">
 					</a>
 				</figure>
   			</div>
 
   			<div>
 				<figure>
-					<a href="#"><img src="/topchart/assets/images/home/we-preset/img-1.jpg" alt="image-1" width="362" height="441">
+					<a href="#"><img src="/assets/images/home/we-preset/img-1.jpg" alt="image-1" width="362" height="441">
 					</a>
 				</figure>
   			</div>
 
   			<div>
 				<figure>
-					<a href="#"><img src="/topchart/assets/images/home/we-preset/img-1.jpg" alt="image-1" width="362" height="441">
+					<a href="#"><img src="/assets/images/home/we-preset/img-1.jpg" alt="image-1" width="362" height="441">
 					</a>
 				</figure>
   			</div>
 
   			<div>
 				<figure1>
-					<img src="/topchart/assets/images/home/we-preset/img-1.jpg" alt="image-1" width="362" height="441" style="float: left; padding-right: 22px">
+					<img src="/assets/images/home/we-preset/img-1.jpg" alt="image-1" width="362" height="441" style="float: left; padding-right: 22px">
 				</figure1>
   			</div>
 
   			<div>
 				<figure>
 					<a href="#">
-						<img src="/topchart/assets/images/home/we-preset/img-1.jpg" alt="image-1" width="362" height="441">
+						<img src="/assets/images/home/we-preset/img-1.jpg" alt="image-1" width="362" height="441">
 					</a>
 				</figure>
   			</div>
@@ -157,7 +159,7 @@ window.onclick = function(event) {
   			<div>
 				<figure>
 					<a href="#">
-						<img src="/topchart/assets/images/home/we-preset/img-1.jpg" alt="image-1" width="362" height="441" style="padding-right: none;">
+						<img src="/assets/images/home/we-preset/img-1.jpg" alt="image-1" width="362" height="441" style="padding-right: none;">
 					</a>
 				</figure>
   			</div>

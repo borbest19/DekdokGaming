@@ -1,3 +1,3 @@
 exports.index = function(req, res) {
-  res.render('topten.twig')
+  res.render('topchart.twig')
 }

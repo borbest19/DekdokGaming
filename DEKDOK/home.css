@@ -5,7 +5,9 @@ footer{
 	background-color:#8c0009 !important;
 	height: 250px !important;}
 
-
+section .section{
+	margin-bottom: -30px;
+}
 .headcontainer {
 	width: 1174px;
 	height: 142px;
@@ -18,7 +20,9 @@ footer{
 	margin: 0 auto;
 	background-color: #8c0009;
 }
-
+.column{
+	margin-right: -10px;
+}
 .footer2
 {
 	width: 100%;
@@ -73,7 +77,10 @@ nav a:hover {
 	margin-top: -10px;
 	margin-bottom: -20px;
 }
+.cardtop{
+	margin-top: -20px;
 
+}
 .LOGO
 {
 	margin-top: 30px;
@@ -85,7 +92,7 @@ margin-top: 50px;
 }
 
 .card{
-	margin-bottom: 25px !important;
+	margin-bottom: 20px;
 }
 .card:hover{
 	opacity: .5;

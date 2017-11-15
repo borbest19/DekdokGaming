@@ -5,7 +5,9 @@ footer{
 	background-color:#8c0009 !important;
 	height: 250px !important;}
 
-
+section .section{
+	margin-bottom: -30px;
+}
 .headcontainer {
 	width: 1174px;
 	height: 142px;
@@ -18,7 +20,9 @@ footer{
 	margin: 0 auto;
 	background-color: #8c0009;
 }
-
+.column{
+	margin-right: -10px;
+}
 .footer2
 {
 	width: 100%;
@@ -39,7 +43,7 @@ nav a {
 	font: 25px Superspace !important;
 	padding: 10px !important;
 	border-radius: 5px;
-	font-weight: bold !important; 
+	font-weight: bold !important;
 }
 
 nav a:hover {
@@ -62,16 +66,21 @@ nav a:hover {
 
 .subtitle
 {
-	font : 26px RSU text !important;}
+	font : 26px RSU text !important;
+}
 
 .time
 {
 	color: black;
 	font : 20px Superspace !important;
 	font-weight: bold !important;
+	margin-top: -10px;
+	margin-bottom: -20px;
+}
+.cardtop{
+	margin-top: -20px;
 
 }
-
 .LOGO
 {
 	margin-top: 30px;
@@ -83,9 +92,12 @@ margin-top: 50px;
 }
 
 .card{
-	margin-bottom: 50px !important;
+	margin-bottom: 20px;
 }
-
+.card:hover{
+	opacity: .5;
+	transition: 0.2s;
+}
 .container3{
 	background-color: #acacac;
 	position: absolute !important;
@@ -100,14 +112,22 @@ margin-top: 50px;
 
 .line
 {
-  height: 1px;
+  height: 2px;
   background-color: #ffffff;
   margin-top: 20px;
 }
 
+.card-content{
+	margin-top: -25px;
+}
 .eiei {
 	font : 30px Superspace  ;
 	color: white;
+}
+
+.container2:hover{
+	opacity: 0.5;
+	transition: 0.2s;
 }
 
 .headnews{

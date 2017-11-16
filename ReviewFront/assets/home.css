@@ -929,3 +929,7 @@ button:hover {
 .animate {
     animation: zoom 0.6s
 }
+h2 {
+	font: 30px Superspace;
+	font-weight: bold;
+}

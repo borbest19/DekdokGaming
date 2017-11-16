@@ -5,8 +5,35 @@
 	<title>Dekdok NEWS</title>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
 	<link rel="stylesheet" href="/DEKDOK/home.css">
+
 </head>
 <header>
+	<style>
+input[type=text] {
+    width: 40px;
+    box-sizing: border-box;
+    border: 2px hidden #8c000a;
+    font-size: 16px;
+		background-image:url(/DDG/static/assets/images/search.png);
+		background-color: #202020;
+		background-repeat: no-repeat;
+		height: 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+		cursor: pointer;
+}
+
+input[type=text]:focus {
+    width: 200px;
+		border: solid;
+		background-color: #505050;
+		background-image: none;
+		cursor: grab;
+}
+input:focus{
+	cursor: grab !important;
+}
+</style>
 	 <script>
 function statusChangeCallback(response) {
 console.log('statusChangeCallback');
@@ -57,10 +84,16 @@ FB.api('/me', function(response) {
 <div class="headcontainer">
 	<!--ถ้าใช้ id จะอ้าง java script ได้-->
 				 <br>
-					<img  src="/DDG/static/assets/LogoWeb/dekdoklogowhite.png" alt="" width="200" height="auto"> <!--แทรกรูป กำหนดขนาด-->
-						<a onclick="document.getElementById('modal-wrapper').style.display='block'"  >
-								<img align="right" src="/DDG/static/assets/images/log-in.png" alt="" width="100px">
-					 </a>
+				 <div class="head">
+					 <div class="columns is-multiline">
+						 <div class="column is-4">
+							 <img  src="/DDG/static/assets/LogoWeb/dekdoklogowhite.png" alt="" width="200" height="auto"> <!--แทรกรูป กำหนดขนาด-->
+						 </div>
+						 <div class="column is-8"align="right"><input type="text" name="search" placeholder="       Search.."><a onclick="document.getElementById('modal-wrapper').style.display='block'"  >
+								 <img  src="/DDG/static/assets/images/log-in.png" alt="" width="100px">
+						</a></div>
+					 </div>
+				 </div>
 </div>
 </div>
 <div id="modal-wrapper" class="modal">

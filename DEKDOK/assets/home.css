@@ -5,7 +5,6 @@ footer{
 	background-color:#8c0009 !important;
 	height: 250px !important;}
 
-
 .headcontainer {
 	width: 1174px;
 	height: 142px;
@@ -39,7 +38,7 @@ nav a {
 	font: 25px Superspace !important;
 	padding: 10px !important;
 	border-radius: 5px;
-	font-weight: bold !important; 
+	font-weight: bold !important;
 }
 
 nav a:hover {

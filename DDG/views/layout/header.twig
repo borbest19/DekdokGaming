@@ -9,6 +9,57 @@
     class="logo"> <img src="assets/Logoweb/dekdoklogowhite.png" alt="" width="145" height="auto" style="margi-top:-10px;"> </a> </div> </nav> <nav class="navbar is-transparent"> <div class="navbar-brand"> <a class="navbar-item" href="/home"> <img
     src="assets/Logoweb/logow.png" alt="" width="112" height="28"> </a> <button class="button navbar-burger"> <span></span> <span></span> <span></span> </button> </div> </nav> <div class="navcontainer"> <div class="nav-center"> <nav class="navbar-tabs">
     <a href="#" class="nav-item">หน้าแรก</a> <a href="#" class="nav-item">ข่าว</a> <a href="#" class="nav-item">รีวิวเกม</a> <a href="#" class="nav-item">เกมยอดนิยม</a> <a href="#" class="nav-item">เกี่ยวกับเรา</a> </nav> </div> </div> -->
+    <style>
+  input[type=text] {
+      width: 40px;
+      box-sizing: border-box;
+      border: 2px hidden #8c000a;
+      font-size: 16px;
+  		background-image:url(/DDG/static/assets/images/search.png);
+  		background-color: #202020;
+  		background-repeat: no-repeat;
+  		height: 40px;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
+  		cursor: pointer;
+  }
+
+  input[type=text]:focus {
+      width: 200px;
+  		border: solid;
+  		background-color: #505050;
+  		background-image: none;
+  		cursor: grab;
+  }
+  input:focus{
+  	cursor: grab !important;
+  }
+  </style><style>
+input[type=text] {
+    width: 40px;
+    box-sizing: border-box;
+    border: 2px hidden #8c000a;
+    font-size: 16px;
+		background-image:url(/DDG/static/assets/images/search.png);
+		background-color: #202020;
+		background-repeat: no-repeat;
+		height: 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+		cursor: pointer;
+}
+
+input[type=text]:focus {
+    width: 200px;
+		border: solid;
+		background-color: #505050;
+		background-image: none;
+		cursor: grab;
+}
+input:focus{
+	cursor: grab !important;
+}
+</style>
     <script>
       function statusChangeCallback(response) {
         console.log('statusChangeCallback');
@@ -51,30 +102,21 @@
         window.location.reload();
       });
     </script>
-
-
-
-
-
-
-
-    <div class="columns is-multiline">
-
-      <div class="headcontainer">
-        <!--ถ้าใช้ id จะอ้าง java script ได้-->
-
-
-        <br>
-
-        <a href="/home"> <img src="/assets/Logoweb/dekdoklogowhite.png" alt="" width="200" height="auto" style="margin-top:-20px;"> </a>
-        <!--แทรกรูป กำหนดขนาด-->
-
-
-
-        <a onclick="document.getElementById('modal-wrapper').style.display='block'">
-          <img align="right" src="/assets/images/log-in.png" alt="" width="100px">
-        </a>
-      </div>
+    <div class="column is-multiline">
+    <div class="headcontainer">
+    	<!--ถ้าใช้ id จะอ้าง java script ได้-->
+    				 <br>
+    				 <div class="head">
+    					 <div class="columns is-multiline">
+    						 <div class="column is-4">
+    							 <img  src="/DDG/static/assets/LogoWeb/dekdoklogowhite.png" alt="" width="200" height="auto"> <!--แทรกรูป กำหนดขนาด-->
+    						 </div>
+    						 <div class="column is-8"align="right"><input type="text" name="search" placeholder="       Search.."><a onclick="document.getElementById('modal-wrapper').style.display='block'"  >
+    								 <img  src="/DDG/static/assets/images/log-in.png" alt="" width="100px">
+    						</a></div>
+    					 </div>
+    				 </div>
+    </div>
     </div>
     <div id="modal-wrapper" class="modal">
 

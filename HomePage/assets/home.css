@@ -13,9 +13,6 @@ body { /*ไม่มีไรนำหน้าคือ tag ปกติ*/
   width: auto;
   height: auto;
   margin: 0 auto;
-  padding-left: 30px;
-  padding-right: 30px;
-
 }
 
 .navcontainer {

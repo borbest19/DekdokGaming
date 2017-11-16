@@ -8,38 +8,133 @@
 </head>
 <body>
   <header>
-      <div class="headcontainer">
-      <!--ถ้าใช้ id จะอ้าง java script ได้-->
-        <div class="has-text-left">
-          <br>
-          <img src="assets\images\dekdoklogowhite.png" alt="" width="145" height="auto"> <!--แทรกรูป กำหนดขนาด-->
-        </div>
-      </div>
+     <script>
+function statusChangeCallback(response) {
+  console.log('statusChangeCallback');
+  console.log(response);
+  if (response.status === 'connected') {
+    testAPI();
+  } else {
+    document.getElementById('status').innerHTML = 'Please log ' +
+      'into this app.';
+  }
+}
+function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+}
+window.fbAsyncInit = function() {
+FB.init({
+  appId      : '1490167914363614',
+  cookie     : true,
+  xfbml      : true,
+  version    : 'v2.8'
+});
+FB.Event.subscribe('auth.login', function() {
+window.location.reload();
+});
+FB.getLoginStatus(function(response) {
+  statusChangeCallback(response);
+});
+};
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+function testAPI() {
+  console.log('Welcome!  Fetching your information.... ');
+  FB.api('/me', function(response) {
+    console.log('Successful login for: ' + response.name);
+    document.getElementById('status').innerHTML =
+      'Thanks for logging in, ' + response.name + '!';
+  });
+}
+</script>
+<div class="column is-multiline">
+<div class="headcontainer">
+    <!--ถ้าใช้ id จะอ้าง java script ได้-->
+           <br>
+            <img  src="/DDG/static/assets/LogoWeb/dekdoklogowhite.png" alt="" width="200" height="auto"> <!--แทรกรูป กำหนดขนาด-->
+              <a onclick="document.getElementById('modal-wrapper').style.display='block'"  >
+                  <img align="right" src="/DDG/static/assets/images/log-in.png" alt="" width="100px">
+             </a>
+</div>
+</div>
+<div id="modal-wrapper" class="modal">
 
-      <div class="navcontainer">
-        <div class="nav-center">
-        <nav class="navbar-tabs">
-
+<<<<<<< HEAD
           <a href="/HomePage/index.html" class="nav-item">หน้าแรก</a>
           <a href="#" class="nav-item">ข่าว</a>
           <a href="#" class="nav-item">รีวิวเกม</a>
           <a href="#" class="nav-item">เกมยอดนิยม</a>
           <a href="#" class="nav-item">เกี่ยวกับเรา</a>
+=======
+    <form class="modal-content animate" action="#">
+      <!-- #หน้าหลังล็อกอิน-->
+>>>>>>> d12855d54b027d899984ffc9b239cc64e9c1592a
 
-        </nav>
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
+            <img src="/DDG/static/assets/LogoWeb/dekdoklogoblack.png" alt="Avatar" class="avatar">
+            <h1 style="text-align:center">เข้าสู่ระบบ</h1>
         </div>
-      </div>
-    </header><main>
+              <div class="has-text-centered">
+                  <h3>——————————  หรือ  ——————————</h3>
+                        <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div>
+                        <div id="status"></div>
+                        <input type="text" placeholder="อีเมล์" name="uname">
+                        <input type="password" placeholder="รหัสผ่าน" name="psw">
+                        <br></br>
+                        <button type="submit">เข้าสู่ระบบ</button><br>
+                        <input type="checkbox" style="margin:26px 30px;"> จดจำฉัน</input>
+                        <a class="has-text-centered" href="#" style="text-align:center;">ลืมรหัสผ่าน?</a>
+                        <br><button class="regis" type="submit">สมัครเลย</button>
+            </div>
+    </form>
 
+</div>
+
+<script>
+// If user clicks anywhere outside of the modal, Modal will close
+var modal = document.getElementById('modal-wrapper');
+window.onclick = function(event) {
+  if (event.target == modal) {
+      modal.style.display = "none";
+  }
+}
+</script>
+
+                    <div class="navcontainer">
+                        <div class="nav-center">
+                             <nav class="navbar-tabs">
+                                  <a href="/index.html" class="nav-item">หน้าแรก</a>
+                                  <a href="/DEKDOK/index.html" class="nav-item">ข่าว</a>
+                                  <a href="/ReviewFront/index.html" class="nav-item">รีวิวเกม</a>
+                                  <a href="/topchart/index.html" class="nav-item">เกมยอดนิยม</a>
+                                  <a href="#" class="nav-item">เกี่ยวกับเรา</a>
+                             </nav>
+                        </div>
+                     </div>
+</header>
 <br>
     <section>
           <section class="section we-present">
+    <div style="width: 1100px; margin: 0 auto; overflow: hidden;">
     <div class="container">
+<<<<<<< HEAD
         <a href="/ReviewFront/reviewmaster.html"><b2>รีวิวจากเว็บมาสเตอร์</b2></a>
+=======
+        <a href="#"><h2><div class ="has-text-white"><b>รีวิวจากเว็บมาสเตอร์</b></div></h2></a>
+>>>>>>> d12855d54b027d899984ffc9b239cc64e9c1592a
         <div class="line"></div>
       </div>
     </div>
   </section>
+<<<<<<< HEAD
             <section class="section">
     <div class="container">
       <section class="columns is-multiline is-marginle">
@@ -75,38 +170,37 @@
               </div>
             </div>
           </a>
+=======
+  <div class="topcontainer">
+    <div class="columns is-multiline is-centered" >
+        <div class="top1"> <img class="image is-three-fifths is-marginless"src="/DDG/static/assets/images/pic/review1pic1.jpg" width=100%>
+>>>>>>> d12855d54b027d899984ffc9b239cc64e9c1592a
         </div>
-
-        <div class="column is-3">
-          <a href="#">
-            <div class="card">
-              <div class="container2">
-                  <div class ="img1-resize">
-                  <img class="headnews"src="
-                  /ReviewFront/assets/images/pic/review1pic4.jpg" alt="images-1">
-                </div>
-              </div>
-            </div>
-          </a>
-<br>
-           <a href="#">
-            <div class="card">
-              <div class="container2">
-                  <div class ="img1-resize">
-                  <img class="headnews"src="/ReviewFront/assets/images/pic/review1pic9.png" alt="images-1">
-              </div>
-              </div>
-            </div>
-          </a>
+      <div class="top2  is-multiline">
+        <div class="top2_1 is-marginless"><img class="image is-marginless"src="/DDG/static/assets/images/pic/review1pic2.jpg  " width=100%>
         </div>
-      </section>
+        <div class="top2_2 is-marginless"><img class="image is-marginless"src="/DDG/static/assets/images/pic/review1pic3.jpg"   width=100%>
     </div>
-  </section>
+  </div>
+  <div class="top3 is-multiline" >
+      <div class="top3_1 is-marginless"><img class="image is-marginless"src="/DDG/static/assets/images/pic/review1pic4.jpg" width=100%>
+      </div>
+      <div class="top3_2 is-marginless">
+      <img class="image is-marginless"src="/DDG/static/assets/images/pic/review1pic9.png" width="100%">
+          </div>
+        </div>
+</div>
 
+      </div>
+  </div>
     <section>
           <section class="section we-present">
     <div class="container">
+<<<<<<< HEAD
         <a href="#"><b2>รีวิวจากผู้ใช้ทั้งหมด</b2></a>
+=======
+        <a href="#"><h2><div class ="has-text-white"><b>รีวิวจากผู้ใช้ทั้งหมด</b></div></h2></a>
+>>>>>>> d12855d54b027d899984ffc9b239cc64e9c1592a
         <div class="line"></div>
   </div>
     </div>
@@ -119,7 +213,7 @@
                     <div class="column">
                       <a href="#">
                       <figure class="image is-5by3" height="720 px">
-                        <img src="/ReviewFront/assets/images/pic/userreview1.png" alt="user 1.png">
+                        <img src="/DDG/static/assets/images/pic/userreview1.png" alt="user 1.png">
                       </figure>
                   </a>
                   </div>
@@ -128,7 +222,7 @@
                       <div class="column">
 
                         <figure class="image is-16x16">
-                        <h1><img src="/ReviewFront/assets/images/pic/underline-button.png"></h1>
+                        <h1><img src="/DDG/static/assets/images/pic/underline-button.png"></h1>
                           </figure>
 
                       </div>
@@ -136,7 +230,7 @@
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       <div class="column has-text-right">
                           <figure class="image is-16x16">
-                        <h1><img src="/ReviewFront/assets/images/pic/star.png"></h1>
+                        <h1><img src="/DDG/static/assets/images/pic/star.png"></h1>
                       </figure>
                       </div>
                     </div>
@@ -149,7 +243,7 @@
                     <div class="column">
                       <a href="#">
                         <figure class="image is-5by3" height="720 px">
-                        <img src="/ReviewFront/assets/images/pic/userreview2.jpg" alt="user 2.jpg">
+                        <img src="/DDG/static/assets/images/pic/userreview2.jpg" alt="user 2.jpg">
                       </figure>
                     </a>
                   </div>
@@ -157,13 +251,13 @@
                     <div class="columns is-multiline">
                       <div class="column">
                         <figure class="image is-16x16">
-                        <h1><h1><img src="/ReviewFront/assets/images/pic/underline-button.png"></h1></h1>
+                        <h1><h1><img src="/DDG/static/assets/images/pic/underline-button.png"></h1></h1>
                       </figure>
                       </div>
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="column has-text-right">
                         <figure class="image is-16x16" height="720 px">
-                        <img src="/ReviewFront/assets/images/pic/star.png" alt="user 2.jpg">
+                        <img src="/DDG/static/assets/images/pic/star.png" alt="user 2.jpg">
                       </figure>
                       </div>
                     </div>
@@ -177,7 +271,7 @@
                     <div class="column">
                       <a href="#">
                       <figure class="image is-5by3" height="720 px">
-                        <img src="/ReviewFront/assets/images/pic/userreview3.jpg" alt="user 3.jpg">
+                        <img src="/DDG/static/assets/images/pic/userreview3.jpg" alt="user 3.jpg">
                       </figure>
                   </a>
                   </div>
@@ -185,14 +279,14 @@
                     <div class="columns is-multiline">
                       <div class="column">
                         <figure class="image is-16x16">
-                        <h1><img src="/ReviewFront/assets/images/pic/underline-button.png"></h1>
+                        <h1><img src="/DDG/static/assets/images/pic/underline-button.png"></h1>
                           </figure>
 
                       </div>
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="column has-text-right">
                         <figure class="image is-16x16" height="720 px">
-                        <img src="/ReviewFront/assets/images/pic/star.png" alt="user 2.jpg">
+                        <img src="/DDG/static/assets/images/pic/star.png" alt="user 2.jpg">
                       </figure>
                       </div>
                     </div>
@@ -205,7 +299,7 @@
                     <div class="column">
                       <a href="#">
                       <figure class="image is-5by3" height="720 px">
-                        <img src="/ReviewFront/assets/images/pic/userreview4.jpg" alt="user 4.jpg">
+                        <img src="/DDG/static/assets/images/pic/userreview4.jpg" alt="user 4.jpg">
                       </figure>
                   </a>
                   </div>
@@ -213,14 +307,14 @@
                     <div class="columns is-multiline">
                       <div class="column">
                         <figure class="image is-16x16">
-                        <h1><img src="/ReviewFront/assets/images/pic/underline-button.png"></h1>
+                        <h1><img src="/DDG/static/assets/images/pic/underline-button.png"></h1>
                           </figure>
 
                       </div>
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="column has-text-right">
                         <figure class="image is-16x16" height="720 px">
-                        <img src="/ReviewFront/assets/images/pic/star.png" alt="user 2.jpg">
+                        <img src="/DDG/static/assets/images/pic/star.png" alt="user 2.jpg">
                       </figure>
                       </div>
                     </div>
@@ -233,7 +327,7 @@
                     <div class="column">
                       <a href="#">
                       <figure class="image is-5by3" height="720 px">
-                        <img src="/ReviewFront/assets/images/pic/userreview5.jpg" alt="user5.jpg">
+                        <img src="/DDG/static/assets/images/pic/userreview5.jpg" alt="user5.jpg">
                       </figure>
                     </a>
                   </div>
@@ -241,14 +335,14 @@
                     <div class="columns is-multiline">
                       <div class="column">
                         <figure class="image is-16x16">
-                        <h1><img src="/ReviewFront/assets/images/pic/underline-button.png"></h1>
+                        <h1><img src="/DDG/static/assets/images/pic/underline-button.png"></h1>
                           </figure>
 
                       </div>
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="column has-text-right">
                         <figure class="image is-16x16" height="720 px">
-                        <img src="/ReviewFront/assets/images/pic/star.png" alt="user 2.jpg">
+                        <img src="/DDG/static/assets/images/pic/star.png" alt="user 2.jpg">
                       </figure>
                       </div>
                     </div>
@@ -261,7 +355,7 @@
                     <div class="column">
                       <a href="#">
                       <figure class="image is-5by3" height="720 px">
-                        <img src="/ReviewFront/assets/images/pic/userreview6.jpg" alt="user 6.jpg">
+                        <img src="/DDG/static/assets/images/pic/userreview6.jpg" alt="user 6.jpg">
                       </figure>
                     </a>
                   </div>
@@ -269,14 +363,14 @@
                     <div class="columns is-multiline">
                       <div class="column">
                         <figure class="image is-16x16">
-                        <h1><img src="/ReviewFront/assets/images/pic/underline-button.png"></h1>
+                        <h1><img src="/DDG/static/assets/images/pic/underline-button.png"></h1>
                           </figure>
 
                       </div>
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="column has-text-right">
                         <figure class="image is-16x16" height="720 px">
-                        <img src="/ReviewFront/assets/images/pic/star.png" alt="user 2.jpg">
+                        <img src="/DDG/static/assets/images/pic/star.png" alt="user 2.jpg">
                       </figure>
                       </div>
                     </div>
@@ -289,7 +383,7 @@
                     <div class="column">
                       <a href="#">
                       <figure class="image is-5by3" height="720 px">
-                        <img src="/ReviewFront/assets/images/pic/userreview7.jpg" alt="user 7.jpg">
+                        <img src="/DDG/static/assets/images/pic/userreview7.jpg" alt="user 7.jpg">
                       </figure>
                     </a>
                   </div>
@@ -297,14 +391,14 @@
                     <div class="columns is-multiline">
                       <div class="column">
                         <figure class="image is-16x16">
-                        <h1><img src="/ReviewFront/assets/images/pic/underline-button.png"></h1>
+                        <h1><img src="/DDG/static/assets/images/pic/underline-button.png"></h1>
                           </figure>
 
                       </div>
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="column has-text-right">
                         <figure class="image is-16x16" height="720 px">
-                        <img src="/ReviewFront/assets/images/pic/star.png" alt="user 2.jpg">
+                        <img src="/DDG/static/assets/images/pic/star.png" alt="user 2.jpg">
                       </figure>
                       </div>
                     </div>
@@ -317,7 +411,7 @@
                     <div class="column">
                       <a href="#">
                       <figure class="image is-5by3" height="720 px">
-                        <img src="/ReviewFront/assets/images/pic/userreview8.jpg" alt="user 8.jpg">
+                        <img src="/DDG/static/assets/images/pic/userreview8.jpg" alt="user 8.jpg">
                       </figure>
                     </a>
                   </div>
@@ -325,14 +419,14 @@
                     <div class="columns is-multiline">
                       <div class="column">
                         <figure class="image is-16x16">
-                        <h1><img src="/ReviewFront/assets/images/pic/underline-button.png"></h1>
+                        <h1><img src="/DDG/static/assets/images/pic/underline-button.png"></h1>
                           </figure>
 
                       </div>
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="column has-text-right">
                         <figure class="image is-16x16" height="720 px">
-                        <img src="/ReviewFront/assets/images/pic/star.png" alt="user 2.jpg">
+                        <img src="/DDG/static/assets/images/pic/star.png" alt="user 2.jpg">
                       </figure>
                       </div>
                     </div>
@@ -345,7 +439,7 @@
                     <div class="column">
                       <a href="#">
                       <figure class="image is-5by3" height="720 px">
-                        <img src="/ReviewFront/assets/images/pic/userreview9.png" alt="user 9.png">
+                        <img src="/DDG/static/assets/images/pic/userreview9.png" alt="user 9.png">
                       </figure>
                     </a>
                   </div>
@@ -353,14 +447,18 @@
                     <div class="columns is-multiline">
                       <div class="column">
                         <figure class="image is-16x16">
+<<<<<<< HEAD
                         <h1><img src="/ReviewFront/assets/images/pic/underline-button.png"></h1>
+=======
+                        <h1><img src="/DDG/static/assets/images/pic/underline-button.png"></h1>
+>>>>>>> d12855d54b027d899984ffc9b239cc64e9c1592a
                           </figure>
 
                       </div>
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="column has-text-right">
                         <figure class="image is-16x16" height="720 px">
-                        <img src="/ReviewFront/assets/images/pic/star.png" alt="user 2.jpg">
+                        <img src="/DDG/static/assets/images/pic/star.png" alt="user 2.jpg">
                       </figure>
                       </div>
                     </div>
@@ -392,12 +490,13 @@
   <div class="container">
       <div class="content has-text-centered has-text-white">
         <p>
-          <img src="assets\images\dekdoklogowhite.png" alt="" width="145" height="auto">
+          <img src="/DDG/static/assets/LogoWeb/dekdoklogowhite.png" alt="" width="145" height="auto">
           <strong>DEKDOK</strong> by <a href="#">DEKDOK GAMING</a>. The source code is licensed
           <a href="#">DEKDOK 2017</a>. The website content
           is licensed <a href="#"> dekdok.com</a>.
         </p>
       </div>
     </div>
+  </div>
 </footer>
 </html>

@@ -15,14 +15,13 @@ body { /*ไม่มีไรนำหน้าคือ tag ปกติ*/
 }
 
 nav a {
-	width: 150px;
-	color: white ! important;
+	width: 200px;
+	color: white !important;
 	display: block;
-	text-decoration: none;
-	font: 25px Superspace;
-	padding: 10px;
-	border-radius: 10px;
-	font-weight: bold;
+	font: 25px Superspace !important;
+	padding: 10px !important;
+	border-radius: 5px;
+	font-weight: bold !important;
 }
 
 nav a:hover {
@@ -136,7 +135,7 @@ div.img-resize {
 }
 div.img-resize img{
 height: 370px;
-width: auto;	
+width: auto;
 }
 div.img1-resize {
 	width: 300px;
@@ -146,7 +145,7 @@ div.img1-resize {
 }
 div.img1-resize img{
 height: 180px;
-width: 300px;	
+width: 300px;
 }
 line {
   height: 3px;

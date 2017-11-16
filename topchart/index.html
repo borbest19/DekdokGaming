@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Top Chart</title>
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
-	<link rel="stylesheet" href="/main.css">
-</head>
-<body>
-	<header>
-  <script>
+  <head>
+    <meta charset="utf-8">
+    <title>Dek-Dok Gaming</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
+    <link rel="stylesheet" href="/topchart/assets/main.css">
+    <link rel="stylesheet" href="/topchart/assets/home.css">
+    <link rel="icon" href="/DDG/static/assets/images/Berm.ico">
+  </head>
+  <body>
+    <header>
+       <script>
+
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
@@ -32,8 +35,8 @@
     xfbml      : true,
     version    : 'v2.8'
   });
-	FB.Event.subscribe('auth.login', function() {
-window.location.reload();
+  FB.Event.subscribe('auth.login', function() {
+  window.location.reload();
 });
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
@@ -55,12 +58,16 @@ window.location.reload();
     });
   }
 </script>
-<div class="headcontainer">
-		<!--ถ้าใช้ id จะอ้าง java script ได้-->
-			<div class="has-text-left">
-				<img src="/topchart/assets/images/dekdoklogo.png" alt="" width="145" height="auto" style="margin-top: 41px"> <!--แทรกรูป กำหนดขนาด-->
-			</div>
-		</div>
+<div class="column is-multiline">
+  <div class="headcontainer">
+      <!--ถ้าใช้ id จะอ้าง java script ได้-->
+             <br>
+              <img  src="/DDG/static/assets/LogoWeb/dekdoklogowhite.png" alt="" width="145" height="auto"> <!--แทรกรูป กำหนดขนาด-->
+                <a onclick="document.getElementById('modal-wrapper').style.display='block'"  >
+                    <img align="right" src="/DDG/static/assets/images/log-in.png" alt="" width="100px">
+               </a>
+  </div>
+</div>
   <div id="modal-wrapper" class="modal">
 
       <form class="modal-content animate" action="#">
@@ -68,12 +75,12 @@ window.location.reload();
 
           <div class="imgcontainer">
               <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
-              <img src="/topchart/assets/images/logo.png" alt="Avatar" class="avatar">
-              <h1 style="text-align:center">เข้าสู่ระบบ</h1>
-          </div>
+              <img src="/DDG/static/assets/LogoWeb/dekdoklogoblack.png" alt="Avatar" class="avatar">
+            </div>
                 <div class="has-text-centered">
+                  <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div>
                     <h3>——————————  หรือ  ——————————</h3>
-                          <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div>
+                          <h1 style="text-align:center">เข้าสู่ระบบ</h1>
                           <div id="status"></div>
                           <input type="text" placeholder="อีเมล์" name="uname">
                           <input type="password" placeholder="รหัสผ่าน" name="psw">
@@ -97,89 +104,160 @@ window.onclick = function(event) {
 }
 </script>
 
-
-
-		<div class="navcontainer">
-			<div class="nav-center">
-			<nav class="navbar-tabs">
-
-				<a class="link1" href="#">หน้าแรก</a>
-				<a class="link2" href="#">ข่าว</a>
-				<a class="link3" href="#">รีวิวเกม</a>
-				<a class="link4" href="#">เกมยอดนิยม</a>
-				<a class="link5" href="#">เกี่ยวกับเรา</a>
-
-			</nav>
-			</div>
-		</div>
-	</header>
-	<main>
-	<div class="container">
-		<h1>10 อันดับเกมยอดนิยมประจำสัปดาห์</h1>
-		<hr>
-		<div class="date">NOVEMBER 5-11, 2017</div>
-
-		<div id="chart">
-			<div>
-				<figure>
-					<a href="#">
-						<img src="/assets/images/home/we-preset/img-1.jpg" alt="image-1" width="362" height="441">
-					</a>
-				</figure>
-  			</div>
-
-  			<div>
-				<figure>
-					<a href="#"><img src="/assets/images/home/we-preset/img-1.jpg" alt="image-1" width="362" height="441">
-					</a>
-				</figure>
-  			</div>
-
-  			<div>
-				<figure>
-					<a href="#"><img src="/assets/images/home/we-preset/img-1.jpg" alt="image-1" width="362" height="441">
-					</a>
-				</figure>
-  			</div>
-
-  			<div>
-				<figure1>
-					<img src="/assets/images/home/we-preset/img-1.jpg" alt="image-1" width="362" height="441" style="float: left; padding-right: 22px">
-				</figure1>
-  			</div>
-
-  			<div>
-				<figure>
-					<a href="#">
-						<img src="/assets/images/home/we-preset/img-1.jpg" alt="image-1" width="362" height="441">
-					</a>
-				</figure>
-  			</div>
-
-  			<div>
-				<figure>
-					<a href="#">
-						<img src="/assets/images/home/we-preset/img-1.jpg" alt="image-1" width="362" height="441" style="padding-right: none;">
-					</a>
-				</figure>
-  			</div>
-  		</div>
-	</div>
-	</main>
-
-		<footer>
-		<div class="footercontainerbg">
-			<div class="has-text-left">
-				<img src="/topchart/assets/images/dekdoklogo.png" alt="" width="145" height="auto" style="margin-top: 41px"> <!--แทรกรูป กำหนดขนาด-->
-			</div>
-	    	<div class="content has-text-centered has-text-white">
-	      		<p>
-	        		<strong>DEKDOK</strong> by <a href="#">DEKDOK GAMING</a>. The source code is licensed
-	        		<a href="#">DEKDOK 2017</a>. The website contentis licensed <a href="#"> dekdok.com</a>.
-	      		</p>
-	    	</div>
-	    </div>
-	</footer>
-
-</body>
+                      <div class="navcontainer">
+                          <div class="nav-center">
+                               <nav class="navbar-tabs">
+                                    <a href="#" class="nav-item">หน้าแรก</a>
+                                    <a href="#" class="nav-item">ข่าว</a>
+                                    <a href="#" class="nav-item">รีวิวเกม</a>
+                                    <a href="#" class="nav-item">เกมยอดนิยม</a>
+                                    <a href="#" class="nav-item">เกี่ยวกับเรา</a>
+                               </nav>
+                          </div>
+                       </div>
+ </header>
+  <main>
+    <div class="bodycontainer" >
+    </br>
+  		<g class="content has-text-left">10 อันดับเกมยอดนิยมประจำสัปดาห์</g>
+  		<hr>
+  		<b class="content has-text-left">NOVEMBER 5-11, 2017</b>
+    </br>
+    <div class="top5container">
+      <div class="columns is-multiline is-centered" >
+          <div class="top5_1"> <img class="image is-three-fifths is-marginless"src="/DDG/static/assets/images/Nono.jpg" width=100%>
+            <div class="middle">
+              <div class="text">Fire Emblem Heroes</div>
+            </div>
+          </div>
+        <div class="top5_7  is-multiline">
+          <div class="top5_2 is-marginless"><img class="image is-marginless"src="/DDG/static/assets/images/csgo_iconi.jpg  " width=100%>
+            <div class="middle">
+              <div class="text">CS:GO</div>
+            </div>
+          </div>
+          <div class="top5_3 is-marginless"><img class="image is-marginless"src="/DDG/static/assets/images/Sasaki4i.jpg  " width=100%>
+            <div class="middle">
+              <div class="text">FGO</div>
+            </div></div></div>
+        <div class="top5 is-multiline" >
+            <div class="top5_4 is-marginless"><img class="image is-marginless"src="/DDG/static/assets/images/Nepi.jpg" width=100%>
+              <div class="middle">
+                <div class="text">Neptunia:RE1</div>
+              </div></div>
+            <div class="top5_5 is-marginless">
+            <img class="image is-marginless"src="/DDG/static/assets/images/Game_3267i.jpg" width="100%">
+              <div class="middle">
+                <div class="text">Neptunia:U</div>
+                </div>
+                </div>
+              </div>
+        </div>
+    </div>
+<div class="container">
+  <div class="columns is-multiline">
+    <div class="column is-3">
+          <img src="/DDG/static/assets/images/sticker,375x360-bg,ffffff.u8.png" alt="LD" width="100px" height="auto">
+    </div>
+    <div class="column is-1">
+      <g>6</g>
+    </div>
+    <div class="column is-4">
+      <img src="/DDG/static/assets/images/Neko.jpg" alt="NK" width="100px" height="auto">
+    </div>
+    <div class="column is-4" >
+      <g>Nekopara</g>
+    </div>
+</div>
+<hr>
+<div>
+<div class="columns is-multiline">
+  <div class="column is-3">
+  <img src="/DDG/static/assets/images/levelUP.png" alt="LU" width="100px" height="auto">
+  </div>
+  <div class="column is-1">
+    <g>7</g>
+  </div>
+  <div class="column is-4">
+    <img src="/DDG/static/assets/images/Skyrim.png" alt="Skyrim" width="100px" height="auto">
+  </div>
+  <div class="column is-4" >
+    <g>Skyrim</g>
+  </div>
+</div>
+</div>
+<hr>
+<div>
+<div class="columns is-multiline">
+  <div class="column is-3">
+  <img src="/DDG/static/assets/images/sticker,375x360-bg,ffffff.u8.png" alt="LD" width="100px" height="auto">
+  </div>
+  <div class="column is-1">
+    <g>8</g>
+  </div>
+  <div class="column is-4">
+     <img src="/DDG/static/assets/images/Game_2870.png" alt="Akiba" width="100px" height="auto">
+  </div>
+  <div class="column is-4" >
+    <g>Akiba's Trip</g>
+  </div>
+</div>
+</div>
+<hr>
+<div>
+<div class="columns is-multiline">
+  <div class="column is-3">
+  <img src="/DDG/static/assets/images/levelUP.png" alt="LU" width="100px" height="auto">
+  </div>
+  <div class="column is-1">
+    <g>9</g>
+  </div>
+  <div class="column is-4">
+     <img src="/DDG/static/assets/images/Game_2652.png" alt="MC" width="100px" height="auto">
+  </div>
+  <div class="column is-4" >
+    <g>Minecraft</g>
+  </div>
+</div>
+</div>
+<hr>
+<div>
+<div class="columns is-multiline">
+  <div class="column is-3">
+  <img src="/DDG/static/assets/images/sticker,375x360-bg,ffffff.u8.png" alt="LD" width="100px" height="auto">
+  </div>
+  <div class="column is-1">
+    <g>10</g>
+  </div>
+  <div class="column is-4">
+     <img src="/DDG/static/assets/images/Game_992.png" alt="FE" width="100px" height="auto">
+  </div>
+  <div class="column is-4" >
+    <g>Assasin's Creed 2</g>
+  </div>
+</div>
+</div>
+<hr>
+</div>
+<div>
+<br>
+      <b1>
+                  <strong>แหล่งข้อมูลจาก</strong> <A href="https://www.facebook.com/MixBlasterGESTV" style="color:red">กูเอง</A>
+      </b1>
+      </div>
+    </div>
+   </main>
+      <footer class="footer" background-color="#8c0009">
+ <div class="footercontainer">
+     <div class="content has-text-centered has-text-white">
+       <p>
+          <img src="/DDG/static/assets/LogoWeb/dekdoklogoblack.png" alt="logo" width="145px">
+         <strong>DEKDOK</strong> by <a href="#">DEKDOK GAMING</a>. The source code is licensed
+         <a href="#">DEKDOK 2017</a>. The website content
+         is licensed <a href="#"> dekdok.com</a>.
+       </p>
+     </div>
+   </div>
+    </footer>
+  </body>
 </html>

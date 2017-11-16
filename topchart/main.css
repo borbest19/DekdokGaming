@@ -82,28 +82,28 @@ nav a {
 .container {
 	width: 1206px;
 	height: auto;
-	background: white; 
+	background: white;
 	margin-top: 22px;
 	margin-bottom: 22px;
 	padding: 33px;
 }
 
 h1 {
-	font: bold 50pt Superspace; 
+	font: bold 50pt Superspace;
 	color: #000000;
 	text-align: center;
 }
 
 hr{
-	height: 2px; 
-	background-color: #000000; 
+	height: 2px;
+	background-color: #000000;
 }
 
 .date {
-	font: bold 14pt Superspace; 
-	color: #000000; 
+	font: bold 14pt Superspace;
+	color: #000000;
 	margin-bottom: 33px;
-	
+
 }
 
 #chart figure img {

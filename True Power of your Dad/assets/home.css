@@ -1,4 +1,5 @@
-body { /*ไม่มีไรนำหน้าคือ tag ปกติ*/
+body
+{ /*ไม่มีไรนำหน้าคือ tag ปกติ*/
  background: #202020;
  /*font:100% RSU text;*/
 }
@@ -8,14 +9,14 @@ body { /*ไม่มีไรนำหน้าคือ tag ปกติ*/
  height: 142px;
  margin: 0 auto;
 }
-
-.bodyScope {
-  width: auto;
-  height: auto;
-  margin: 0 auto;
-  padding-left: 30px;
-  padding-right: 30px;
-
+.bodycontainer {
+ width: 1300px;
+ height: auto;
+ margin: 0 auto;
+ padding-left : 30px;
+ padding-right : 30px;
+ padding-bottom: 30px;
+ background : #fff;
 }
 
 .navcontainer {
@@ -24,7 +25,7 @@ body { /*ไม่มีไรนำหน้าคือ tag ปกติ*/
 }
  .footer{
    background: #8c0009;
-   margin-top: 2rem;
+   margin-top: 5rem;
  }
 nav a {
  width: 200px;
@@ -35,6 +36,58 @@ nav a {
  padding: 10px !important;
  border-radius: 5px;
  font-weight: bold !important;
+}
+body g
+{
+  text-align: center;
+  width: auto;
+  color: black !important;
+  display: block;
+  text-decoration: none;
+  font: 50pt Superspace !important;
+  padding: 5px !important;
+  border-radius: 5px;
+  font-weight: bold !important;
+}
+body g1
+{
+  text-align: center;
+  width: auto;
+  color: black !important;
+  display: block;
+  text-decoration: none;
+  font: 20pt Superspace !important;
+  padding: 5px !important;
+  border-radius: 5px;
+  font-weight: bold !important;
+}
+body b
+{
+  text-align: center;
+  width: auto;
+  color: black;
+  display: block;
+  text-decoration: none;
+  font: 30pt RSU Text;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+b.thick {
+    font-weight: bold;
+}
+body b1
+{
+  margin-right: 30px;
+  text-align: right;
+  width: auto;
+  color: black;
+  display: block;
+  text-decoration: none;
+  font: 25pt RSU Text;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 nav a:hover {
@@ -323,151 +376,11 @@ button:hover {
   align-items: center;
   height: 11.2rem;
 }
-/*
+
 .photo {
   border:8px solid #ffffff;
 }
 
-div.img-resize img {
-	height: 480px;
-	width: 663px;
-}
-
-div.img-resize {
-	width: 663px;
-	height: 480px;
-	overflow: hidden;
-	text-align: center;
-}
-div.img1-resize img {
-	height: 200px;
-	width: 319px;
-}
-
-div.img1-resize {
-	width: 319px;
-	height: 200px;
-	overflow: hidden;
-	text-align: center;
-}
-
-div.img2-resize img {
-	height: 200px;
-	width: 330px;
-}
-
-div.img2-resize {
-	width: 330px;
-	height: 200px;
-	overflow: hidden;
-	text-align: center;
-}
-
-h3 {
-  font: 30px Superspace;
-  font-weight: bold;
-}
-
-h5 {
-  font: 20px Superspace;
-  font-weight: bold;
-}
-h4 {
-  font: 10pt Superspace;
-}
-
-p {
-  font: 26px RSU text;
-}
-.card-content0 {
-  height: 515px;
-  padding: 30px;
-}
-.card-content {
-  height: 290px;
-}
-
-.card-content1 {
-  height: 30px;
-  padding: 30px;
-}
-
-
-
-*/
-h2 {
-  color: #ffffff;
-  font: 30px Superspace;
-  font-weight: bold;
-}
-.small .content h3 {
-  font: 20px Superspace;
-  font-weight: bold;
-}
-
-.small .content h5 {
-  font: 14px Superspace;
-  font-weight: bold;
-  margin-top: -15px;
-}
-h4 {
-  font: 10pt Superspace;
-}
-
-.small .content p {
-  font: 24px RSU text;
-}
-.line {
-  height: 2px;
-  background-color: #ffffff;
-  margin-bottom: 20px;
-}
-.big .card {
-  height: 680px;
-  width: 630px;
-}
-.big .card-content{
-  margin: -15px;
-}
-.big .content h3{
-  font: 40px Superspace;
-  font-weight: bold;
-}
-.big .content h5{
-  font: 30px Superspace;
-}
-.big .content p{
-  font: 28px RSU text;
-}
-.small .card {
-  height: 330px;
-  width: 260px;
-  margin-top: 12px;
-}
-.small .card-content{
-  margin: -15px;
-}
-
-.foot .card{
-  height: 210px;
-  width: 250px;
-}
-.foot .content{
-  position: relative;
-  margin-top: 5px;
-  margin-left: 10px;
-}
-.foot .content h5{
-  font: 18px Superspace;
-}
-.image{
-  width: 100%;
-  margin-top: -15px;
-}
-.big .content{
-  margin-top: 20px;
-}
-.foot .image{
-  width: 100%;
-  height: 180px;
+.card .card-image {
+  max-height: 360px;
 }

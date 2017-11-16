@@ -561,3 +561,17 @@ button:hover {
   justify-content: center;
   align-items: center;
 }
+.container{
+  margin-top: 35px;
+}
+hr{
+  width: 1240px;
+}
+g{
+  margin-right: 100px;
+}
+h2{
+  font: 40pt Superspace;
+  font-weight: bold;
+  margin-top: 15px;
+}

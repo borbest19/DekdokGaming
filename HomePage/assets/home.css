@@ -323,7 +323,7 @@ button:hover {
   align-items: center;
   height: 11.2rem;
 }
-
+/*
 .photo {
   border:8px solid #ffffff;
 }
@@ -391,21 +391,70 @@ p {
   height: 30px;
   padding: 30px;
 }
-.card-content2 {
-  height: 30px;
+
+
+
+*/
+h2 {
+  color: #ffffff;
+  font: 30px Superspace;
+  font-weight: bold;
+}
+h3 {
+  font: 30px Superspace;
+  font-weight: bold;
+}
+
+h5 {
+  font: 20px Superspace;
+  font-weight: bold;
+  margin-top: -15px;
+}
+h4 {
+  font: 10pt Superspace;
+}
+
+p {
+  font: 26px RSU text;
 }
 .line {
   height: 2px;
   background-color: #ffffff;
   margin-bottom: 20px;
 }
-
-h2 {
-  color: #ffffff;
-  font: 30px Superspace;
-  font-weight: bold;
+.big .card {
+  height: 680px;
+  width: 630px;
+}
+.big .card-content{
+  margin: -15px;
+}
+.small .card {
+  height: 330px;
+  width: 260px;
+  margin-top: 12px;
+}
+.small .card-content{
+  margin: -15px;
 }
 
-.card {
-  margin-bottom: 15px;
+.foot .card{
+  height: 210px;
+  width: 250px;
+}
+.foot .content{
+  position: relative;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.image{
+  width: 100%;
+  margin-top: -15px;
+}
+.big .content{
+  margin-top: 20px;
+}
+.foot .image{
+  width: 100%;
+  height: 180px;
 }

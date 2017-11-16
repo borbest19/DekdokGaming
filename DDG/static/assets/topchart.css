@@ -1,28 +1,4 @@
-body { /*ไม่มีไรนำหน้าคือ tag ปกติ*/
-	background: #202020;
-	/*font:100% RSU text;*/
-}
 
-.headcontainer { /*จุดคือเรียกใช้ class*/
-	width: 1174px;
-	height: 142px;
-	margin: 0 auto;
-}
-
-.navcontainer {
-	height: 57px;
-	background: #8c000a;
-}
-
-nav a {
-	width: 200px;
-	color: white !important;
-	display: block;
-	text-decoration: none;
-	font: 25pt Superspace !important;
-	border-radius: 5px;
-	font-weight: bold !important; ]
-}
 
 .link1 {
 	text-align: center;

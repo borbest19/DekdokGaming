@@ -2,102 +2,267 @@
 
 {% block stylesheet %}
   <link rel="stylesheet" href="/assets/home.css">
+  <link rel="stylesheet" href="/assets/home.js">
 
 {% endblock %}
 
 {% block content %}
 
-  <body>
 
-    <main>
-      <br>
-      <div class="slideshow-container is-paddingless">
-        <div class="mySlides fade">
-          <div class="numbertext">1 / 3</div>
-          <img src="/assets/images/Home_B1.jpg" style="width:100%">
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <div class="container">
+  <h2>FEATURE</h2>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="/assets/images/B1.jpg" alt="Los Angeles" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Los Angeles</h3>
+          <p>LA is always so much fun!</p>
         </div>
-
-        <div class="mySlides fade">
-          <div class="numbertext">2 / 3</div>
-          <img src="/assets/images/Home_B2.jpg" style="width:100%">
-
-        </div>
-
-        <div class="mySlides fade">
-          <div class="numbertext">3 / 3</div>
-          <img src="/assets/images/Home_B3.jpg" style="width:100%">
-
-        </div>
-
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
-      <br>
 
-      <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
+      <div class="item">
+        <img src="/assets/images/B2.jpg" alt="Chicago" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Chicago</h3>
+          <p>Thank you, Chicago!</p>
+        </div>
       </div>
-      <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
 
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
+      <div class="item">
+        <img src="/assets/images/B3.jpg" alt="New York" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>New York</h3>
+          <p>We love the Big Apple!</p>
+        </div>
+      </div>
 
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
+    </div>
 
-        function showSlides(n) {
-          var i;
-          var slides = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("dot");
-          if (n > slides.length) {
-            slideIndex = 1
-          }
-          if (n < 1) {
-            slideIndex = slides.length
-          }
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-          }
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex - 1].style.display = "block";
-          dots[slideIndex - 1].className += " active";
-        }
-      </script>
-      <img src="/assets/images/NewNews.png">
-      <br><br>
-      <section>
-        <div class="thumbnail">
-          <div class="columns is-maginless">
-            <img class="column thumbnail-item is-paddingless" src="/assets/images/banner.jpg">
-            <img class="column thumbnail-item is-paddingless" src="/assets/images/1.jpg">
-            <img class="column thumbnail-item is-paddingless" src="/assets/images/thumbnail-3.jpg">
-            <img class="column thumbnail-item is-paddingless" src="/assets/images/thumbnail-4.jpg">
+
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div> -->
+
+ <main class="bodyScope">
+      <br>
+    <div class="slideshow-container is-paddingless">
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="/assets/images/B1.jpg" style="width:100%">
+
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="/assets/images/B2.jpg" style="width:100%">
+
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="/assets/images/B3.jpg" style="width:100%">
+
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+  <script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }
+</script>  
+    <body class="bodyScope ">
+      <div style="width: 1100px; margin: 0 auto; overflow: hidden;">
+      <h2 color="white">ข่าวล่าสุด</h2>
+      <div class="line"></div>
+      <div class="columns ">
+        <div class="column is-6">
+          <div class="big">
+            <div class="card">
+              <div class="card-content">
+                <div class="image">
+                  <img src="/assets/images/news1 pic1.jpg" alt="image-1">
+                </div>
+                <div class="content">
+                  <h3 class="title is-spaced is-4">แอบส่องตัวละครจากเกม Battle Carnival ว่าที่เกม FPS สุดมันส์แห่งปี</h3>
+                  <h5 class="category">2 HOUR AGO</h5>
+                  <p>
+                     ถ้าพูดถึงเกม FPS น่าเล่นแห่งปี 2017 คงปฏิเสธไม่ได้ว่าต้องเป็นเกม Battle Carnival (https://bc.exe.in.th) เพราะนอกจากภาพของเกมนี้จะน่าเล่นมากๆ มีโหมดหลายรูปแบบให้เลือกตามถนัด แถมตัวละครของเกมยังเป็นอีกหนึ่งจุดเด่นที่ทำให้เกมนี้เป็นเกมที่มีคนจับตามอง และ มีคนรอเล่นกันอยู่ไม่น้อยเลยทีเดียว นั่นเป็นเพราะตัวละครแต่ละตัวมี Story และ มีความสามารถพิเศษเฉพาะตัว มีความสมจริงทำให้คนที่เล่นรู้สึกอินกับคาแรคเตอร์ของตัวละคร รู้สึกเหมือนได้สวมบทบาทเป็นตัวละครนั้นๆจริงๆ...
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-      <br><br>
-      <img src="/assets/images/Review.png">
-      <br><br>
-      <section>
-        <div class="thumbnail">
-          <div class="columns is-maginless">
-            <img class="column thumbnail-item is-paddingless" src="/assets/images/banner.jpg">
-            <img class="column thumbnail-item is-paddingless" src="/assets/images/1.jpg">
-            <img class="column thumbnail-item is-paddingless" src="/assets/images/thumbnail-3.jpg">
-            <img class="column thumbnail-item is-paddingless" src="/assets/images/thumbnail-4.jpg">
+        <div class="small">
+          <div class="columns is-multiline">
+            <div class="column">
+              <div class="card">
+                <div class="card-content ">
+                  <div class="image">
+                    <img src="/assets/images/news1 pic2.png" alt="image-1" >
+                  </div>
+                  <div class="content">
+                      <h3 class="title is-spaced is-4">นักศึกษาเตรียมลุย! Overwatch Thailand ...</h3>
+                    <h5 class="category">2 DAYS AGO</h5>
+                    <p> เหล่านักศึกษาเตรียมตัวมันกันให้พร้อมกับการ
+  แข่งขัน E-Sports ในระดับมหาวิทยาลัยกับเกม Overwatch ในรายการ Overwatch Thailand...
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <div class="card-content ">
+                  <div class="image">
+                    <img src="/assets/images/news1 pic4.jpg" alt="image-1" >
+                  </div>
+                  <div class="content">
+                      <h3 class="title is-spaced is-4">เผยโฉมอีกหนึ่งตัวร้ายกับบาทหลวงผู้บิด
+                  เบี้ยวในตัวอย่างใหม่ของ The Evil Within 2</h3>
+                    <h5 class="category">4 DAYS AGO</h5>
+                    <p> เหล่านักศึกษาเตรียมตัวมันกันให้พร้อมกับการหลังจากที่ The Evil Within 2 เกมสยองขวัญภาคต่อได้ปล่อยเทรลเลอร์ออกมาเมื่อ...
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="columns is-multiline">
+            <div class="column">
+              <div class="card">
+                <div class="card-content ">
+                  <div class="image">
+                    <img src="/assets/images/news1 pic3.jpg" alt="image-1" >
+                  </div>
+                  <div class="content">
+                      <h3 class="title is-spaced is-4">งานนี้กระเป๋าแฟ้บ เมื่อซีรี่ส์ Assassin's Creed กำลังลดราคาแบบจัดหนักบน Steam!</h3>
+                    <h5 class="category">3 DAYS AGO</h5>
+                    <p> Assassin's Creed ถือเป็นอีกหนึ่งซีรี่ส์ของทาง Ubisoft ที่ได้รับความนิยมมานาน และเพื่อ...
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <div class="card-content ">
+                  <div class="image">
+                    <img src="/assets/images/news1 pic5.jpg" alt="image-1" >
+                  </div>
+                  <div class="content">
+                      <h3 class="title is-spaced is-4">งานนี้มีหลอน! เมื่อพี่แป้ง zbing z. แคสเกม Home Sweet Home</h3>
+                    <h5 class="category">5 DAYS AGO</h5>
+                    <p>ถือว่ามาแรงมากๆ กับเกมสยองขวัญสายเลือดไทยอย่าง Home Sweet Home ที่ในตอนนี้เหล่าแคสเตอร์ชื่อดังต่างก็แคสเกมนี้กันอย่างมากมาย ไม่เว้นพีแป้ง zbing z...
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+      <h2 color="white">รีวิวเกมจากเว็บมาสเตอร์ล่าสุด</h2>
+      <div class="line"></div>
+      <div class="foot">
+        <div class="columns is-multiline">
+          <div class="column">
+            <div class="card">
+              <div class="">
+                <img class="image" src="/assets/images/review1 pic1.jpg" alt="image-1">
+              </div>
+              <div class="content">
+                <h5>7 HOURS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;200 VIEWS</h5>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div>
+                <img class="image" src="/assets/images/review1 pic2.jpg" alt="image-1">
+              </div>
+              <div class="content">
+                <h5>7 HOURS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;500 VIEWS</h5>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div>
+                  <img class="image" src="/assets/images/review1 pic3.jpg" alt="image-1">
+              </div>
+              <div class="content">
+                <h5>7 HOURS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;580 VIEWS</h5>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="">
+                <img class="image" src="/assets/images/review1 pic4.jpg" alt="image-1">
+              </div>
+              <div class="content">
+                <h5>7 HOURS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;690 VIEWS</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
     {% block footer %}{% endblock %}
 

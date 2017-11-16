@@ -1,0 +1,30 @@
+body { /*ไม่มีไรนำหน้าคือ tag ปกติ*/
+ background: #202020;
+ /*font:100% RSU text;*/
+}
+
+
+
+.headcontainer { /*จุดคือเรียกใช้ class*/
+ width: 1174px;
+ height: 142px;
+ margin: 0 auto;
+}
+
+.bodyScope {
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+
+}
+
+.navcontainer {
+ height: 57px;
+ background: #8c0009;
+}
+ .footer{
+   background: #8c0009;
+   margin-top: 5rem;
+ }

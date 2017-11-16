@@ -527,24 +527,7 @@ button:hover {
 .animate {
     animation: zoom 0.6s
 }
-/* The Close Button (x) */
-.close {
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-}
-.close:hover,.close:focus {
-    color: red;
-    cursor: pointer;
-}
 
-/* Add Zoom Animation */
-.animate {
-    animation: zoom 0.6s
-}
 .card-image
 {
   display: flex;

@@ -186,6 +186,8 @@ line {
 .nav1{
 	position: centered;
 }
+<<<<<<< HEAD:ReviewFront/assets/mainhome.css
+=======
 style{
   margin:0px;
   padding:0px;
@@ -465,7 +467,6 @@ button:hover {
 
 .card .card-image {
   max-height: 360px;
-  overflow: hidden;
 }
 .highlight {
   margin-bottom: 0 !important; /*ลบborderออก*/
@@ -945,3 +946,4 @@ h2 {
 	font: 30px Superspace;
 	font-weight: bold;
 }
+>>>>>>> d12855d54b027d899984ffc9b239cc64e9c1592a:ReviewFront/assets/home.css

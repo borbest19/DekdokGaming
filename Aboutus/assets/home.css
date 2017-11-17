@@ -374,7 +374,7 @@ h1 {
  }
 
  .footercontainer {
- 	width: 1174px;
+ 	width: full;
  	height: auto;
  	margin: 0 auto;
  	background-color: #8c0009;
@@ -890,3 +890,4 @@ h1 {
  .animate {
      animation: zoom 0.6s
  }
+ 

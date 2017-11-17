@@ -8,7 +8,57 @@
 	<link rel="icon" href="/DDG/static/assets/images/Berm.ico">
 </head>
 <header>
+	<style>
+	input[type=text] {
+		width: 40px;
+		box-sizing: border-box;
+		border: 2px hidden #8c000a;
+		font-size: 16px;
+		background-image:url(/assets/images/search.png);
+		background-color: #202020;
+		background-repeat: no-repeat;
+		height: 40px;
+		-webkit-transition: width 0.4s ease-in-out;
+		transition: width 0.4s ease-in-out;
+		cursor: pointer;
+	}
 
+	input[type=text]:focus {
+		width: 200px;
+		border: solid;
+		background-color: #505050;
+		background-image: none;
+		cursor: grab;
+	}
+	input:focus{
+	cursor: grab !important;
+	}
+	</style><style>
+	input[type=text] {
+	width: 40px;
+	box-sizing: border-box;
+	border: 2px hidden #8c000a;
+	font-size: 16px;
+	background-image:url(/assets/images/search.png);
+	background-color: #202020;
+	background-repeat: no-repeat;
+	height: 40px;
+	-webkit-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;
+	cursor: pointer;
+	}
+
+	input[type=text]:focus {
+	width: 200px;
+	border: solid;
+	background-color: #505050;
+	background-image: none;
+	cursor: grab;
+	}
+	input:focus{
+	cursor: grab !important;
+	}
+	</style>
   <script>
     function statusChangeCallback(response) {
       console.log('statusChangeCallback');

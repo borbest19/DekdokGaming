@@ -6,10 +6,59 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
     <link rel="stylesheet" href="/assets/home.css">
     <link rel="stylesheet" href="/assets/home.js">
-    <link rel="icon" href="/DDG/static/assets/images/Berm.ico">
   </head>
   <header>
+  	<style>
+  	input[type=text] {
+  		width: 40px;
+  		box-sizing: border-box;
+  		border: 2px hidden #8c000a;
+  		font-size: 16px;
+  		background-image:url(/assets/images/search.png);
+  		background-color: #202020;
+  		background-repeat: no-repeat;
+  		height: 40px;
+  		-webkit-transition: width 0.4s ease-in-out;
+  		transition: width 0.4s ease-in-out;
+  		cursor: pointer;
+  	}
 
+  	input[type=text]:focus {
+  		width: 200px;
+  		border: solid;
+  		background-color: #505050;
+  		background-image: none;
+  		cursor: grab;
+  	}
+  	input:focus{
+  	cursor: grab !important;
+  	}
+  	</style><style>
+  	input[type=text] {
+  	width: 40px;
+  	box-sizing: border-box;
+  	border: 2px hidden #8c000a;
+  	font-size: 16px;
+  	background-image:url(/assets/images/search.png);
+  	background-color: #202020;
+  	background-repeat: no-repeat;
+  	height: 40px;
+  	-webkit-transition: width 0.4s ease-in-out;
+  	transition: width 0.4s ease-in-out;
+  	cursor: pointer;
+  	}
+
+  	input[type=text]:focus {
+  	width: 200px;
+  	border: solid;
+  	background-color: #505050;
+  	background-image: none;
+  	cursor: grab;
+  	}
+  	input:focus{
+  	cursor: grab !important;
+  	}
+  	</style>
     <script>
       function statusChangeCallback(response) {
         console.log('statusChangeCallback');
@@ -557,8 +606,10 @@ function showSlides(n) {
  <div class="container">
      <div class="content has-text-centered has-text-white">
        <p>
-          <img src="/DDG/static/assets/LogoWeb/dekdoklogoblack.png" alt="logo" width="150px" align="center">
-
+          <img src="/DDG/static/assets/LogoWeb/dekdoklogowhite.png" alt="logo" width="145px">
+         <strong>DEKDOK</strong> by <a href="#">DEKDOK GAMING</a>. The source code is licensed
+         <a href="#">DEKDOK 2017</a>. The website content
+         is licensed <a href="#"> dekdok.com</a>.
        </p>
      </div>
    </div>

@@ -6,115 +6,136 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
     <link rel="stylesheet" href="/True Power 2/assets/home.css">
     <link rel="stylesheet" href="/True Power 2/assets/home.js">
-    <link rel="icon" href="/True Power 2/assets/images/Berm.ico">
+    <link rel="icon" href="/DDG/static/assets/images/Berm.ico">
   </head>
-  <body>
-    <header>
-       <script>
+  <header>
 
-  function statusChangeCallback(response) {
-    console.log('statusChangeCallback');
-    console.log(response);
-    if (response.status === 'connected') {
-      testAPI();
-    } else {
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into this app.';
-    }
-  }
-  function checkLoginState() {
-    FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
-    });
-  }
-  window.fbAsyncInit = function() {
-  FB.init({
-    appId      : '1490167914363614',
-    cookie     : true,
-    xfbml      : true,
-    version    : 'v2.8'
-  });
-  FB.Event.subscribe('auth.login', function() {
-  window.location.reload();
-});
-  FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-  });
-  };
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-  function testAPI() {
-    console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', function(response) {
-      console.log('Successful login for: ' + response.name);
-      document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
-    });
-  }
-</script>
-<div class="column is-multiline">
-  <div class="headcontainer">
-      <!--ถ้าใช้ id จะอ้าง java script ได้-->
-             <br>
-              <img  src="/True Power 2/assets/images/logo.png" alt="" width="145" height="auto"> <!--แทรกรูป กำหนดขนาด-->
-                <a onclick="document.getElementById('modal-wrapper').style.display='block'"  >
-                    <img align="right" src="/True Power 2/assets/images/log-in.png" alt="" width="100px">
-               </a>
-  </div>
-</div>
-  <div id="modal-wrapper" class="modal">
+    <script>
+      function statusChangeCallback(response) {
+        console.log('statusChangeCallback');
+        console.log(response);
+        if (response.status === 'connected') {
+          testAPI();
+        } else {
+          document.getElementById('status').innerHTML = 'Please log ' +
+            'into this app.';
+        }
+      }
 
-      <form class="modal-content animate">
+      function checkLoginState() {
+        FB.getLoginStatus(function(response) {
+          statusChangeCallback(response);
+        });
+      }
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId: '1490167914363614',
+          cookie: true,
+          xfbml: true,
+          version: 'v2.8'
+        });
+        FB.Event.subscribe('auth.login', function() {
+          window.location.reload();
+        });
+        FB.getLoginStatus(function(response) {
+          statusChangeCallback(response);
+        });
+      };
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
+      function testAPI() {
+        console.log('Welcome!  Fetching your information.... ');
+        FB.api('/me', function(response) {
+          console.log('Successful login for: ' + response.name);
+          document.getElementById('status').innerHTML =
+            'Thanks for logging in, ' + response.name + '!';
+        });
+      }
+    </script>
+    <div class="column is-multiline">
+      <div class="headcontainer">
+        <!--ถ้าใช้ id จะอ้าง java script ได้-->
+        <br>
+        <div class="head">
+          <div class="columns is-multiline">
+            <div class="column is-4" align="right" style="margin-top:-50px">
+              <a ahref="/index.html">
+              <img  src="/DDG/static/assets/LogoWeb/dekdoklogowhite.png" alt="" width="270" height="auto">
+              </a>
+              <!--แทรกรูป กำหนดขนาด-->
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <div class="column is-5" align="right">
+  <br>
+    <input type="text" name="search" placeholder="       Search..">
+              </div>
+    <div class="column is-2" align="left" >
+      <br><br>
+      <a onclick="document.getElementById('modal-wrapper').style.display='block'">
+      <img src="/DDG/static/assets/images/log-in.png" alt="" width="100px"></a>
+
+
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div id="modal-wrapper" class="modal">
+
+      <form class="modal-content animate" action="#">
         <!-- #หน้าหลังล็อกอิน-->
 
-          <div class="imgcontainer">
-              <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
-              <img src="/True Power 2/assets/images/logo.png" alt="Avatar" class="avatar">
-          </div>
-                <div class="has-text-centered">
-                  <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div>
-                          <div id="status"></div>
-                    <h3>——————————  หรือ  ——————————</h3>
-                    <h1 style="text-align:center">เข้าสู่ระบบ</h1>
-                          <input type="text" placeholder="อีเมล์" name="username">
-                          <input type="password" placeholder="รหัสผ่าน" name="password">
-                          <br></br>
-                          <button type="submit">เข้าสู่ระบบ</button><br>
-                          <input type="checkbox" style="margin:26px 30px;"> จดจำฉัน</input>
-                          <a class="has-text-centered" href="#" style="text-align:center;">ลืมรหัสผ่าน?</a>
-                          <br><button class="regis" type="submit">สมัครเลย</button>
-              </div>
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
+          <img src="/DDG/static/assets/LogoWeb/dekdoklogoblack.png" alt="Avatar" class="avatar">
+          <h1 style="text-align:center">เข้าสู่ระบบ</h1>
+        </div>
+        <div class="has-text-centered">
+          <h3>——————————  หรือ  ——————————</h3>
+          <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div>
+          <div id="status"></div>
+          <input type="text" placeholder="อีเมล์" name="uname">
+          <input type="password" placeholder="รหัสผ่าน" name="psw">
+          <br></br>
+          <button type="submit">เข้าสู่ระบบ</button><br>
+          <input type="checkbox" style="margin:26px 30px;"> จดจำฉัน</input>
+          <a class="has-text-centered" href="#" style="text-align:center;">ลืมรหัสผ่าน?</a>
+          <br><button class="regis" type="submit">สมัครเลย</button>
+        </div>
       </form>
 
-  </div>
+    </div>
 
-<script>
-// If user clicks anywhere outside of the modal, Modal will close
-var modal = document.getElementById('modal-wrapper');
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
+    <script>
+      // If user clicks anywhere outside of the modal, Modal will close
+      var modal = document.getElementById('modal-wrapper');
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
 
-                      <div class="navcontainer">
-                          <div class="nav-center">
-                               <nav class="navbar-tabs">
-                                    <a href="#" class="nav-item">หน้าแรก</a>
-                                    <a href="#" class="nav-item">ข่าว</a>
-                                    <a href="#" class="nav-item">รีวิวเกม</a>
-                                    <a href="#" class="nav-item">เกมยอดนิยม</a>
-                                    <a href="#" class="nav-item">เกี่ยวกับเรา</a>
-                               </nav>
-                          </div>
-                       </div>
- </header>
+    <div class="navcontainer">
+      <div class="nav-center">
+        <nav class="navbar-tabs">
+          <a href="/index.html" class="nav-item">หน้าแรก</a>
+          <a href="/DEKDOK/index.html" class="nav-item">ข่าว</a>
+          <a href="/ReviewFront/index.html" class="nav-item">รีวิวเกม</a>
+          <a href="/topchart/index.html" class="nav-item">เกมยอดนิยม</a>
+          <a href="/Aboutus/index.html" class="nav-item">เกี่ยวกับเรา</a>
+        </nav>
+      </div>
+    </div>
+  </header>
   <main>
     <br><br>
     <div class="bodycontainer">
@@ -184,17 +205,15 @@ window.onclick = function(event) {
     </div>
 
    </main>
-      <footer class="footer" background-color="#8c0009">
- <div class="container">
-     <div class="content has-text-centered has-text-white">
-       <p>
-          <img src="/True Power 2/assets/images/logo.png" alt="logo" width="145px">
-         <strong>DEKDOK</strong> by <a href="#">DEKDOK GAMING</a>. The source code is licensed
-         <a href="#">DEKDOK 2017</a>. The website content
-         is licensed <a href="#"> dekdok.com</a>.
-       </p>
-     </div>
-   </div>
-    </footer>
+   <footer class="footer" background-color="#8c0009">
+<div class="container">
+  <div class="content has-text-centered has-text-white">
+    <p>
+       <img src="/DDG/static/assets/LogoWeb/dekdoklogoblack.png" alt="logo" width="150px" align="center">
+
+    </p>
+  </div>
+</div>
+ </footer>
   </body>
 </html>

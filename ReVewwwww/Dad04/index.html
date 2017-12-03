@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Dek-Dok Gaming</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
+    <link rel="stylesheet" href="\ReVewwwww\assets\home.css">
+    <link rel="icon" href="/DDG/static/assets/images/Berm.ico">
+  </head>
+  <header>
+
+    <script>
+      function statusChangeCallback(response) {
+        console.log('statusChangeCallback');
+        console.log(response);
+        if (response.status === 'connected') {
+          testAPI();
+        } else {
+          document.getElementById('status').innerHTML = 'Please log ' +
+            'into this app.';
+        }
+      }
+
+      function checkLoginState() {
+        FB.getLoginStatus(function(response) {
+          statusChangeCallback(response);
+        });
+      }
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId: '1490167914363614',
+          cookie: true,
+          xfbml: true,
+          version: 'v2.8'
+        });
+        FB.Event.subscribe('auth.login', function() {
+          window.location.reload();
+        });
+        FB.getLoginStatus(function(response) {
+          statusChangeCallback(response);
+        });
+      };
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
+      function testAPI() {
+        console.log('Welcome!  Fetching your information.... ');
+        FB.api('/me', function(response) {
+          console.log('Successful login for: ' + response.name);
+          document.getElementById('status').innerHTML =
+            'Thanks for logging in, ' + response.name + '!';
+        });
+      }
+    </script>
+    <div class="column is-multiline">
+      <div class="headcontainer">
+        <!--ถ้าใช้ id จะอ้าง java script ได้-->
+        <br>
+        <div class="head">
+          <div class="columns is-multiline">
+            <div class="column is-4" align="right" style="margin-top:-50px">
+              <a ahref="/index.html">
+              <img  src="/DDG/static/assets/LogoWeb/dekdoklogowhite.png" alt="" width="270" height="auto">
+              </a>
+              <!--แทรกรูป กำหนดขนาด-->
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <div class="column is-5" align="right">
+  <br>
+    <input type="text" name="search" placeholder="       Search..">
+              </div>
+    <div class="column is-2" align="left" >
+      <br><br>
+      <a onclick="document.getElementById('modal-wrapper').style.display='block'">
+      <img src="/DDG/static/assets/images/log-in.png" alt="" width="100px"></a>
+
+
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div id="modal-wrapper" class="modal">
+
+      <form class="modal-content animate" action="#">
+        <!-- #หน้าหลังล็อกอิน-->
+
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
+          <img src="/DDG/static/assets/LogoWeb/dekdoklogoblack.png" alt="Avatar" class="avatar">
+          <h1 style="text-align:center">เข้าสู่ระบบ</h1>
+        </div>
+        <div class="has-text-centered">
+          <h3>——————————  หรือ  ——————————</h3>
+          <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div>
+          <div id="status"></div>
+          <input type="text" placeholder="อีเมล์" name="uname">
+          <input type="password" placeholder="รหัสผ่าน" name="psw">
+          <br></br>
+          <button type="submit">เข้าสู่ระบบ</button><br>
+          <input type="checkbox" style="margin:26px 30px;"> จดจำฉัน</input>
+          <a class="has-text-centered" href="#" style="text-align:center;">ลืมรหัสผ่าน?</a>
+          <br><button class="regis" type="submit">สมัครเลย</button>
+        </div>
+      </form>
+
+    </div>
+
+    <script>
+      // If user clicks anywhere outside of the modal, Modal will close
+      var modal = document.getElementById('modal-wrapper');
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+
+    <div class="navcontainer">
+      <div class="nav-center">
+        <nav class="navbar-tabs">
+          <a href="/index.html" class="nav-item">หน้าแรก</a>
+          <a href="/DEKDOK/index.html" class="nav-item">ข่าว</a>
+          <a href="/ReviewFront/index.html" class="nav-item">รีวิวเกม</a>
+          <a href="/topchart/index.html" class="nav-item">เกมยอดนิยม</a>
+          <a href="/Aboutus/index.html" class="nav-item">เกี่ยวกับเรา</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <br><br>
+    <div class="bodycontainer">
+      <div class="content has-text-centered has-text-black">
+          <br></br>
+          <g class="content has-text-left">รีวิว Mobile Suit Gundam: Extreme Vs</g>
+          <img src="\ReVewwwww\assets\images\Line.png" height="3px" width="1230px" >
+          <b class="content has-text-left">เมื่อ 9000+ ชม. ที่แล้ว</b>
+          <img src="\ReVewwwww\assets\images\gundamkitscollectionSS001.jpg" height="auto" width="900px">
+          </br>
+          <b class="content has-text-left"></br>
+            <g1 class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;Mobile Suit Gundam: Extreme Vs</g1>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เครื่อง : PS3
+</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ประเภท : ต่อสู้ / มุมมองบุคคที่3 / ยกพวกตีกัน / เกมส์การ์ตูน
+</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;วันวางจำหน่าย : 30/01/2014
+</br>
+</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เกมส์กันดั้มสำหรับ PS3 ที่พอทมาจากเครื่องเกมส์ตู้ ที่เน้นการเล่นไปที่การสู้กันแบบเกมส์ Fighting ในมุมมองแบบ  TPS ที่อัดแนนด้วยโมบิลสูทที่ครบที่สุดเกือบทุกรุ่น ที่แต่ละรุ่นจะมีลักษณะการโจมตีที่แตกต่างกันไป สามารถเล่นสู้กันกับเพื่อนที่บ้านโดยใช้จอย P2 ได้ หรือจะออนไลน์แบ่งทีมสู้กับคนทั่วโลกก็ยังไหว
+</br>
+</br>
+<div class="content has-text-centered">
+<img src="\ReVewwwww\assets\images\mobile-suit-gundam-extreme-vs-force-uscira-luglio-in-europa-v2-263598-1.jpg" height="auto" width="900px">
+</div>
+          <g class="content has-text-left">Gameplay</g>
+          <b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การเล่นจะเป็นการแบ่งทีมต่อสู้ 2 ต่อ 2 โดยแต่ละทีมจะมี Cost รวมเริ่มต้นที่ 6000 แต้ม ถ้าแต้มของฝั่งไหนหมดก่อนก็แพ้ไป ถ้าเราเลือกหุ่นที่มีค่า Cost สูง เวลาตายก็จะเสีย Cost ของทีมเท่ากับจำนวน Cost ของหุ่นที่เราเลือกใช้ เวลาเลือกใช้หุ่นตัวเก่งๆก็ต้องเล่นให้เก่งสมกับหุ่นถ้าตายไวก็เท่ากับแจกแต้มให้ทีมต้องแพ้เร็วขึ้นเท่านั้น และภาคนี้ที่พอทลง PS3 ก็ได้เพิ่มโหมด Multiplayer เข้ามาทำให้สร้างห้องที่สามารถเล่นด้วยกันได้ถึง 12 คนเลยทีเดียว งานนี้ฝีมือเฉพาะตัวคงไม่สำคัญเท่าทีมเวิคและการเลือกใช้หุ่นให้เหมาะกับแผนการรบด้วย ตัวละครและโมบิลสูทมีให้เลือกใช้เยอะมาก ซึ่งแต่ละตัวจะใช้ Cost ต่างกัน
+ยิ่งใช้ตัวที่ Cost เยอะเวลา ตายขึ้นมาทีมก็เสียเปรียบ<br>
+<div class="content has-text-centered">
+<img src="\ReVewwwww\assets\images\gundamexfullb01_thumb.jpg" height="auto" width="900px">
+</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;แถบด้านบนคือ Cost ของฝั่งเราและฝั่งศัตรู Cost ของใครหมดก่อนก็แพ้ไป
+ตัวเลขใหญ่ๆนั่นคือพลังชีวิตของเรา หมดเมื่อไรทีมก็เสียง Cost ทันที
+อัดกันด้วยการโจมตีระยะประชิด หรือยิงระยะไกล เลือกใช้ตามความสามารถของโมบิลสูทรุ่นนั้น
+พุ่งเข้าไปแบบไม่ดูตาม้าตาเรือ อาจโดนส่องระยะไกลได้ ต้องกะจังหวะหลบให้ทัน</b>
+<div class="content has-text-centered">
+<img src="\ReVewwwww\assets\images\mbsgvdex05.jpg" height="auto" width="900px">
+</div>
+          <g class="content has-text-left">Arcade</g>
+          <b class="content has-text-left">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เป็นการเล่นแบบตามเนื้อเรื่องของเกมส์โดยจะให้เลือกหุ่นที่เราจะบังคับ กับเลือกเส้นทางเพื่อดำเนินเรื่องไปจบจบ
+โดยสามารถเล่นคนเดียว หรือเล่นกับจอย P2 หรือออนไลน์กับเพื่อนก็ได้</b>
+<div class="content has-text-centered">
+          <img src="\ReVewwwww\assets\images\Extreme-Vs-Full-Boost-Menu-02.jpg" height="auto" width="900px"></div>
+          <g class="content has-text-left">Free Battle</g>
+          <b class="content has-text-left">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หน้าแรก Free Battle จะให้เลือกตัวผู้เล่นกับหุ่นที่จะบังคับ
+<div class="content has-text-centered">
+<img src="\ReVewwwww\assets\images\Extreme-Vs-Full-Boost-Menu-06.jpg" height="auto" width="900px">
+</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;พอเลือกตัวได้แล้วก็มาตั้งค่าห้องที่จะเล่น</b>
+<div class="content has-text-centered">
+          <img src="\ReVewwwww\assets\images\Extreme-Vs-Full-Boost-Menu-07.jpg" height="auto" width="900px"></div>
+          <g class="content has-text-left">Ranked Match</g>
+          <b class="content has-text-left">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;โหมดนี้เป็นการเลือกสู้กับผู้เล่นออนไลน์คนอื่นเพื่อเป็นการจัดอันดับของผู้เล่น ใครจะเทพสุดวัดจากตรงนี้</b>
+          <div class="content has-text-centered"><img src="\ReVewwwww\assets\images\Extreme-Vs-Full-Boost-Menu-08.jpg" height="auto" width="900px"></div>
+          <g class="content has-text-left">Player Match</g>
+          <b class="content has-text-left">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เป็นโหมดสำหรับผู้ที่เล่นที่ชำนาญในระดับหนึ่งแล้ว สามารถเข้ามาตั้งห้องเล่น เพื่อสู้กับคนที่ต้องการได้
+ให้อารมณ์เหมือนเกมส์ออนไลน์จากคอม ที่ตั้งห้อง PVP หรือกิลวอ กันนั่นแหละ</b>
+          <div class="content has-text-centered"><img src="\ReVewwwww\assets\images\Extreme-Vs-Full-Boost-Menu-09.jpg" height="auto" width="900px"></div>
+          <b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<g1>Berm GAMER Score: 9000+/100</g1>
+            <br></br>
+          <b1>
+            <strong>แหล่งข้อมูลจาก</strong> <A href="http://www.metalbridges.com/mobile-suit-gundam-extreme-vs-%E0%B8%A7%E0%B8%B4%E0%B8%98%E0%B8%B5%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9A%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%B1%E0%B8%9A%E0%B9%80/" style="color:red">Webmaster</A>
+          </b1>
+      </div>
+    </div>
+
+   </main>
+   <footer class="footer" background-color="#8c0009">
+<div class="container">
+  <div class="content has-text-centered has-text-white">
+    <p>
+       <img src="/DDG/static/assets/LogoWeb/dekdoklogoblack.png" alt="logo" width="150px" align="center">
+
+    </p>
+  </div>
+</div>
+ </footer>
+  </body>
+</html>

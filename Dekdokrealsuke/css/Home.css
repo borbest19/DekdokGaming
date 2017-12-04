@@ -1,0 +1,25 @@
+body { /*พื้นหลังเว็ป*/
+	background: #202020;
+}
+/*-------------------------*/ /*  รูปสไลด์  */
+.col-md-8 { /*กรอบรูปสไลด์*/
+	background: #202020;
+	width: 80%;
+}
+
+.col-xs-12{ /*กรอบข้อความ*/
+	background: #ffffff;
+	box-shadow: 20px 10px 20px #171717; /* x y ความฟุ้ง */
+	align-items: flex-end;
+}
+
+.col-sm-4 h2 {
+	font-size:35px;
+}
+
+.col-sm-4 p {
+	font-size:23px;
+}
+
+
+/*-------------------------*/

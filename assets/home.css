@@ -228,6 +228,11 @@ button:hover {
 
 .mySlides {
     display: none;
+    cursor: pointer;
+}
+.mySlides :hover{
+  opacity: 0.7;
+	transition: 0.3s;
 }
 
 /* Next & previous buttons */

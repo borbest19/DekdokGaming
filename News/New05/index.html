@@ -9,7 +9,58 @@
     <link rel="icon" href="/DDG/static/assets/images/Berm.ico">
   </head>
   <header>
+    <style>
+    input[type=search] {
+      width: 40px;
+      box-sizing: border-box;
+      border: 2px hidden #8c000a;
+      font-size: 16px;
+      background-image:url(/assets/images/search.png);
+      background-color: #202020;
+      background-repeat: no-repeat;
+      height: 40px;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
+      cursor: pointer;
+    }
 
+    input[type=search]:focus {
+      width: 200px;
+      border: solid;
+      background-color: #505050;
+      background-image: none;
+      cursor: grab;
+    }
+    input:focus{
+    cursor: grab !important;
+    }
+    </style><style>
+    input[type=search] {
+    width: 40px;
+    box-sizing: border-box;
+    border: 2px hidden #8c000a;
+    font-size: 16px;
+    background-image:url(/assets/images/search.png);
+    background-color: #202020;
+    background-repeat: no-repeat;
+    height: 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    cursor: pointer;
+    margin-top: 28px;
+    }
+
+    input[type=search]:focus {
+    width: 200px;
+    border: solid;
+    background-color: #505050;
+    background-image: none;
+    cursor: grab;
+    }
+    input:focus{
+    cursor: grab !important;
+    }
+    </style>
     <script>
       function statusChangeCallback(response) {
         console.log('statusChangeCallback');
@@ -75,7 +126,7 @@
 
             <div class="column is-5" align="right">
   <br>
-    <input type="text" name="search" placeholder="       Search..">
+    <input type="search" name="search" placeholder="       Search..">
               </div>
     <div class="column is-2" align="left" >
       <br><br>

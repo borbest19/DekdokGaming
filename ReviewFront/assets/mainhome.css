@@ -132,7 +132,7 @@ body b2
 	.pagination .pagination-link
 	{
 		width: 2px !important;
-
+	border-color: #ffffff;
 	}
 	.pagination .is-current
 	{
@@ -142,20 +142,13 @@ body b2
 	.pagination .pagination-link:hover
 	{
 		background: #8C0009;
-
-	}
-	.pagination .pagination-previous
-	{
-		width: 2px !important;
+	border-color: #ffffff;
 	}
 
-.pagination .pagination-next
-{
-	width: 2px !important;
-}
 nav .pagination
 {
 	align-items: center;
+		border-color: #ffffff;
 }
 div.img-resize {
 	width: auto;
@@ -944,4 +937,32 @@ button:hover {
 h2 {
 	font: 30px Superspace;
 	font-weight: bold;
+}
+
+.foot .card{
+  height: 210px;
+  width: 250px;
+}
+.foot .content{
+  position: relative;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+.foot .content h5{
+  font: 18px Superspace;
+}
+.image{
+  width: 100%;
+  margin-top: -15px;
+}
+.big .content{
+  margin-top: 20px;
+}
+.foot .image{
+  width: 100%;
+  height: 180px;
+}
+.footer .container{
+  width: auto;
+  height: 15px;
 }

@@ -466,7 +466,7 @@ button:hover {
 }
 
 .card .card-image {
-  max-height: 360px;
+  max-height: 200px;
   overflow: hidden;
 }
 .highlight {
@@ -843,8 +843,6 @@ button:hover {
   border:8px solid #ffffff;
 }
 
-.card .card-image {
-  max-height: 360px;
 }
 .highlight {
   margin-bottom: 0 !important; /*ลบborderออก*/

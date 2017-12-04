@@ -1,7 +1,7 @@
 body { /*ไม่มีไรนำหน้าคือ tag ปกติ*/
  background: #202020;
 
-     background-image:url(bg.png);
+     background-image:url("bg.png");
 
  /*font:100% RSU text;*/
 }

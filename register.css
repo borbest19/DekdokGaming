@@ -1,0 +1,12 @@
+body { /*ไม่มีไรนำหน้าคือ tag ปกติ*/
+ background: #202020;
+ /*font:100% RSU text;*/
+}
+.content p{
+  font: 25px Superspace;
+}
+.regis {
+  height: auto;
+  width: 200px;
+  font: 25px Superspace;
+}

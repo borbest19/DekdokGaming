@@ -397,7 +397,7 @@ p {
 
 
 */
-h2 {
+.bodyScope h2 {
   color: #ffffff;
   font: 30px Superspace;
   font-weight: bold;

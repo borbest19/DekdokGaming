@@ -1,5 +1,8 @@
 body { /*ไม่มีไรนำหน้าคือ tag ปกติ*/
  background: #202020;
+
+     background-image:url(bg.png);
+
  /*font:100% RSU text;*/
 }
 
@@ -476,4 +479,9 @@ h4 {
 .footer .container{
   width: auto;
   height: 15px;
+}
+
+.card:hover{
+	opacity: .5;
+	transition: 0.2s;
 }

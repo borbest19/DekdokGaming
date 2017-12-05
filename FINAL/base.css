@@ -706,3 +706,18 @@ section .section {
 	margin-top: -10px;
 	margin-bottom: -20px;
 }
+
+.bodycontainer {
+ width: 1300px;
+ height: auto;
+ margin: 0 auto;
+ padding-left : 30px;
+ padding-right : 30px;
+ padding-bottom: 30px;
+ background : #fff;
+}
+
+.line
+{
+  background: #202020;
+}

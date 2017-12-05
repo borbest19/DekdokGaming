@@ -1,219 +1,116 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Dek-Dok Gaming</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
-    <link rel="stylesheet" href="/True Power 2/assets/home.css">
-    <link rel="stylesheet" href="/True Power 2/assets/home.js">
-    <link rel="icon" href="/DDG/static/assets/images/Berm.ico">
-  </head>
-  <header>
-
-    <script>
-      function statusChangeCallback(response) {
-        console.log('statusChangeCallback');
-        console.log(response);
-        if (response.status === 'connected') {
-          testAPI();
-        } else {
-          document.getElementById('status').innerHTML = 'Please log ' +
-            'into this app.';
-        }
-      }
-
-      function checkLoginState() {
-        FB.getLoginStatus(function(response) {
-          statusChangeCallback(response);
-        });
-      }
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId: '1490167914363614',
-          cookie: true,
-          xfbml: true,
-          version: 'v2.8'
-        });
-        FB.Event.subscribe('auth.login', function() {
-          window.location.reload();
-        });
-        FB.getLoginStatus(function(response) {
-          statusChangeCallback(response);
-        });
-      };
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-
-      function testAPI() {
-        console.log('Welcome!  Fetching your information.... ');
-        FB.api('/me', function(response) {
-          console.log('Successful login for: ' + response.name);
-          document.getElementById('status').innerHTML =
-            'Thanks for logging in, ' + response.name + '!';
-        });
-      }
-    </script>
-    <div class="column is-multiline">
-      <div class="headcontainer">
-        <!--ถ้าใช้ id จะอ้าง java script ได้-->
-        <br>
-        <div class="head">
-          <div class="columns is-multiline">
-            <div class="column is-4" align="right" style="margin-top:-50px">
-              <a ahref="/index.html">
-              <img  src="/DDG/static/assets/LogoWeb/dekdoklogowhite.png" alt="" width="270" height="auto">
-              </a>
-              <!--แทรกรูป กำหนดขนาด-->
-            </div>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-            <div class="column is-5" align="right">
-  <br>
-    <input type="text" name="search" placeholder="       Search..">
-              </div>
-    <div class="column is-2" align="left" >
-      <br><br>
-      <a onclick="document.getElementById('modal-wrapper').style.display='block'">
-      <img src="/DDG/static/assets/images/log-in.png" alt="" width="100px"></a>
-
-
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
-    <div id="modal-wrapper" class="modal">
-
-      <form class="modal-content animate" action="#">
-        <!-- #หน้าหลังล็อกอิน-->
-
-        <div class="imgcontainer">
-          <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
-          <img src="/DDG/static/assets/LogoWeb/dekdoklogoblack.png" alt="Avatar" class="avatar">
-          <h1 style="text-align:center">เข้าสู่ระบบ</h1>
-        </div>
-        <div class="has-text-centered">
-          <h3>——————————  หรือ  ——————————</h3>
-          <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div>
-          <div id="status"></div>
-          <input type="text" placeholder="อีเมล์" name="uname">
-          <input type="password" placeholder="รหัสผ่าน" name="psw">
-          <br></br>
-          <button type="submit">เข้าสู่ระบบ</button><br>
-          <input type="checkbox" style="margin:26px 30px;"> จดจำฉัน</input>
-          <a class="has-text-centered" href="#" style="text-align:center;">ลืมรหัสผ่าน?</a>
-          <br><button class="regis" type="submit">สมัครเลย</button>
-        </div>
-      </form>
-
-    </div>
-
-    <script>
-      // If user clicks anywhere outside of the modal, Modal will close
-      var modal = document.getElementById('modal-wrapper');
-      window.onclick = function(event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      }
-    </script>
-
-    <div class="navcontainer">
-      <div class="nav-center">
-        <nav class="navbar-tabs">
-          <a href="/index.html" class="nav-item">หน้าแรก</a>
-          <a href="/DEKDOK/index.html" class="nav-item">ข่าว</a>
-          <a href="/ReviewFront/index.html" class="nav-item">รีวิวเกม</a>
-          <a href="/topchart/index.html" class="nav-item">เกมยอดนิยม</a>
-          <a href="/Aboutus/index.html" class="nav-item">เกี่ยวกับเรา</a>
-        </nav>
-      </div>
-    </div>
-  </header>
+<?php include_once 'header.php' ?>
   <main>
     <br><br>
     <div class="bodycontainer">
       <div class="content has-text-centered has-text-black">
           <br></br>
-          <g class="content has-text-left">รีวิว DARK SOUL III</g>
-          <img src="/True Power 2/assets/images/Line.png" height="3px" width="1230px" >
+          <g class="content has-text-left">(รีวิวเกมออฟไลน์) Medal of Honor Warfighter เกียรติยศของทหารกล้าผู้พลีชีพ</g>
+          <img src="ReVewwwww\assets\images\Line.png" height="3px" width="1230px" >
           <b class="content has-text-left">เมื่อ 9000+ ชม. ที่แล้ว</b>
-          <img src="/True Power 2/assets/images/B4.jpg" height="auto" width="900px">
+          <img src="DDG/static/assets/images/mdh1.jpg" height="auto" width="900px">
           </br>
-          <b class="content has-text-left"><strong>DARK SOUL III</strong>
-          </br>ประเภท : Action / Rpg / Openworld
-          </br>  เครื่อง : PS4 / XboxOne / PC
-          </br>  วันวางจำหน่าย : 12 เมษายน 2016
-          </br>  พัฒนาโดย : FROM SOFTWARE
-          </br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DARK SOUL III
-            นี่คือเกมที่ได้ชื่อว่า “ทรมานคนเล่นมากที่สุดของยุค” บทสรุปของเรื่องราวไตรภาค
-            นักรบผู้ไม่ยอมตาย กับวิญญาณที่ยังคงต่อสู้เพื่อเจตจำนงแห่งไฟ กำดาบให้มั่น
-            แล้วผจญภัยในโลกแฟนตาซีสุดมืดมนที่จัดว่า“โคตรยาก”กับเกมภาคต่อที่ชื่อว่า “DARK SOUL III”
-          </b>
-          <g class="content has-text-left">Gameplay</g>
-          <b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ระบบการเล่น “DARK SOUL III” จะยังคงเป็นแนว RPGบนโลกที่แสนโหดร้าย ทุกย่างก้าวต้องใช้สมาธิสูงเพราะศัตรูที่รออยู่ระหว่างทางทุกตัวสามารถฆ่าเราได้ ถ้ากดจังหวะพลาดไปเพียงเสี้ยววินาที อาจจะตายได้ทันทีและ SOULS (EXP) ทั้งหมดที่เก็บมาได้ก็จะตกอยู่ตรงที่ตายนั้น และเราจะไปฟื้นคืนชีพใหม่ที่กองไฟ BONFIRE และออกเดินทางกันใหม่กลับไปเก็บ SOULS ตรงที่เราตายและฝ่าด่านต่อไปจนถึงห้องบอสสุดโหดให้ได้</b>
-          <g class="content has-text-left">ตัวละคร/สายอาชีพ</g>
           <b class="content has-text-left">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ตัวเกมส์สามารถสร้างหน้าตาตัวละครได้อิสระและเลือกสวมใส่เสื้อผ้าอาวุธหลากหลายชนิดได้ตามใจ ซึ่งอุปกรณ์แต่ละอย่างจะมีค่า Status เป็นเงื่อนไขกำหนดไว้ทำให้ความสามารถแตกต่างกันไป แต่ตอนเริ่มเกมส์ก็จะมีสายอาชีพที่เซ็ทค่า Status สำหรับสวมใส่อาวุธแต่ละชนิดไว้ให้เราเลือกเล่นตามความถนัด
-</br></br>
-&nbsp;&nbsp;<strong>Knight</strong> – เน้นพลังป้องกัน (Vit) และสวมชุดเกราะหนัก Lv.9
- </br>
-&nbsp;&nbsp;<strong>Mercenary</strong> – เน้น (Dex) ใช้งานอาวุธ2มือโจมตีต่อเนื่อง Lv.8
- </br>
-&nbsp;&nbsp;<strong>Warrior</strong> - เน้นพลังโจมตี (Str) ใช้งานอาวุธหนักพวกขวาน Lv.7
- </br>
-&nbsp;&nbsp;<strong>Herald</strong> – ความคล่องตัวต่ำ ชดเชยด้วยหอกที่ใช้คู่กับโล่ได้ดี Lv.9
- </br>
-&nbsp;&nbsp;<strong>Thief</strong> – มีค่า (Luck) ที่สูง เน้นความคล่องตัวกับอาวุธระยะประชิด Lv.5
- </br>
-&nbsp;&nbsp;<strong>Assassin</strong> – เน้นความคล่องตัว ใช้อาวุธพวกดาบควบคู่กับสกิล Lv.10
- </br>
-&nbsp;&nbsp;<strong>Sorcerer</strong> – มีค่า (Int) ที่สูง ใช้อาวุธมีดกับเวทย์ที่ไกลและรุนแรง Lv.6
- </br>
-&nbsp;&nbsp;<strong>Pyromancer</strong> – เน้นการต่อสู้ระยะประชิดด้วยขวานเล็กและเวทย์ไฟ Lv.8
- </br>
-&nbsp;&nbsp;<strong>Cleric</strong> - มีค่า (Faith/Luck) ที่สูง อาวุธกระบองระยะประชิดเวทย์ผลัก Lv.7
- </br>
-&nbsp;&nbsp;<strong>Deprived</strong> – ค่าพลังทุกอย่างเท่ากันหมดเริ่มต้นที่ Lv.1</b>
-          <g class="content has-text-left">เทคนิคการเล่น
-</g>
-          <b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ตัวเกมส์ซีรี่นี้ขึ้นชื่อเรื่องความยาก เพราะจังหวะการเคลื่อนไหวทุกอย่างจะอิงกับค่า STAMINA ถ้ากดฟันรัวๆหรือกระโดดหลบรัวๆจนหมดแรง ก็โดนศัตรูเล่นงานได้ง่าย และดาเมจที่ได้รับแต่ละทีก็หนักหน่วงเอาการ เทคนิคการเล่นคือให้อ่านรูปแบบกาารเคลื่อนไหวของศัตรูก่อน และรอจังหวะให้ศัตรูออกท่าโจมตีให้หมดชุดแล้วค่อยเข้าไปตี 2-3 ทีแล้วรีบกระโดดออกมาทิ้งระยะห่าง แล้วหาโอกาสเข้าตีใหม่ จำไว้ อย่าใจร้อน อย่าตีรัว อย่าแลก เน้นหลบ และรักษาระยะ</b>
-          <g class="content has-text-left">CO-OP / เรียกพวกมาช่วย</g>
-          <b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ด้วยความที่เกมนี้มีฉากกว้างมากและจุดตั้งกองไฟ BONFIRE แต่ละจุดก็อยู่ห่างกันมาก การจะผ่านด่านสำหรับผู้เล่นมือใหม่ที่ยังไม่คุ้นกับจังหวะการหลบ ก็ถือว่าเกมนี้อยู่ในระดับที่ยากมากจริงๆ แต่การเล่นออนไลน์หาคนมาช่วยก็ทำให้เกมส์ดูง่ายขึ้นเยอะ บอสโหดๆถ้ามีคนช่วยเป็นตัวล่อ อีกคนคอยทำดาเมจ อีกคนคอยซัพพอท บอสที่ว่ายากก็อาจจะง่ายขึ้นเยอะ ซึ่งวิธีการเล่นออนไลน์หาผู้เล่นมาช่วยสามารถทำได้ 2 แบบ
-        </br>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-<strong>White Sign Soapstone</strong> ใช้เปิดสัญญาณให้ผู้เล่นอื่นดึงเราเข้าไปช่วยสู้ในโลกของเขาได้ เป็นอีกวิธีที่ทำให้เราย้อนกลับไปเก็บเลเวลกับบอสที่ฆ่าไปแล้วได้ด้วย
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ถ้าหากเปรียบตัวเกม C_ll of D_ty เป็นวรรณกรรมสงครามโลกชิ้นเยี่ยมแล้ว ตัวเกม Medal of Honor ของทางฝั่งค่ายเกมขี้งกอย่าง EA ได้ดำเนินแนวทางเกมที่แตกต่าง นั่นก็คือ การนำเสนอเรื่องราวของหน่วยรบ Tier 1 หน่วยรบที่มีอยู่จริง เหตุการณ์จริงๆ นำมาเสนอคนเล่น ซึ่งในภาคแรกก็ประสบความสำเร็จอย่างงดงาม และก็ได้สานต่อมายังภาคสองครับ</br>
 </br>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>Ember</strong> เป็นไอเทมที่ทำให้เรากลับมาในร่างท๊อปฟอร์มไฟลุกอีกครั้ง และยังสามารถดึงพวกที่เปิดสัญญาณวาร์ปไว้ที่พื้น ให้เข้ามาช่วยเราสู้ผ่านด่านในโลกของเราได้ด้วย และยังเป็นการดึงผู้เล่น PK ตัวแดง ที่จ้องจะฆ่าผู้เล่นด้วยกันเองเข้ามาอีกด้วย
-</b>
-<g class="content has-text-left">Game Rank S Score 99/100</g>
-<g1 class="content has-text-left">เกมส์เพลยอดเยี่ยม / ภาพเสียงอลังการ / เนื้อเรื่องเหนือจินตนาการ</g1>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สำหรับภาค 2 นี้จะดำเนินเรื่องต่อจากภาคแรก แต่คนไหนขี้เกียจซื้อภาคแรกหรือยังไม่เคยเล่นภาคแรกมาก่อนก็ไม่ต้องเป็นห่วงว่าจะเล่นไม่รู้เรื่อง เพราะตัวเกมจะสปอยแค่ตัวละครแค่ว่ามาจากภาคแรกเท่านั้น เพราะหลักๆ เนื้อเรื่องในภาคนี้ก็คืออยู่เป็นเงาของประวัติศาสตร์ในการล่ากบาลผู้ก่อการร้ายเพื่อรักษาความมั่นคงของประเทศแม่ตนเอง
 </br>
-<b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;นี่คือเกมส์ที่ต้องใช้ฝีมือให้การเล่นอย่างแท้จริง ที่ต้องอาศัยทั้งทักษะการบังคับ และการตัดสินใจที่เฉียบคม สมาธิต้องมีตลอดเวลา นี่ไม่ใช่เกมส์แอคชั่นลุยแหลกกดปุ่มรัวๆกระหน่ำคอมโบฆ่าศัตรูที่อยู่ตรงหน้าครั้งละหลายสิบตัวอย่างง่ายดาย รูปแบบการเล่นแบบนั้นไม่สามารถใช้ได้กับ Dark Soul เพราะศัตรูที่อยู่ตรงหน้าทุกตัวล้วนอันตรายหมด การอ่านระยะโจมตี และจดจำรูปแบบการออกท่าของศัตรูเป็นเรื่องสำคัญมาก การหลบถือเป็นสิ่งสำคัญมากกว่าการเข้าตี บอสใหญ่จอมโหดทุกตัวมีพลังชีวิตที่เยอะมากกก การจะล้มมันได้ต้องอาศัยความอดทน ตอดเล็กตอดน้อย คอยหลบให้ดี เพราะเมื่อพลาดเพียงเสี้ยววินาทีอาจหมายถึงความตายได้เลย</b>
+</br>
+<div class="has-text-centered"><img src="ReVewwwww\assets\images\2.jpg" height="auto" width="900px"></div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ตัวเกมนั้นในภาคนี้ได้ปรับปรุงระบบเกมเพลออกมาเยอะมากๆ เพราะเนื่องจากภาคแรกมีภารกิจที่ทั้งน่าเบื่อและสนุกสนานสลับกันไป (ตามเนื้อหาจริงๆ ที่หน่วยปฏิบัติการ Tier 1 Operators ไปเจอมา) ในภาคนี้เหมือนได้มีการตัดต่อโดยการเลือกเฉพาะเหตุการณ์เด็ดๆ น่าตื่นเต้นมายัดในเกมต่อเนื่อง และแน่นอนว่ามีการใส่สีตีไข่หยอดซีอิ๋วเพิ่มเข้าไปให้มันออกดูเว่อร์นิดๆ แต่ก็ทำให้ตัวเกมเล่นได้สนุกขึ้น เรียกได้ว่าทางทีมพัฒนาได้ยอมรับความคิดเห็นของทั้งสื่อและแฟนๆ เกมมาพัฒนาในเกมภาคสอง
+</br>
+</br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ตลอดเวลาทั้งหมด 8 – 12 ชั่วโมง (แล้วแต่ฝีมือคนเล่น) ตัวเกมจะนำพาคนเล่นไปพบกับภารกิจที่หลากหลายกว่าในภาคแรก ไม่ว่าทั้งการบุกทลายรังของผู้ก่อการร้าย , บุกช่วยเหลือตัวประกัน , ขับรถไล่ล่ากลางเมือง (อารมณ์ความรู้สึกยังกับ Need for Speed The Run) ในภาคนี้ภารกิจลอบเร้นนั้นมีให้เล่นน้อยกว่าภาคแรกมาก ประสบการเล่นทั้งหมด 8 – 12 ชั่วโมงคุณจะได้สัมผัสกับอารมณ์การเล่นที่ดุเดือดทั้งเกม
+</br>
+</br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ในภาคนี้ได้ใช้แองจิ้นที่ EA งกมากไม่ยอมปล่อยไม่ยอมขายอย่าง Frostbite 2 ดังนั้นหมายความว่าคนเล่นจะได้พบกับสิ่งปลูกสร้างแสนอลังการ ฉากระเบิดตู้มตามระดับกระท่อมเผายันตึกถล่ม ฝุ่นควันปลิวกระจายแต่ไม่ทะลุจอ และอีกหนึ่งความพิเศษของ Frostbite 2 ก็คือ การรังสรรค์ภาพตัวละครในเกมให้ออกมาเหมือนคนจริงมากๆ
+</br>
+</br>
+<div class="has-text-centered"><img src="ReVewwwww\assets\images\4.jpg" height="auto" width="900px"></div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;แต่ทั้งนี้ก็ไม่รู้ว่าคนพัฒนา Frostbite 2 นั้นสีม่วงรึเปล่า เพราะเท่าที่สังเกตมาตั้งแต่ Need for Speed The Run ซึ่งเป็นเกมตัวแรกที่ได้สร้างตัวละครหญิงขึ้นมา ปรากฎตัวละครหญิงในเกมนี้ไม่ให้ความรู้สึกว่าสวยสักนิด (ถึงจะดูเหมือนคนจริงๆ ก็เหอะ) แต่กลับกัน ตัวละครชายทั้งหลายทั้งหล่อ ทั้งลํ่าเสียจนเก้งกวางทั้งหลายเป็นแล้วอยากจับขย่ม ไหนๆ มีตัวละครหญิงโผล่มาในเกมทั้งที ก็แอบสงสัยอยู่ว่าทำให้ออกมาดูสวยสักหน่อยไม่ได้รึยังไง
+</br>
+</br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เกมเพลกับแองจิ้น Frostbite 2 นั้นเหมือนทีมพัฒนาได้ใช้ต้นฉบับมาจาก Battlefield 3 มาทั้งหมด ไล่ตั้งแต่แอนิเมชั่นเคลื่อนไหวตัวละคร , การหมอบคลาน ไปจนถึงฉากตัวละครตาย จนแอบคิดเหมือนกันว่านี่มันคือ Battlefield 3 ในเวอร์ชั่น Medal of Honor รึเปล่า แต่ก็ยังดีที่ตัวเกมได้มีการสร้างโมเดลตัวละคร อาวุธขึ้นมาใหม่โดยไม่มีการอิงกับ Battlefield 3 ที่มีอยู่เดิม
+</br>
+</br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ทำให้ฉากต่างๆ ในเกม Medal of Honor Warfighter นั้นมีการพัฒนาที่สูงกว่า Battlefield 3 ทั้งฉากเรียบเนียนกว่า กินเฟรมเรตน้อยกว่า (คนไหนคอมสเปคน้อยและผ่านเกม Battlefield 3 มาก่อนขอแสดงความยินดีด้วย เพราะในเกมนี้เล่นลื่นกว่า 2 เท่า) และสำคัญคือ บั๊กในเกมนั้นแทบไม่มีให้เห็นเหมือน Battlefield 3 ที่หลายครั้งเวลาเล่นแล้วเม้งแตกประจำที่ต้อง Restart เริ่มเล่นใหม่ซึ่งทำให้เสียอารมณ์ไปเปล่าๆ
+</br>
+</br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;แต่ใช่ว่าบั๊กต่างๆ จะไม่มีให้เห็นนะครับ มีให้เห็นประปรายบ้าง ตั้งแต่ตัวละครหักแขนยื่นกระสุนมาให้เราโดยไม่หันหน้า (สยองโว้ย) ตัวละครขาจมดินหรือประตู ไปจนถึงตัวละครแว็บหายตัวมาอยู่ข้างหลังเราเฉยจนคิดเล่นๆ ว่าพี่แกมีสกิลเทเลพอร์ทรึเปล่าทำไมวิ่งตามมาเร็วจัง แต่ในส่วนของบั๊กเกมเพลนั้นต้องบอกว่าไม่มีให้เห็นเลย ยกเว้นบั๊กเสียงหายหรือบั๊กหลุดออกจากเกม ซึ่งตัวเกมได้พัฒนาขึ้นไปอีกขั้น หากเกิด ERROR อะไรสักอย่างที่ทำให้ตัวเกมหลุด ตัวเกมจะรันใหม่และเล่นต่อได้โดยอัตโนมัติ เป็นเกมแรกที่ผมเห็นระบบโปรแกรมการจัดการแบบนี้ ต้องบอกได้เลยว่าสุดยอดมาก!
+</br>
+</br>
+<div class="has-text-centered"><img src="ReVewwwww\assets\images\9.jpg" height="auto" width="900px"></div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;พล่ามเรื่องระบบในเกมเยอะมาดูเกมเพลอีกทีดีกว่าว่ามีอะไรใหม่ๆ บ้าง แม้ว่าตัวเกมเพลในภาคนี้จะดูเหมือนลอกเลียนแบบ C_ll of D_ty มาซะหลายฉาก แต่ก็ได้มีการพัฒนาตัวเกมไม่ให้มีความเหมือนโดยการสร้างความแตกต่างและความเร้าใจเข้าไป เช่นฉากพังประตู มีมินิเกมให้เล่นด้วยว่าถ้าคุณเก็บ HeadShot ได้ก็จะปลดล็อคท่าพังประตูใหม่ๆ , การต่อสู้ระยะประชิด ส่วนที่เหลือมีการเปลี่ยนแปลงยังไงบ้างนั้นไม่ขอสปอย แต่จะบอกว่ามีความแตกต่างจาก C_ll of D_ty จนทำให้ไม่ดูเหมือนเป็นการลอกเลียนแบบมากเกินไป
+</br>
+</br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;แม้ว่าตัวเนื้อเรื่องของเกมจะไม่อลังการระดับโลกเมื่อเทียบกับซีรี่ย์ C_ll of D_ty แต่เนื้อเรื่องในภาคนี้ก็ได้ใช้ในเรื่องของ “ความเสียสละ” ของเหล่าทหารกล้าที่ไม่ได้แม้แต่จะออกข่าวตามหนังสือพิมพ์มาให้พวกเราสัมผัส ซึ่งทำได้ดีกว่าภาคแรกที่ให้เรารู้สึกแบบนี้กันในช่วงหลังของเกม แต่ก็ต้องบอกตรงๆ ว่ายังไม่สามารถให้คนเล่นอินได้เมื่อเทียบกับซีรี่ย์ของ C_ll of D_ty ที่อยู่มายาวนานกว่า แต่ก็ต้องชมเชย Medal of Honor Warfighter เลยว่าคุณมาถูกทางแล้ว
+</br>
+</br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ความกล้าหาญ ความเสียสละ ความสูญเสีย แม้ชีวิตจะหาไม่ แม้จะไม่มีใครรับรู้ชะตากรรม แต่มันคือเกียรติยศที่ทำให้บ้านเมืองของพวกเราอยู่ได้อย่างสงบสุขปลอดภัยจากภัยคุกคาม นี่จะเป็นเกมที่ทำให้คนเล่นได้รับรู้ชะตากรรมของพวกเขา ที่ทำให้พวกเราได้อยู่อย่างปลอดภัยและอยู่สุขสบาย มันคือเกมที่ยกย่องเกียรติของทหารอย่างแท้จริงครับ
+</br>
+</br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ทางด้านระบบเสียงนั้นด้วยแองจิ้นของ Frostbite 2 ได้รังสรรค์เสียงปืนออกมาได้กระหึ่มและสมจริงกว่าภาคแรก คนไหนต่อระบบเสียงแบบโฮมเธียรเตอร์รับรองว่ากระหึ่มลั่นบ้านครับ เสียงพากษ์ตัวละครดูมีความชัดเจนและสื่อถึงอารมณ์ได้มากขึ้น โดยเฉพาะเมื่อคนเล่นได้เริ่มรู้จักตัวละครหลักที่มาจากภาคแรกแล้ว
+</br>
+</br>
+<div class="has-text-centered"><img src="ReVewwwww\assets\images\13.jpg" height="auto" width="900px"></div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;อีกหนึ่งไฮไลท์ของเกมนี้ก็คือระบบ Multiplayer ครับ ในเกมนี้ถอดแบบโหมด Multiplayer จาก Battlefield 3 เอามาไว้เช่นกัน ที่เห็นได้ชัดก็คือระบบรายงานการได้รับรางวัลตอนจบเกมเนี่ยแหละที่เหมือนมาก ในเกมนี้มีโหมดให้เล่นเยอะ ตั้งแต่ Team Death , วิ่งวางระเบิดทั้ง 3 หรือ 5 จุด , โหมดยึดครองพื้นที่ และโหมดชิงธง แล้วแต่เลยว่าจะเลือกเล่นแบบไหน
+</br>
+</br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ในเกม Medal of Honor Warfighter นั้นจะมีความแตกต่างจาก Battlefield 3 ตรงที่ว่าฉากพื้นที่ในการรบนั้นจะเป็นพื้นที่ขนาดเล็ก ไม่ได้เป็นพื้นที่ขนาดใหญ่ ไม่มีพาหนะให้ขับ ดังนั้นการปะทะต่างๆ นั้นจะรวดเร็วขึ้นและเน้นจบเกมเร็วๆ มากกว่าคุมเชิงมันทั้งเกม
+</br>
+</br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ตัวเกมนั้นจะเน้นให้คนเล่นเกาะกลุ่มกับทีมตนเองเสียมากกว่า เพราะจะได้รับอภิสิทธิเยอะมาก ตั้งแต่เกิดใกล้ๆ กัน (แถมหากคนในทีมกำลังบู๊อยู่ตัวเกมจะไม่ให้เราเกิด เพื่อป้องกันไม่ให้เราเกิดแล้วกบาลแตก) , จะมองเห็นเงาของศัตรูที่ซ่อนอยู่ และคะแนนโบนัสพิเศษอีกด้วย ทำให้คนเล่นต้องเกาะกลุ่มกันเอาไว้ถึงจะได้เปรียบกว่าฝ่ายตรงข้าม
+</br>
+</br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หน้าตาของ Multiplayer ต้องบอกเลยว่าออกแบบมาได้ค่อนข้างง่ายในการเรียนรู้มากๆ เพียงแค่คนเล่นเข้าไปให้ชาวบ้านเขายิงสัก 2 – 3 ตาก็รู้แล้วว่าคุณต้องเล่นยังไง จะเลือกอาวุธยังไง เลือกคราสยังไง มีการแบ่งหมวดหมู่ออกมาได้ชัดเจนและง่ายต่อการเข้าใจ และสำหรับคนที่ชอบอยู่ตัวเกมยาวๆ ในเกมนั้นจะมีของให้ปลดล็อคเพียบตั้งแต่คราส , อาวุธ , ของแต่งปืน ไปจนถึงเหรียญรางวัลต่างๆ อีกเยอะ
+</br>
+</br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;แต่ก็แน่หละ ข้อเสียของ Multiplayer ก็คือ ระบบคนไหนอยู่ก่อนได้เปรียบ คนไหนเข้ามาใหม่เป็นลูกแกะร้องแบะๆ ให้ชาวบ้านเล็งหัว ตัวเกมไม่มีการแบ่งระดับคนเล่น แต่จับยัดเอามารวมกัน ใครโชคดีเจอคนเล่นระดับเดียวกันก็โอเค แต่ใครเจอคนเล่นที่ยศสูงๆ ก็เตรียมใจกันได้ แต่ข้อดีของระบบ Multiplayer ในเกมนี้ก็คือเข้าเกมได้ไม่ยุ่งยากเมื่อเทียบกับ Battlefield 3 (เข้าเกมแล้วเล่นได้เลยไม่ต้องผ่านหน้าเว็บ)
+</br>
+</br>
+<div class="has-text-centered"><img src="ReVewwwww\assets\images\19.jpg" height="auto" width="900px"></div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;มาถึงช่วงสุดท้ายกับการ “สับ” ตัวเกมว่ามันมีอะไรแย่ๆ บ้าง ถ้าไม่นับพวกบั๊กแปลกๆ พวกเสียงหายอะไรแล้วก็ยังมีให้เห็นบ้าง ตั้งแต่ AI ที่ยังบ้าวิ่งออกมาให้เรายิง (ไม่กลัวตายกันเลยนะพวกเมิงเนี่ย) การเขียนบทเนื้อเรื่องที่ดีขึ้น แต่ก็ยังทำให้คนเล่นไม่รู้จักตัวละครได้ดีพอเท่าไหร่นัก คนไหนไม่เคยเล่นภาคแรกมาก่อนหรืออ่านภาษาอังกฤษไม่ออก คุณจะรู้สึกงงๆ กับความสัมพันธ์ของตัวละครและเนื้อเรื่องมาก ไปจนถึงราคาตัวเกมที่แอบแพ๊งแพงซึ่งก็ไม่รู้ว่าจะมี DLC ออกมาขายเราอีกไหม (ตามสไตล์ความงกของ EA เขาหละนะ)
+</br><div class="has-text-centered"><img src="ReVewwwww\assets\images\20.jpg" height="auto" width="900px"></div>
+</br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;โดยสรุป นี่คือเกม FPS ที่บอกเล่าเรื่องราวของเหล่าทหารกล้าที่นำเรื่องราวที่เกิดขึ้นจริงๆ สถานที่จริง ศัตรูที่มีอยู่จริง พัฒนาได้มากกว่าภาคแรก เนื้อเรื่องแม้ไม่ถึงระดับล้างโลกแต่ก็ตื่นตาตื่นใจจนไม่อยากลุกไปไหน ฉากระเบิดตู้มตามช่วนตื่นเต้นระทึกใจ นี่เป็นอีกหนึ่งเกม ที่สำหรับคอเกมเมอร์ FPS ทั้งหลาย ควรที่จะสัมผัสได้แล้ว ถ้าคุณไม่เคยเริ่มต้นเล่นเกมซีรี่ย์นี้มาก่อน ยังไม่สายที่คุณจะบูชายัญเงินในกระเป๋าคุณ แล้วมาเริ่มต้นเป็นแฟนซีรี่ย์นี้กันครับ</b>
+</br>
+<img src="ReVewwwww\assets\images\8.jpg" height="auto" width="900px">
+          <g1 class="content has-text-left">&nbsp;&nbsp;&nbsp;จุดเด่น</g1>
+          <b class="content has-text-left">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– นำเสนอเรื่องราวที่เกิดขึ้นจริงได้อลังการกว่าภาคแรก</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– เกมเพลเน้นความดุเดือดเร้าใจไม่มีคำว่าน่าเบื่อเมื่อเทียบกับภาคแรก</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– แองจิ้น Frostbite 2 ทำให้เกมนี้สมจริงขึ้น ฉากถล่มทลายสะใจขึ้นมาก</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– เนื้อหาชวนให้คนเล่นอินได้มากกว่าภาคแรก</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– กราฟฟิกเรียบเนียนขึ้น เราคงจะได้เห็นแล้วว่า Battlefield 4 จะมีหน้าตาที่ดีกว่าภาค 3 ยังไงบ้าง</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– Multiplayer ระดับน้องๆ Battlefield 3 แต่เน้นปะทะไวขึ้น เข้าใจง่ายขึ้น</br>
+<g1 class="content has-text-left">&nbsp;&nbsp;&nbsp;ข้อด้อย</g1>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– AI ยังมีโง่ออกมาให้เรายิงเล่นๆ บ้าง</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– ตัวเกมยังให้เราทำความรู้จักกับตัวละครไม่พอ คนไหนอ่านภาษาอังกฤษไม่ออกมีสิทธิแอบงงเล็กน้อย</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– บั๊กแปลกๆ แอบฮา (ขาจมดิน , ขาทะลุประตู หรือตัวละครวาร์ปมาอยู่หลังเรา)</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– ระบบ Multiplayer ที่คนอยู่ก่อนเฮ คนมาทีหลังโดนรุมขยํ้า เหมือนหมาป่ากับกระต่าย</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– ราคาแอบแพงแล้วก็ไม่รู้จะมี DLC มาอีกไหม</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– ไม่มี BOT ไม่มี Lan สำคัญคือ ไม่ซัพพอต Windows XP</br></b>
+          <img src="ReVewwwww\assets\images\17.jpg" height="auto" width="900px">
+        <b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สำหรับร้านเน็ตที่สนใจ สามารถติดต่อทาง Newera ในการซื้อลงร้านได้ ในราคากล่องละ 1,699 บาท จะซื้อแบบ 1 กล่องลง 2 เครื่องหรือซื้อกล่องตามปริมาณเครื่องในร้านก็แล้วแต่ แต่หากต้องการให้ลูกค้าเล่น Multiplayer ด้วยต้องซื้อเรียงเครื่องนะครับ
+ </b>
             <br></br>
           <b1>
-            <strong>แหล่งข้อมูลจาก</strong> <A href="http://www.metalbridges.com/dark-soul-iii/" style="color:red">Web Master</A>
+            <strong>แหล่งข้อมูลจาก</strong> <A href="http://www.g-genius.com/%E0%B8%A3%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%A7%E0%B9%80%E0%B8%81%E0%B8%A1%E0%B8%AD%E0%B8%AD%E0%B8%9F%E0%B9%84%E0%B8%A5%E0%B8%99%E0%B9%8C-medal-of-honor-warfighter-%E0%B9%80%E0%B8%81%E0%B8%B5%E0%B8%A2/" style="color:red">g-genius.com</A>
           </b1>
       </div>
     </div>
 
    </main>
-   <footer class="footer" background-color="#8c0009">
-<div class="container">
-  <div class="content has-text-centered has-text-white">
-    <p>
-       <img src="/DDG/static/assets/LogoWeb/dekdoklogoblack.png" alt="logo" width="150px" align="center">
-
-    </p>
-  </div>
-</div>
- </footer>
-  </body>
-</html>
+<?php include_once 'footer.php' ?>

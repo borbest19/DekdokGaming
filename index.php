@@ -1,12 +1,12 @@
 <?php include_once 'header.php' ?>
   <br>
-  <main class="bodyScope">
+  <main class="bodyScope" >
     <br>
   <div class="slideshow-container is-paddingless">
     <div class="mySlides w3-animate-right">
       <div class="numbertext"></div>
-      <a href="\News\New06\index.php">
-      <img src="DDG/static/assets/images/B1NEW.jpg" style="width:100%">
+      <a href="\News\New06\new6.html">
+      <img src="/DDG/static/assets/images/B1NEW.jpg" style="width:100%">
       <div class="w3-display-bottommiddle w3-container w3-padding-16 w3-black">
          <font face="Superspace" size="5">ครั้งแรกที่เกมซีรีส์ Touhou ได้ขึ้นแพลตฟอร์มสตีม</font>
        </div>
@@ -15,8 +15,8 @@
 
     <div class="mySlides w3-animate-right">
       <div class="numbertext"></div>
-      <a href="\ReVewwwww\Dad03\index.php">
-      <img src="DDG/static/assets/images/B2NEW.jpg" style="width:100%" >
+      <a href="\ReVewwwww\Dad03\index.html">
+      <img src="/DDG/static/assets/images/B2NEW.jpg" style="width:100%" >
 <div class="w3-display-bottommiddle w3-container w3-padding-16 w3-black">
    <font face="Superspace" size="5">[Review] Need for Speed การกลับมาของเกมรถซิ่งข้างถนน</font>
  </div>
@@ -25,8 +25,8 @@
 
     <div class="mySlides w3-animate-right">
       <div class="numbertext"></div>
-      <a href="\ReVewwwww\Dad01\index.php">
-      <img src="DDG/static/assets/images/B3.jpg" style="width:100%">
+      <a href="\ReVewwwww\Dad01\index.html">
+      <img src="/DDG/static/assets/images/B3.jpg" style="width:100%">
       <div class="w3-display-bottommiddle w3-container w3-padding-16 w3-black">
          <font face="Superspace" size="5">[Review] Dark Soul lll ยอดนักรบหัวใจเหล็กกล้า</font>
        </div>
@@ -94,7 +94,7 @@ function carousel() {
     <div class="columns ">
       <div class="column is-6">
         <div class="big">
-          <div class="card"><a href="\News\New01\index.php">
+          <div class="card"><a href="\News\New01\new1.html">
             <div class="card-content">
               <div class="image">
                 <img src="News\assets\images\New01.jpg" alt="image-1">
@@ -112,7 +112,7 @@ function carousel() {
       <div class="small">
         <div class="columns is-multiline">
           <div class="column">
-            <div class="card"><a href="\News\New02\index.php">
+            <div class="card"><a href="\News\New02\new2.html">
               <div class="card-content ">
                 <div class="image">
                   <img src="News\assets\images\New02.jpg" alt="image-1" >
@@ -127,7 +127,7 @@ function carousel() {
             </div>
           </div>
           <div class="column">
-            <div class="card"><a href="\News\New03\index.php">
+            <div class="card"><a href="\News\New03\new3.html">
               <div class="card-content ">
                 <div class="image">
                   <img src="News\assets\images\New03.jpg" alt="image-1" >
@@ -144,7 +144,7 @@ function carousel() {
         </div>
         <div class="columns is-multiline">
           <div class="column">
-            <div class="card"><a href="\News\New04\index.php">
+            <div class="card"><a href="\News\New04\new4.html">
               <div class="card-content ">
                 <div class="image">
                   <img src="News\assets\images\New04.jpg" alt="image-1" >
@@ -159,7 +159,7 @@ function carousel() {
             </div>
           </div>
           <div class="column">
-            <div class="card"><a href="\News\New05\index.php">
+            <div class="card"><a href="\News\New05\new5.html">
               <div class="card-content ">
                 <div class="image">
                   <img src="News\assets\images\New05.jpg" alt="image-1" >
@@ -180,7 +180,7 @@ function carousel() {
     <div class="foot">
       <div class="columns is-multiline">
         <div class="column">
-          <div class="card"><a href="\ReVewwwww\Dad01\index.php">
+          <div class="card"><a href="\ReVewwwww\Dad01\index.html">
             <div>
               <img class="image" src="\ReVewwwww\assets\images\B4.jpg" alt="image-1">
             </div>
@@ -190,7 +190,7 @@ function carousel() {
           </div>
         </div>
         <div class="column">
-          <div class="card"><a href="\ReVewwwww\Dad02\index.php">
+          <div class="card"><a href="\ReVewwwww\Dad02\index.html">
             <div>
               <img class="image" src="\ReVewwwww\assets\images\Hyperdimension_Neptunia_Re_Birth1.jpg" alt="image-1">
             </div>
@@ -200,7 +200,7 @@ function carousel() {
           </div>
         </div>
         <div class="column">
-          <div class="card"><a href="\ReVewwwww\Dad03\index.php">
+          <div class="card"><a href="\ReVewwwww\Dad03\index.html">
             <div>
                 <img class="image" src="\ReVewwwww\assets\images\need-for-speed-2015.jpg" alt="image-1">
             </div>
@@ -210,9 +210,9 @@ function carousel() {
           </div>
         </div>
         <div class="column">
-          <div class="card"><a href="\ReVewwwww\Dad04\index.php">
+          <div class="card"><a href="\ReVewwwww\Dad04\index.html">
             <div class="">
-              <img class="image" src="ReVewwwww/assets/images/marco.jpg" alt="image-1">
+              <img class="image" src="/ReVewwwww/assets/images/marco.jpg" alt="image-1">
             </div>
             <div class="content">
               <h5>7 HOURS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;690 VIEWS</h5>
@@ -228,7 +228,7 @@ function carousel() {
           <div class="card-image">
             <figure class="image is-4by2">
               <div class="img2-resize">
-                <img class="image" src="DDG/static/assets/images/review1 pic1.jpg" alt="image-1">
+                <img class="image" src="/DDG/static/assets/images/review1 pic1.jpg" alt="image-1">
               </div>
             </figure>
           </div>
@@ -243,7 +243,7 @@ function carousel() {
           <div class="card-image">
             <figure class="image is-4by2">
               <div class="img2-resize">
-                <img class="image" src="DDG/static/assets/images/review1 pic2.jpg" alt="image-1">
+                <img class="image" src="/DDG/static/assets/images/review1 pic2.jpg" alt="image-1">
               </div>
             </figure>
           </div>
@@ -258,7 +258,7 @@ function carousel() {
           <div class="card-image">
             <figure class="image is-4by2">
               <div class="img2-resize">
-                <img class="image" src="DDG/static/assets/images/review1 pic3.jpg" alt="image-1">
+                <img class="image" src="/DDG/static/assets/images/review1 pic3.jpg" alt="image-1">
               </div>
             </figure>
           </div>
@@ -273,7 +273,7 @@ function carousel() {
             <div class="card-image">
               <figure class="image is-4by2">
                 <div class="img2-resize">
-                  <img class="image" src="DDG/static/assets/images/review1 pic4.jpg" alt="image-1">
+                  <img class="image" src="/DDG/static/assets/images/review1 pic4.jpg" alt="image-1">
                 </div>
               </figure>
             </div>
@@ -289,7 +289,7 @@ function carousel() {
                     <div class="card-image">
                       <figure class="image is-4by2">
                         <div class="img-resize">
-                          <img class="photo" src="DDG/static/assets/images/news1 pic1.jpg" alt="image-1">
+                          <img class="photo" src="/DDG/static/assets/images/news1 pic1.jpg" alt="image-1">
                         </div>
                       </figure>
                     </div>
@@ -306,7 +306,7 @@ function carousel() {
                       <div class="card-image">
                         <figure class="image is-4by2">
                           <div class="img1-resize">
-                            <img class="photo" src="DDG/static/assets/images/news1 pic2.png" alt="image-1">
+                            <img class="photo" src="/DDG/static/assets/images/news1 pic2.png" alt="image-1">
                           </div>
                         </figure>
                       </div>
@@ -324,7 +324,7 @@ function carousel() {
                       <div class="card-image">
                         <figure class="image is-4by2">
                           <div class="img1-resize">
-                            <img class="photo" src="DDG/static/assets/images/news1 pic4.jpg" alt="image-1">
+                            <img class="photo" src="/DDG/static/assets/images/news1 pic4.jpg" alt="image-1">
                           </div>
                         </figure>
                       </div>
@@ -345,7 +345,7 @@ function carousel() {
                       <div class="card-image">
                         <figure class="image is-4by2">
                           <div class="img1-resize">
-                            <img class="photo" src="DDG/static/assets/images/news1 pic3.jpg" alt="image-1">
+                            <img class="photo" src="/DDG/static/assets/images/news1 pic3.jpg" alt="image-1">
                           </div>
                         </figure>
                       </div>
@@ -363,7 +363,7 @@ function carousel() {
                       <div class="card-image">
                         <figure class="image is-4by2">
                           <div class="img1-resize">
-                            <img class="photo" src="DDG/static/assets/images/news1 pic5.jpg" alt="image-1">
+                            <img class="photo" src="/DDG/static/assets/images/news1 pic5.jpg" alt="image-1">
                           </div>
                         </figure>
                       </div>
@@ -390,7 +390,7 @@ function carousel() {
           <div class="card-image">
             <figure class="image is-4by2">
               <div class="img2-resize">
-                <img class="photo" src="DDG/static/assets/images/review1 pic1.jpg" alt="image-1">
+                <img class="photo" src="/DDG/static/assets/images/review1 pic1.jpg" alt="image-1">
               </div>
             </figure>
           </div>
@@ -405,7 +405,7 @@ function carousel() {
           <div class="card-image">
             <figure class="image is-4by2">
               <div class="img2-resize">
-                <img class="photo" src="DDG/static/assets/images/review1 pic2.jpg" alt="image-1">
+                <img class="photo" src="/DDG/static/assets/images/review1 pic2.jpg" alt="image-1">
               </div>
             </figure>
           </div>
@@ -420,7 +420,7 @@ function carousel() {
           <div class="card-image">
             <figure class="image is-4by2">
               <div class="img2-resize">
-                <img class="photo" src="DDG/static/assets/images/review1 pic3.jpg" alt="image-1">
+                <img class="photo" src="/DDG/static/assets/images/review1 pic3.jpg" alt="image-1">
               </div>
             </figure>
           </div>
@@ -435,7 +435,7 @@ function carousel() {
           <div class="card-image">
             <figure class="image is-4by2">
               <div class="img2-resize">
-                <img class="photo" src="DDG/static/assets/images/review1 pic4.jpg" alt="image-1">
+                <img class="photo" src="/DDG/static/assets/images/review1 pic4.jpg" alt="image-1">
               </div>
             </figure>
           </div>
@@ -446,4 +446,3 @@ function carousel() {
       </a>-->
    </main>
 <?php include_once 'footer.php' ?>
-</body>

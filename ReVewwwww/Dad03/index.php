@@ -1,219 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Dek-Dok Gaming</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
-    <link rel="stylesheet" href="/True Power 2/assets/home.css">
-    <link rel="stylesheet" href="/True Power 2/assets/home.js">
-    <link rel="icon" href="/DDG/static/assets/images/Berm.ico">
-  </head>
-  <header>
-
-    <script>
-      function statusChangeCallback(response) {
-        console.log('statusChangeCallback');
-        console.log(response);
-        if (response.status === 'connected') {
-          testAPI();
-        } else {
-          document.getElementById('status').innerHTML = 'Please log ' +
-            'into this app.';
-        }
-      }
-
-      function checkLoginState() {
-        FB.getLoginStatus(function(response) {
-          statusChangeCallback(response);
-        });
-      }
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId: '1490167914363614',
-          cookie: true,
-          xfbml: true,
-          version: 'v2.8'
-        });
-        FB.Event.subscribe('auth.login', function() {
-          window.location.reload();
-        });
-        FB.getLoginStatus(function(response) {
-          statusChangeCallback(response);
-        });
-      };
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-
-      function testAPI() {
-        console.log('Welcome!  Fetching your information.... ');
-        FB.api('/me', function(response) {
-          console.log('Successful login for: ' + response.name);
-          document.getElementById('status').innerHTML =
-            'Thanks for logging in, ' + response.name + '!';
-        });
-      }
-    </script>
-    <div class="column is-multiline">
-      <div class="headcontainer">
-        <!--ถ้าใช้ id จะอ้าง java script ได้-->
-        <br>
-        <div class="head">
-          <div class="columns is-multiline">
-            <div class="column is-4" align="right" style="margin-top:-50px">
-              <a ahref="/index.html">
-              <img  src="/DDG/static/assets/LogoWeb/dekdoklogowhite.png" alt="" width="270" height="auto">
-              </a>
-              <!--แทรกรูป กำหนดขนาด-->
-            </div>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-            <div class="column is-5" align="right">
-  <br>
-    <input type="text" name="search" placeholder="       Search..">
-              </div>
-    <div class="column is-2" align="left" >
-      <br><br>
-      <a onclick="document.getElementById('modal-wrapper').style.display='block'">
-      <img src="/DDG/static/assets/images/log-in.png" alt="" width="100px"></a>
-
-
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
-    <div id="modal-wrapper" class="modal">
-
-      <form class="modal-content animate" action="#">
-        <!-- #หน้าหลังล็อกอิน-->
-
-        <div class="imgcontainer">
-          <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
-          <img src="/DDG/static/assets/LogoWeb/dekdoklogoblack.png" alt="Avatar" class="avatar">
-          <h1 style="text-align:center">เข้าสู่ระบบ</h1>
-        </div>
-        <div class="has-text-centered">
-          <h3>——————————  หรือ  ——————————</h3>
-          <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div>
-          <div id="status"></div>
-          <input type="text" placeholder="อีเมล์" name="uname">
-          <input type="password" placeholder="รหัสผ่าน" name="psw">
-          <br></br>
-          <button type="submit">เข้าสู่ระบบ</button><br>
-          <input type="checkbox" style="margin:26px 30px;"> จดจำฉัน</input>
-          <a class="has-text-centered" href="#" style="text-align:center;">ลืมรหัสผ่าน?</a>
-          <br><button class="regis" type="submit">สมัครเลย</button>
-        </div>
-      </form>
-
-    </div>
-
-    <script>
-      // If user clicks anywhere outside of the modal, Modal will close
-      var modal = document.getElementById('modal-wrapper');
-      window.onclick = function(event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      }
-    </script>
-
-    <div class="navcontainer">
-      <div class="nav-center">
-        <nav class="navbar-tabs">
-          <a href="/index.html" class="nav-item">หน้าแรก</a>
-          <a href="/DEKDOK/index.html" class="nav-item">ข่าว</a>
-          <a href="/ReviewFront/index.html" class="nav-item">รีวิวเกม</a>
-          <a href="/topchart/index.html" class="nav-item">เกมยอดนิยม</a>
-          <a href="/Aboutus/index.html" class="nav-item">เกี่ยวกับเรา</a>
-        </nav>
-      </div>
-    </div>
-  </header>
+<?php include_once 'header.php' ?>
   <main>
     <br><br>
     <div class="bodycontainer">
       <div class="content has-text-centered has-text-black">
           <br></br>
-          <g class="content has-text-left">รีวิว DARK SOUL III</g>
-          <img src="/True Power 2/assets/images/Line.png" height="3px" width="1230px" >
+          <g class="content has-text-left">[Review] Need for Speed การกลับมาของเกมรถซิ่งข้างถนนมีดีที่ภาพสวยแต่ยังไม่ปลื้มอีกเหมือนเคย</g>
+          <img src="ReVewwwww\assets\images\Line.png" height="3px" width="1230px" >
           <b class="content has-text-left">เมื่อ 9000+ ชม. ที่แล้ว</b>
-          <img src="/True Power 2/assets/images/B4.jpg" height="auto" width="900px">
+          <img src="ReVewwwww\assets\images\need-for-speed-2015.jpg" height="auto" width="900px">
           </br>
-          <b class="content has-text-left"><strong>DARK SOUL III</strong>
-          </br>ประเภท : Action / Rpg / Openworld
-          </br>  เครื่อง : PS4 / XboxOne / PC
-          </br>  วันวางจำหน่าย : 12 เมษายน 2016
-          </br>  พัฒนาโดย : FROM SOFTWARE
-          </br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DARK SOUL III
-            นี่คือเกมที่ได้ชื่อว่า “ทรมานคนเล่นมากที่สุดของยุค” บทสรุปของเรื่องราวไตรภาค
-            นักรบผู้ไม่ยอมตาย กับวิญญาณที่ยังคงต่อสู้เพื่อเจตจำนงแห่งไฟ กำดาบให้มั่น
-            แล้วผจญภัยในโลกแฟนตาซีสุดมืดมนที่จัดว่า“โคตรยาก”กับเกมภาคต่อที่ชื่อว่า “DARK SOUL III”
+          <b class="content has-text-left"></br>
+            <g1 class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;Need for Speed (PlayStation 4 , Xbox One , PC)</g1>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ผู้พัฒนา: Ghost Game
+</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ผู้จัดจำหน่าย: EA
+</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;วันวางจำหน่าย: 3 พฤศจิกายน 2015 (PlayStation 4 , Xbox One) , 15 มีนาคม 2016 (PC)
+</br>
+</br>
+<g1 class="content has-text-left">&nbsp;&nbsp;Minimum Requirements</g1>
+
+&nbsp;&nbsp;&nbsp;&nbsp;OS: 64-bit Windows 7 or later</br>
+&nbsp;&nbsp;&nbsp;&nbsp;Processor: Intel Core i3-4130 or equivalent with four hardware threads</br>
+&nbsp;&nbsp;&nbsp;&nbsp;Memory: 6GB RAM</br>
+&nbsp;&nbsp;&nbsp;&nbsp;Graphics Card: NVIDIA GeForce GTX 750 Ti 2GB, AMD Radeon HD 7850 2GB, or equivalent DX11 compatible GPU with 2GB memory</br>
+&nbsp;&nbsp;&nbsp;&nbsp;Hard Drive: 30 GB free space
+</br>
+</br>
+<g1 class="content has-text-left">&nbsp;&nbsp;Recommend Requirements</g1>
+&nbsp;&nbsp;&nbsp;&nbsp;OS: Windows 7 or later</br>
+&nbsp;&nbsp;&nbsp;&nbsp;Processor: Intel Core i5-4690 or equivalent with four hardware threads</br>
+&nbsp;&nbsp;&nbsp;&nbsp;Memory: 8GB RAM</br>
+&nbsp;&nbsp;&nbsp;&nbsp;Graphics Card: NVIDIA GeForce GTX 970 4GB, AMD Radeon R9 290 4GB, or equivalent DX11 compatible GPU with 4GB memory</br>
+&nbsp;&nbsp;&nbsp;&nbsp;Hard Drive: 30 GB free space
+          </b>
+          <b class="content has-text-left">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ถ้าพูดถึงเกมรถแข่งบน PC ชื่อของ Need for Speed คงจะต้องผุดขึ้นบนหัวหลาย ๆ คนแน่นอนเนื่องจากเกมตระกูลนี้ได้ผลิตออกมาให้เกมเมอร์นักซิ่งได้เล่นกันเป็นระยะเวลานานซึ่งภาคที่โด่งดังแจ้งเกิดก็น่าจะเป็น Underground ทั้ง 2 ภาครวมไปถึง Most Wanted จนต่อมา EA ก็ได้พัฒนาเกมเรื่อยมาแต่ก็พบว่าความนิยมกลับไม่เท่า 3 ภาคดังกล่าวเลยดังนั้น EA จึงได้คิดหาทางนำเกมนี้กลับมาดังเปรี้ยงอีกครั้งในปี 2015 ร่วมกับทีมพัฒนา Ghost Game กับการรีบูทในชื่อเดิมไม่มีอะไรต่อท้ายคือ Need for Speed</br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การมาของ Need for Speed ในภาคล่าสุดนี้ก็จะเป็นการหวนคืนกลับสู่การแข่งรถแบบสตรีทดังเช่นภาค Underground แต่สิ่งที่เพิ่มเติมเข้ามาคือจำนวนรถที่มากมาย กราฟิกใหม่ที่ไฉไลกว่าพร้อมกับฟีเจอร์พิเศษสำหรับชาว PC เช่น เกียร์ธรรมดา , ปลดล็อคเฟรมเรต , รองรับความละเอียด 4K แต่ทว่าสิ่งที่ได้รับเมื่อลองเล่นจริง ๆ ยังรู้สึกไม่ปังเท่าไหร่เหมือนว่ามันมีอะไรที่ขาด ๆ เกิน ๆ ไปเยอะพอสมควร</br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Need for Speed จะให้ผู้เล่นเป็นนักซิ่งคนหนึ่งที่ได้เข้าร่วมแก๊งค์นักซิ่งที่ประกอบไปด้วย Spike , Amy และคนอื่น ๆ อีกเพียบโดยเป้าหมายของเกมนี้คือซิ่งรถกับคู่แข่งเพื่อสร้างค่าชื่อเสียงให้กับตนเองและชาวแก็งค์ให้ได้มากที่สุดพร้อมกับหลบหนีตำรวจที่จะคอยซิวผู้เล่นในระหว่างการแข่งขัน</br>
           </b>
           <g class="content has-text-left">Gameplay</g>
-          <b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ระบบการเล่น “DARK SOUL III” จะยังคงเป็นแนว RPGบนโลกที่แสนโหดร้าย ทุกย่างก้าวต้องใช้สมาธิสูงเพราะศัตรูที่รออยู่ระหว่างทางทุกตัวสามารถฆ่าเราได้ ถ้ากดจังหวะพลาดไปเพียงเสี้ยววินาที อาจจะตายได้ทันทีและ SOULS (EXP) ทั้งหมดที่เก็บมาได้ก็จะตกอยู่ตรงที่ตายนั้น และเราจะไปฟื้นคืนชีพใหม่ที่กองไฟ BONFIRE และออกเดินทางกันใหม่กลับไปเก็บ SOULS ตรงที่เราตายและฝ่าด่านต่อไปจนถึงห้องบอสสุดโหดให้ได้</b>
-          <g class="content has-text-left">ตัวละคร/สายอาชีพ</g>
+          <b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การควบคุมรถในภาคนี้ก็แตกต่างจากภาคที่ผ่าน ๆ มาอยู่บ้างนิดหน่อยการเข้าโค้งโดยใช้ Grip ทำได้ดีเลี้ยวเป็นเลี้ยวซึ่งการเลี้ยวก็จะมีมุมมองเอียงไปกับรถด้วยให้ความรู้สึกเร้าใจ นอกจากนี้ตัวเกมก็จะมีระบบนำทางเป็นลูกศรบนพื้นถนนว่าควรจะเลี้ยวตรงไหนเป็นไกด์ไลน์ให้ด้วยซึ่งก็ทำให้ไม่ต้องกังวลเรื่องการเลี้ยวผิดเส้นทางและการมีระบบนี้เมื่อแข่งขันในบางพื้นที่ก็ไม่จำเป็นต้องใช้เบรคเสียด้วยซ้ำยกเว้นเสียแต่ว่าจะเจอโค้งหักศอก</br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;อีกอย่างที่ไม่น่าอภิรมย์เท่าไหร่กับระบบ Rubberbanding ที่ AI จะชะลอความเร็วให้เมื่อผู้เล่นขับตามหลังหรือถูกทิ้งห่างแต่ในขณะเดียวกันถ้าหากแซง AI ไปไกลเกินไปมันก็จะเร่งความเร็วจ่อท้ายหรือไม่ก็แซงไปเลยไม่ว่าตอนนั้นจะขับด้วยความเร็วสูงแค่ไหนก็ตามเป็นระบบที่ชวนหงุดหงิดเป็นที่สุดและทำให้ตัวเกมเล่นยาก</br>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Event ในเกมก็มีโทรศัพท์จากเพื่อนร่วมแก็งค์มักจะโทรเข้ามาให้ชวนแข่งอยู่ตลอดเวลาฟังดูเหมือนจะเป็นข้อดีแต่มันกลับเป็นข้อเสียอย่างร้ายแรงเพราะความถี่ของเพื่อนร่วมทีมที่โทรมาจัดว่าบ่อยมากและผิดที่ผิดเวลาบางครั้งเราอาจจะวิ่งอยู่แล้วจู่ ๆ ก็มีโทรศัพท์เรียกเข้ามาซะอย่างนั้นแถมไม่ใช่แค่โทรครั้งเดียวซะด้วยถ้าหากใครเคยเล่น GTA 4 แล้วรำคาญเจ้า Roman Bellic ที่กระหน่ำโทรศัพท์หาผู้เล่นแล้วล่ะก็อยู่ห่างจากเกมนี้เลยจะดีกว่า</br>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Part ของการแต่งรถก็เป็นอะไรที่ดีงามตามท้องเรื่องมีให้แต่งรถได้มากขึ้นแทบจะทุกส่วนทั้งภาบนอกหรือภายในก็มีการปรับแต่งเครื่องยนต์การจูนรถเซ็ตเครื่องยนต์ให้เหมาะกับการแข่งขันตรงนี้ก็ถือว่าทำได้ละเอียดดีปานประหนึ่งว่าทีมพัฒนาเก็บกดจากเสียงด่าของแฟน ๆ จากภาคที่ผ่าน ๆ มาว่าไม่ใส่ใจเรื่องการแต่งรถบ้างเลยแต่มาในภาคนี้ก็น่าจะทำให้หายหงุดหงิดได้บ้างล่ะครับ</br>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เมื่อมีแข่งรถก็ต้องมีการตามหลบหนีตำรวจใน Need for Speed การมาของตำรวจก็ไม่ได้ช่วยให้ตื่นเต้นกับการหลบหนีเลยความยาก AI ตำรวจถือว่าไม่ยากเกินไปแต่ก็ไม่ง่ายนักใครแต่งเครื่องมาดี ๆ ก็หาที่หลบลดระดับความร้อนแรงได้สบาย ๆ นอกจากนี้ด้าน Event อื่น ๆ เช่นการทำ Donut หรือจุดถ่ายรูปตามมุมเมืองก็ไม่ค่อยมีประโยชน์เท่าไหร่ครับ</br>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ข้อเสียของ Need for Speed ก็ยังมีให้พูดถึงอีกมากอย่างระบบต่อเน็ตตลอดเวลาก็อาจจะเป็นเรื่องแย่สำหรับคนเน็ตไม่เสถียร มุมมองการขับรถที่ไม่มีมุมมองหลังพวงมาลัย คัทซีนที่กด Skip ไม่ได้รวมไปถึงตัวลูกศรที่เป็นตัวนำทางของเราในบางครั้งมันก็พาเราไปชนกับกำแพงและระบบนี้เหมือนกับเล่นในโหมด Tutorial ตลอดเวลายังไงยังงั้น</b>
+<img src="ReVewwwww\assets\images\B6.jpg" height="auto" width="900px">
+          <g class="content has-text-left">Graphic</g>
           <b class="content has-text-left">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ตัวเกมส์สามารถสร้างหน้าตาตัวละครได้อิสระและเลือกสวมใส่เสื้อผ้าอาวุธหลากหลายชนิดได้ตามใจ ซึ่งอุปกรณ์แต่ละอย่างจะมีค่า Status เป็นเงื่อนไขกำหนดไว้ทำให้ความสามารถแตกต่างกันไป แต่ตอนเริ่มเกมส์ก็จะมีสายอาชีพที่เซ็ทค่า Status สำหรับสวมใส่อาวุธแต่ละชนิดไว้ให้เราเลือกเล่นตามความถนัด
-</br></br>
-&nbsp;&nbsp;<strong>Knight</strong> – เน้นพลังป้องกัน (Vit) และสวมชุดเกราะหนัก Lv.9
- </br>
-&nbsp;&nbsp;<strong>Mercenary</strong> – เน้น (Dex) ใช้งานอาวุธ2มือโจมตีต่อเนื่อง Lv.8
- </br>
-&nbsp;&nbsp;<strong>Warrior</strong> - เน้นพลังโจมตี (Str) ใช้งานอาวุธหนักพวกขวาน Lv.7
- </br>
-&nbsp;&nbsp;<strong>Herald</strong> – ความคล่องตัวต่ำ ชดเชยด้วยหอกที่ใช้คู่กับโล่ได้ดี Lv.9
- </br>
-&nbsp;&nbsp;<strong>Thief</strong> – มีค่า (Luck) ที่สูง เน้นความคล่องตัวกับอาวุธระยะประชิด Lv.5
- </br>
-&nbsp;&nbsp;<strong>Assassin</strong> – เน้นความคล่องตัว ใช้อาวุธพวกดาบควบคู่กับสกิล Lv.10
- </br>
-&nbsp;&nbsp;<strong>Sorcerer</strong> – มีค่า (Int) ที่สูง ใช้อาวุธมีดกับเวทย์ที่ไกลและรุนแรง Lv.6
- </br>
-&nbsp;&nbsp;<strong>Pyromancer</strong> – เน้นการต่อสู้ระยะประชิดด้วยขวานเล็กและเวทย์ไฟ Lv.8
- </br>
-&nbsp;&nbsp;<strong>Cleric</strong> - มีค่า (Faith/Luck) ที่สูง อาวุธกระบองระยะประชิดเวทย์ผลัก Lv.7
- </br>
-&nbsp;&nbsp;<strong>Deprived</strong> – ค่าพลังทุกอย่างเท่ากันหมดเริ่มต้นที่ Lv.1</b>
-          <g class="content has-text-left">เทคนิคการเล่น
-</g>
-          <b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ตัวเกมส์ซีรี่นี้ขึ้นชื่อเรื่องความยาก เพราะจังหวะการเคลื่อนไหวทุกอย่างจะอิงกับค่า STAMINA ถ้ากดฟันรัวๆหรือกระโดดหลบรัวๆจนหมดแรง ก็โดนศัตรูเล่นงานได้ง่าย และดาเมจที่ได้รับแต่ละทีก็หนักหน่วงเอาการ เทคนิคการเล่นคือให้อ่านรูปแบบกาารเคลื่อนไหวของศัตรูก่อน และรอจังหวะให้ศัตรูออกท่าโจมตีให้หมดชุดแล้วค่อยเข้าไปตี 2-3 ทีแล้วรีบกระโดดออกมาทิ้งระยะห่าง แล้วหาโอกาสเข้าตีใหม่ จำไว้ อย่าใจร้อน อย่าตีรัว อย่าแลก เน้นหลบ และรักษาระยะ</b>
-          <g class="content has-text-left">CO-OP / เรียกพวกมาช่วย</g>
-          <b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ด้วยความที่เกมนี้มีฉากกว้างมากและจุดตั้งกองไฟ BONFIRE แต่ละจุดก็อยู่ห่างกันมาก การจะผ่านด่านสำหรับผู้เล่นมือใหม่ที่ยังไม่คุ้นกับจังหวะการหลบ ก็ถือว่าเกมนี้อยู่ในระดับที่ยากมากจริงๆ แต่การเล่นออนไลน์หาคนมาช่วยก็ทำให้เกมส์ดูง่ายขึ้นเยอะ บอสโหดๆถ้ามีคนช่วยเป็นตัวล่อ อีกคนคอยทำดาเมจ อีกคนคอยซัพพอท บอสที่ว่ายากก็อาจจะง่ายขึ้นเยอะ ซึ่งวิธีการเล่นออนไลน์หาผู้เล่นมาช่วยสามารถทำได้ 2 แบบ
-        </br>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-<strong>White Sign Soapstone</strong> ใช้เปิดสัญญาณให้ผู้เล่นอื่นดึงเราเข้าไปช่วยสู้ในโลกของเขาได้ เป็นอีกวิธีที่ทำให้เราย้อนกลับไปเก็บเลเวลกับบอสที่ฆ่าไปแล้วได้ด้วย
-</br>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>Ember</strong> เป็นไอเทมที่ทำให้เรากลับมาในร่างท๊อปฟอร์มไฟลุกอีกครั้ง และยังสามารถดึงพวกที่เปิดสัญญาณวาร์ปไว้ที่พื้น ให้เข้ามาช่วยเราสู้ผ่านด่านในโลกของเราได้ด้วย และยังเป็นการดึงผู้เล่น PK ตัวแดง ที่จ้องจะฆ่าผู้เล่นด้วยกันเองเข้ามาอีกด้วย
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สิ่งที่น่าตื่นตาอีกอย่างก็คือฉากรอบ ๆ ตัวในตอนที่เร่งความเร็วที่จะทำให้ภาพข้างพร่ามัวให้ความรู้สึกถึงความเร็วของรถจริง ๆ หรือจะเป็นบรรยากาศสภาพเมือง Ventura Bay ตอนกลางคืนทำได้สวยมาก รถยนต์ก็เช่นกันกราฟิกสมจริงอย่างกับหลุดมาจากนิตยสารรถส่วนการดริฟท์ของ Need for Speed ก็เหมือนกับว่าตัวเกมเซ็ตระบบให้มันไถลแบบมาตรฐานมีความสมดุลแต่การเล่นเทคนิคแทบจะทำไม่ได้ไม่ให้อิสระเท่าไหร่นัก
 </b>
-<g class="content has-text-left">Game Rank S Score 99/100</g>
-<g1 class="content has-text-left">เกมส์เพลยอดเยี่ยม / ภาพเสียงอลังการ / เนื้อเรื่องเหนือจินตนาการ</g1>
-</br>
-<b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;นี่คือเกมส์ที่ต้องใช้ฝีมือให้การเล่นอย่างแท้จริง ที่ต้องอาศัยทั้งทักษะการบังคับ และการตัดสินใจที่เฉียบคม สมาธิต้องมีตลอดเวลา นี่ไม่ใช่เกมส์แอคชั่นลุยแหลกกดปุ่มรัวๆกระหน่ำคอมโบฆ่าศัตรูที่อยู่ตรงหน้าครั้งละหลายสิบตัวอย่างง่ายดาย รูปแบบการเล่นแบบนั้นไม่สามารถใช้ได้กับ Dark Soul เพราะศัตรูที่อยู่ตรงหน้าทุกตัวล้วนอันตรายหมด การอ่านระยะโจมตี และจดจำรูปแบบการออกท่าของศัตรูเป็นเรื่องสำคัญมาก การหลบถือเป็นสิ่งสำคัญมากกว่าการเข้าตี บอสใหญ่จอมโหดทุกตัวมีพลังชีวิตที่เยอะมากกก การจะล้มมันได้ต้องอาศัยความอดทน ตอดเล็กตอดน้อย คอยหลบให้ดี เพราะเมื่อพลาดเพียงเสี้ยววินาทีอาจหมายถึงความตายได้เลย</b>
+          <img src="ReVewwwww\assets\images\BDad.jpg" height="auto" width="900px">
+          <b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;รวมแล้ว Need for Speed รีบูทนำความน่าผิดหวังมากกว่าสมหวังแม้ว่าจะมีการแต่งรถที่ละเอียดขึ้นบวกกับภาพที่สวยงามสมจริงแต่เมื่อเทียบกับข้อเสียมากมายแล้วจึงทำให้การกลับมาของ Need for Speed ครั้งนี้ก็ยังไม่ค่อยน่าปลื้มเท่าไหร่ครับ
+
+ </b>
+<g1>PCGAMER Score: 50/100</g1>
             <br></br>
           <b1>
-            <strong>แหล่งข้อมูลจาก</strong> <A href="http://www.metalbridges.com/dark-soul-iii/" style="color:red">Web Master</A>
+            <strong>แหล่งข้อมูลจาก</strong> <A href="https://notebookspec.com/need-for-speed-2016-review/342528/" style="color:red">PCGAMER</A>
           </b1>
       </div>
     </div>
 
    </main>
-   <footer class="footer" background-color="#8c0009">
-<div class="container">
-  <div class="content has-text-centered has-text-white">
-    <p>
-       <img src="/DDG/static/assets/LogoWeb/dekdoklogoblack.png" alt="logo" width="150px" align="center">
-
-    </p>
-  </div>
-</div>
- </footer>
-  </body>
-</html>
+<?php include_once 'footer.php' ?>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Dek-Dok Gaming</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
+  <link rel="stylesheet" href="\ReviewUser\home.css">
+  <link rel="icon" href="/DDG/static/assets/images/Berm.ico">
+  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+</head>
+<header>
+  <style>
+    input[type=search] {
+      width: 40px;
+      box-sizing: border-box;
+      border: 2px hidden #8c000a;
+      font-size: 16px;
+      background-image: url(/assets/images/search.png);
+      background-color: #202020;
+      background-repeat: no-repeat;
+      height: 40px;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
+      cursor: pointer;
+    }
+
+    input[type=search]:focus {
+      width: 200px;
+      border: solid;
+      background-color: #505050;
+      background-image: none;
+      cursor: grab;
+    }
+
+    input:focus {
+      cursor: grab !important;
+    }
+  </style>
+  <style>
+    input[type=search] {
+      width: 40px;
+      box-sizing: border-box;
+      border: 2px hidden #8c000a;
+      font-size: 16px;
+      background-image: url(/assets/images/search.png);
+      background-color: #202020;
+      background-repeat: no-repeat;
+      height: 40px;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
+      cursor: pointer;
+      margin-top: 28px;
+    }
+
+    input[type=search]:focus {
+      width: 200px;
+      border: solid;
+      background-color: #505050;
+      background-image: none;
+      cursor: grab;
+    }
+
+    input:focus {
+      cursor: grab !important;
+    }
+  </style>
+  <script>
+    function statusChangeCallback(response) {
+      console.log('statusChangeCallback');
+      console.log(response);
+      if (response.status === 'connected') {
+        testAPI();
+      } else {
+        document.getElementById('status').innerHTML = 'Please log ' +
+          'into this app.';
+      }
+    }
+
+    function checkLoginState() {
+      FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+      });
+    }
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId: '1490167914363614',
+        cookie: true,
+        xfbml: true,
+        version: 'v2.8'
+      });
+      FB.Event.subscribe('auth.login', function() {
+        window.location.reload();
+      });
+      FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+      });
+    };
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    function testAPI() {
+      console.log('Welcome!  Fetching your information.... ');
+      FB.api('/me', function(response) {
+        console.log('Successful login for: ' + response.name);
+        document.getElementById('status').innerHTML =
+          'Thanks for logging in, ' + response.name + '!';
+      });
+    }
+  </script>
+  <div class="column is-multiline">
+    <div class="headcontainer">
+      <!--ถ้าใช้ id จะอ้าง java script ได้-->
+      <br>
+      <div class="head">
+        <div class="columns is-multiline">
+          <div class="column is-4" align="right" style="margin-top:-50px">
+            <a ahref="/index.html">
+              <img  src="/DDG/static/assets/LogoWeb/dekdoklogowhite.png" alt="" width="270" height="auto">
+              </a>
+            <!--แทรกรูป กำหนดขนาด-->
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          <div class="column is-5" align="right">
+            <br>
+            <input type="search" name="search" placeholder="       Search..">
+          </div>
+          <div class="column is-2" align="left">
+            <br><br>
+            <a onclick="document.getElementById('modal-wrapper').style.display='block'">
+      <img src="/DDG/static/assets/images/log-in.png" alt="" width="100px"></a>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-wrapper" class="modal">
+
+    <form class="modal-content animate" action="#">
+      <!-- #หน้าหลังล็อกอิน-->
+
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
+        <img src="/DDG/static/assets/LogoWeb/dekdoklogoblack.png" alt="Avatar" class="avatar">
+        <h1 style="text-align:center">เข้าสู่ระบบ</h1>
+      </div>
+      <div class="has-text-centered">
+        <h3>——————————  หรือ  ——————————</h3>
+        <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div>
+        <div id="status"></div>
+        <input type="text" placeholder="อีเมล์" name="uname">
+        <input type="password" placeholder="รหัสผ่าน" name="psw">
+        <br></br>
+        <button type="submit">เข้าสู่ระบบ</button><br>
+        <input type="checkbox" style="margin:26px 30px;"> จดจำฉัน</input>
+        <a class="has-text-centered" href="#" style="text-align:center;">ลืมรหัสผ่าน?</a>
+        <br><button class="regis" type="submit">สมัครเลย</button>
+      </div>
+    </form>
+
+  </div>
+
+  <script>
+    // If user clicks anywhere outside of the modal, Modal will close
+    var modal = document.getElementById('modal-wrapper');
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+  <div class="navcontainer">
+    <div class="nav-center">
+      <nav class="navbar-tabs">
+        <a href="/index.html" class="nav-item">หน้าแรก</a>
+        <a href="/DEKDOK/index.html" class="nav-item">ข่าว</a>
+        <a href="/ReviewFront/index.html" class="nav-item">รีวิวเกม</a>
+        <a href="/topchart/index.html" class="nav-item">เกมยอดนิยม</a>
+
+      </nav>
+    </div>
+  </div>
+</header>
+<main>
+  <br><br>
+  <div class="bodycontainer">
+
+    <br></br>
+    <font face="Superspace" size="10" color="black"><b>( รีวิว ) Skyrim</b></font>
+    <div class="line" style="height: 5px;"></div>
+<!-- ลิงค์วิดิโอใส่ youtube.com/embed/xxxxx  -->
+    <div class="content has-text-centered"><iframe width="900" height="600" src="https://www.youtube.com/embed/PjqsYzBrP-M" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>
+    <!-- ส่วนสไลด์ภาพ ปรับให้ภาพขนาดเท่ากัน อันนี้ใช่ 900 x 600 (ปรับใน ps) ตั้งชื่อไฟล์ตามเกม ได้แก้ง่ายๆ-->
+    <font face="RSU text" size="6" color="black">เนื้อเรื่องของ Skyrim นั้นมีประวัติศาสตร์ที่ยาวนานมาก ขอเล่าสั้นๆ ว่า ปลายยุคที่ 3 ซึ่งเป็นช่วงเวลาที่พวกปีศาจบุกขึ้นมาอาลาวาดบนโลกของเรา ตัวเอกในเกมภาคที่สามสามารถปิดประตูนรกสำเร็จ แต่ก็ทำให้ราชวงศ์ Septim ล่มสลายเพราะการเสียสละในการปิดประตูนรก ทำให้บ้านเมืองขาดผู้นำ ช่วงเวลานั้น เหล่า Thalmor หรือเอลฟ์ชนชั้นสูงได้ฉวยโอกาสนี้ในการยกพลบุกโจมตีเมือง Imperial (หรือฝ่ายจักรพรรดิ) ซึ่งมีสภาพยํ่าแย่อยู่แล้วด้วยผลกระทบจากการบุกของปีศาจ ในที่สุดเมื่อรับมือพวก Thalmor ไม่ไหว ทางฝ่ายจักรพรรดิก็ต้องยอมเซ็นสัญญาสงบศึก เพื่อให้ Thalmor มีอำนาจในการปกครองแดน Skyrim และฝ่าย Thalmor ก็ออกกฎ ห้ามประชาชนในดินแดนนี้นับถือ Talos เป็นเทพเจ้า (Talos เป็นจักรพรรดิที่มีสายเลือกนักรบมังกรที่ยิ่งใหญ่มากจนชาวแดน Skyrim นับถือเป็นเทพ)</font>
+    <br><br><br>
+    <section class="autoplay slider">
+      <div>
+        <img src="assets/skr1.jpg">
+      </div>
+      <div>
+        <img src="assets/skr2.jpg">
+      </div>
+      <div>
+        <img src="assets/skr3.jpg">
+      </div>
+      <div>
+        <img src="assets/skr4.jpg">
+      </div>
+      <div>
+        <img src="assets/skr5.jpeg">
+      </div>
+      <div>
+        <img src="assets/skr6.jpg">
+      </div>
+    </section>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+
+        $('.autoplay').slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 4000,
+        });
+      });
+    </script>
+    <br><br>
+    <font face="RSU text" size="6" color="black">The Elder Scrolls V: Skyrim จะเป็นเกมแนว Open world ซึ่งคนเล่นมีอิสระที่จะไปไหนก็ได้ (แต่ถ้าไม่ไปตามเควส เจอมอนเตอร์เลเวลสูงกว่าตบตายไม่รับผิดชอบ) มีตัวละครทั้งหมด 10 เผ่าให้เลือกเล่น สร้างได้ทั้งชายหญิง (หรือจะสลับเพศเอาตอนเล่นด้วยคำสั่ง Code ก็ได้แล้วแต่) แต่าละเผ่าก็จะมีความสามารถแตกต่างกัน แต่โดยรวมแล้วจะเล่นสายไหนก็ไม่ได้เกี่ยวกับแต่ละเผ่ามากเท่าไหร่นัก เพราะตัวเอกมอบอิสระในการเล่นให้กับคนเล่นครับ (ในบทความรีวิวนี้ คนเขียนได้เล่นเผ่าครึ่งแมวป่า Khajiit ครับ)</font><br><br><br>
+    <font face="RSU text" size="6" color="black"> ในเกมนี้คนเล่นจะสามารถเลือกมุมมองระหว่าง FPS หรือ TPS ก็ได้แล้วแต่ความถนัด คนเล่นสามารถถืออาวุธได้สองมือ จะเลือกเล่นเวทย์ข้างหนึ่ง อาวุธโจมตีประชิดข้างหนึ่งก็ได้ไม่มีปัญหา ใช้อาวุธอะไรก็ได้ไม่มีข้อจำกัด และสามารถเลือกอัพสกิลซึ่งแบ่งเป็นสามสาย เวทย์ , พลังชีวิต และโจมตีได้อย่างอิสระ สำคัญคือ ถ้าคนเล่นชื่นชอบการเป็นมนุษย์หมาป่าหรือแวมไพร์ก็สามารถเป็นในเกมได้เช่นกัน (แต่อย่ากลายร่างหรืองับคอคนเขาตอนกลาวันแสกๆ นะ โดยทหารในเมืองไล่ฆ่าก็ไม่รับผิดชอบเช่นกัน)</font><br><br><br>
+    <font face="RSU text" size="6" color="black">ในเกมนั้นจะมีค่าสถานะตัวละครให้ทั้งหมด 3 ค่า นั่นก็คือ เลือด , ค่าพลังเวทย์ และค่าความเหนื่อย โดยแต่ละท่า การวิ่ง หรือการถูกโจมตีจะใช้ค่าแตกต่างกันออกไป นอกจากนี้คนเล่นยังมีอิสระในการคราฟสิ่งของต่างๆ เพื่อสร้างอาวุธหรือชุดเกราะที่ดีกว่าเดิม , การเป็นเจ้าเมืองเพื่ออาศัยการมีอำนาจในการติดสินบน , ย่องขโมยข้าวของชาวบ้าน ในเกมนี้แม้ว่าคนเล่นจะเลือกเป็นคนดีหรือคนเลวได้ แต่จริงๆ แล้วเนื้อเรื่องในเกมนี้กลับทำเอาไว้กลางๆ ตามแบบชีวิตจริงของเรา นั่นก็คือ เป็นโลกสีเทาครับ่</font><br><br><br>
+    <div>
+      <center><img src="assets/skr7.jpg"></center>
+    </div>
+    <font face="RSU text" size="6" color="black">นอกจากรายละเอียดปลีกย่อยนับร้อยในเกมแล้ว เกมเพลในเกมนี้มีความน่าสนใจอย่างมาก ดันเจี้ยนทุกดันเจี้ยนมีเสน่ห์น่าค้นหา น่าพิชิต สถาปัตยกรรมของแต่ละเมืองน่าดึงดูด กราฟฟิกสุดอลังการแม้ว่าคอมสเปคเก่าก็ยังพอสามารถเล่นได้บ้าง (แต่แนะนำแรม 2G ขึ้นไปได้ไม่อยากเจออาการหลุดจากเกม) ทุกอย่างดูสวยงาม มีชีวิตชีวาและความสมจริง และในเกมนี้นอกจากการปะทะกับศัตรูตามปกติแล้ว การปรากฎตัวของมังกรที่ออกมาโจมตีเราเป็นอะไรที่มหากาพย์มากๆ การต่อสู้ที่สุดระทึก บทเพลงอันยิ่งใหญ่เพื่อสร้างความตื่นเต้นในการเล่นเกมนี้อย่างมากเลยหละครับ</font><br><br><br>
+    <font face="RSU text" size="6" color="black">นอกจากนี้ สิ่งที่ทำให้เกมนี้มีความน่าสนใจและยึดอายุตัวเกมไปได้ยาวนานนั่นก็คือ MOD นั่นเองครับ โดยคนเล่นสามารถดาวโหลด MOD มาใส่ตัวเกมได้หลายร้อยพันอย่าง ตั้งแต่ปั้นหน้าตัวละครให้เท่ขึ้น โมเอะขึ้น ไปจนถึงฉาก สถานที่ต่างๆ แม้แต่การเพิ่มเนื้อหาการเล่นใหม่ๆ เควสใหม่ๆ ที่ทำให้คนเล่นมีเรื่องราวการผจญภัยมากขึ้นแม้ว่าจะเล่นเนื้อเรื่องหลักจบไปแล้วก็ตาม ซึ่งแน่นอนว่า MOD ต่างๆ คนเล่นสามารถไปหาโหลดจากเว็บ MOD หรือโหลดเอาจากระบบของ Steam ได้เลยไม่มีปัญหา</font><br><br><br>
+    <center><font face="RSU text" size="10" color="red"><b>คะแนน 8.5/10<b></font></center>
+</main>
+</body>
+<footer class="footer" background-color="#8c0009">
+  <div class="container">
+    <div class="content has-text-centered has-text-white">
+      <p>
+        <a href=/index.html>
+       <img src="/DDG/static/assets/LogoWeb/dekdoklogoblack.png" alt="logo" width="150px" align="center" style="margin-top:-40px;"> </a><br>
+        <a href="/Aboutus/index.html" target="_blank">
+          <font face="RSU" size="2" color="black"><b>&#9658; About us</b></font>
+        </a>
+        <font face="RSU" size="4" color="black"><b>l</b></font>
+        <font face="RSU" size="2" color="black"><b>Berm and his friends © 1997 Thailand (TH) </b></font>
+      </p>
+    </div>
+  </div>
+</footer>
+
+</html>

@@ -938,3 +938,44 @@ h2 {
 	font: 30px Superspace;
 	font-weight: bold;
 }
+
+.bodycontainer {
+ width: 1300px;
+ height: auto;
+ margin: 0 auto;
+ padding-left : 30px;
+ padding-right : 30px;
+ padding-bottom: 30px;
+ background : #fff;
+}
+
+.footer .container{
+  width: auto;
+  height: 15px;
+}
+
+.foot .card{
+  height: 210px;
+  width: 250px;
+}
+.foot .content{
+  position: relative;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+.foot .content h5{
+  font: 18px Superspace;
+}
+
+.big .content{
+  margin-top: 20px;
+}
+.foot .image{
+  width: 100%;
+  height: 180px;
+}
+
+.footer{
+  background: #8c0009;
+  margin-top: 2rem;
+}

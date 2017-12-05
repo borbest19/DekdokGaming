@@ -721,3 +721,43 @@ section .section {
 {
   background: #202020;
 }
+
+.line2
+{
+  background: #8c000a;
+}
+
+.line3
+{
+  background: #ffffff;
+}
+
+
+.topcontainer{
+	margin-top: 40px
+}
+
+.topcontainer .image:hover{
+	opacity: 0.3;
+	transition: 0.3s;
+}
+
+.top1 .image{
+	height: 360px;
+	width: 600px;
+}
+.top2 .image,.top3 .image{
+	height: 180px;
+	width: 300px;
+}
+.top1,.top2_1,.top2_2,.top3_1,.top3_2{
+	border-top: 5px solid #ffffff;
+	border-right: 5px solid #ffffff;
+	position: relative;
+}
+.top1{
+	border-left: 5px solid #ffffff
+}
+.top1,.top2_2,.top3_2{
+		border-bottom: 5px solid #ffffff;
+}

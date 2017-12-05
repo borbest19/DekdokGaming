@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dekdok NEWS</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
+	<link rel="stylesheet" href="/ReviewFront/reviewmasterhome.css">
+</head>
+         <header>
+       <script>
+  function statusChangeCallback(response) {
+    console.log('statusChangeCallback');
+    console.log(response);
+    if (response.status === 'connected') {
+      testAPI();
+    } else {
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into this app.';
+    }
+  }
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+  window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '1490167914363614',
+    cookie     : true,
+    xfbml      : true,
+    version    : 'v2.8'
+  });
+  FB.Event.subscribe('auth.login', function() {
+  window.location.reload();
+});
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+  };
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('status').innerHTML =
+        'Thanks for logging in, ' + response.name + '!';
+    });
+  }
+</script>
+<div class="column is-multiline">
+  <div class="headcontainer">
+      <!--ถ้าใช้ id จะอ้าง java script ได้-->
+             <br>
+              <img  src="/DDG/static/assets/LogoWeb/dekdoklogowhite.png" alt="" width="200" height="auto"> <!--แทรกรูป กำหนดขนาด-->
+                <a onclick="document.getElementById('modal-wrapper').style.display='block'"  >
+                    <img align="right" src="/DDG/static/assets/images/log-in.png" alt="" width="100px">
+               </a>
+  </div>
+</div>
+  <div id="modal-wrapper" class="modal">
+
+      <form class="modal-content animate" action="#">
+        <!-- #หน้าหลังล็อกอิน-->
+
+          <div class="imgcontainer">
+              <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
+              <img src="/DDG/static/assets/LogoWeb/dekdoklogoblack.png" alt="Avatar" class="avatar">
+              <h1 style="text-align:center">เข้าสู่ระบบ</h1>
+          </div>
+                <div class="has-text-centered">
+                    <h3>——————————  หรือ  ——————————</h3>
+                          <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div>
+                          <div id="status"></div>
+                          <input type="text" placeholder="อีเมล์" name="uname">
+                          <input type="password" placeholder="รหัสผ่าน" name="psw">
+                          <br></br>
+                          <button type="submit">เข้าสู่ระบบ</button><br>
+                          <input type="checkbox" style="margin:26px 30px;"> จดจำฉัน</input>
+                          <a class="has-text-centered" href="#" style="text-align:center;">ลืมรหัสผ่าน?</a>
+                          <br><button class="regis" type="submit">สมัครเลย</button>
+              </div>
+      </form>
+
+  </div>
+
+<script>
+// If user clicks anywhere outside of the modal, Modal will close
+var modal = document.getElementById('modal-wrapper');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+                      <div class="navcontainer">
+                          <div class="nav-center">
+                               <nav class="navbar-tabs">
+                                    <a href="/index.html" class="nav-item">หน้าแรก</a>
+                                    <a href="/DEKDOK/index.html" class="nav-item">ข่าว</a>
+                                    <a href="/ReviewFront/index.html" class="nav-item">รีวิวเกม</a>
+                                    <a href="/topchart/index.html" class="nav-item">เกมยอดนิยม</a>
+                                    <a href="#" class="nav-item">เกี่ยวกับเรา</a>
+                               </nav>
+                          </div>
+                       </div>
+ </header>
+<body>
+	<section class="section we-present">
+		<div class="container">
+			<div class="eiei">
+				<h1> <b>รีวิวจากเว็บมาสเตอร์</b> </h1>
+			</div>
+
+			<div class="line">
+			</div>
+		</div>
+
+	<section class="section">
+		<div class="container">
+			<section class="columns is-multiline">
+				<div class="column is-one-third">
+					<a href="#">
+						<div class="cardtop">
+							<div class="container2">
+									<img class="headnews"src="/DDG/static/assets/images/hsh0.jpg" alt="images-1">
+								<div class="card-content">
+									<h3 class="title is spaced is-4"><font color="white">Home Sweet Home</font></h3>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="column is-one-third">
+					<a href="#">
+						<div class="cardtop">
+							<div class="container2">
+									<img class="headnews"src="/DDG/static/assets/images/gv1.jpg" alt="images-1">
+								<div class="card-content">
+									<h3 class="title is spaced is-4"><font color="white">Get Even</font></h3>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="column is-one-third">
+					<a href="#">
+						<div class="cardtop">
+							<div class="container2">
+									<img class="headnews"src="/DDG/static/assets/images/bc1.jpg" alt="images-1">
+								<div class="card-content">
+									<h3 class="title is spaced is-4"><font color="white">Battle Canival</font></h3>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+			</section>
+		</div>
+	</section>
+</section>
+    <div class="container1">
+    	<main>
+		<section class="section dekdok news present">
+			<div class="card">
+				<a href="\ReVewwwww\Dad13\index.html" class="column">
+					<div class="columns">
+						<div class="column">
+							<figure class="image is-5by3" height="720 px">
+								<div class ="img-resize">
+								<img src="\ReVewwwww\assets\images\Half-Life-2-Buy.jpg"></div>
+							</figure>
+						</div>
+					<div class="column ">
+						<div class="card-content">
+							<h1 class="title is-spaced">[Review] Half-Life 2</h1>
+							<h2 class="subtitle">
+								<p> “ภาคต่อของเกม FPS ในตำนานอย่าง Half-Life” Half-Life 2 เป็นบทต่อเนื่องของเกมที่เป็นแบบฉบับเกม FPS อย่าง Half-Life ที่นอกจากจะมีกราฟิกที่สวยขึ้นแล้ว ยังมีการเพิ่มลูกเล่นของเกม พร้อมด้วยเนื้อหาที่เข้มข้นขึ้น เลยทำให้เกมนี้กลายเป็นเกมขวัญใจของนักเล่นเกมไปตลอดกาลเลยก็ว่าได้
+</p>
+							</h2>
+							<h3 class="time">4 DAYS AGO</h3>
+						</div>
+					</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="card">
+				<a href="\ReVewwwww\Dad14\index.html" class="column">
+					<div class="columns">
+						<div class="column">
+							<figure class="image is-5by3" height="720 px">
+								<div class ="img-resize">
+								<img src="\ReVewwwww\assets\images\850.jpg" alt="/DDG/static/assets/images/gta1.jpg"></div>
+							</figure>
+						</div>
+					<div class="column ">
+						<div class="card-content">
+							<h1 class="title is-spaced">(รีวิวเกม PC) Attack on Titan ดราม่าไม่เน้น มุ่งฟาดยักษ์ไททันเลือดสาด!</h1>
+							<h2 class="subtitle">
+								<p>หลังจากที่ต้องรอลุ้นกันตั้งแต่ตอนที่ประเทศทำเกมตอนแรกๆ ในที่สุด ทาง KOEI TECMO ก็ได้เตรียมพอร์ตเกมพิฆาตไททันลง PC ด้วย เพียงแต่เกมนี้เป็นเกมที่เอ๊กครูชีฟบนเครื่องคอลโซล ทำให้ชาว PC อย่างพวกเรากว่าจะได้เล่นก็ต้องรอนานหน่อย ในที่สุดตัวเกมก็วางขายแล้ว เราจะมารีวิวเกมนี้กันครับ</p>
+							</h2>
+							<h3 class="time">4 DAYS AGO</h3>
+						</div>
+					</div>
+					</div>
+				</a>
+			</div>
+
+
+			<div class="card">
+				<a href="\ReVewwwww\Dad15\index.html" class="column">
+					<div class="columns">
+						<div class="column">
+							<figure class="image is-5by3" height="720 px">
+								<div class ="img-resize">
+								<img src="\ReVewwwww\assets\images\og.jpg"></div>
+							</figure>
+						</div>
+					<div class="column ">
+						<div class="card-content">
+							<h1 class="title is-spaced">Dead or Alive 5 Last Round [PC,PS4,XB1]</h1>
+							<h2 class="subtitle">
+								<p>สังเวียนนักสู้สุดโหดที่ตัดสินว่าใครจะตายและใครจะรอด เป็นเกมส์แนวต่อสู้ความเร็วสูงที่สามารถซัดคู่ต่อสู้ให้ตายในการโจมตีชุดเดียว นำเสนอรูปแบบการต่อสู้ที่รวดเร็วสะใจ กับตัวละครที่เน้นไปทางสาวสวยหุ่นสะบึม ที่พัฒนางานภาพมาอย่างต่อเนื่องจนมาถึงภาค 5 ที่ทำตัวละครออกมาสวยงามราวกับมีชีวิตจริง โดยเนื้อเรื่องภาค 5 ไม่ได้เน้นที่เวทีแข่งขัน DOA เท่าไรตัวละครหลักจะวุ่นวายอยู่กับการหาร่างโคลนนิ่งของ Kasumi นางเอกสุดสวย นั้นก็คือเจ้า...
+			</p>
+							</h2>
+							<h3 class="time">4 DAYS AGO</h3>
+						</div>
+					</div>
+					</div>
+				</a>
+			</div>
+
+
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<nav class="pagination is-centered" role="navigation" aria-label="pagination">
+
+		<ul class="pagination-list">
+      <li><a class="pagination-link " aria-label="Goto page 1" href="/ReviewFront/index.html">1</a></li>
+    <li><a class="pagination-link" aria-label="Goto page 2"  href="/ReviewFront/index2.html">2</a></li>
+    <li><a class="pagination-link is-current" aria-label="Goto page 3" aria-current="page" href="/ReviewFront/index3.html">3</a></li>
+		</ul>
+	</nav>
+
+	</main>
+    </div>
+  </section>
+  	<main>
+  	  <br>
+      <footer class="footer" background-color="#8c0009">
+     <div class="container">
+     <div class="content has-text-centered has-text-white">
+       <p>
+         <a href=/index.html>
+          <img src="/DDG/static/assets/LogoWeb/dekdoklogoblack.png" alt="logo" width="150px" align="center" style="margin-top:-40px;"> </a><br>
+          <a href="/Aboutus/index.html" target="_blank">
+     <font face="RSU" size="2" color="black"><b>&#9658; About us</b></font></a>
+     <font face="RSU" size="4" color="black" ><b>l</b></font>
+     <font face="RSU" size="2" color="black"><b>Parinthon and Friends © 1997 Thailand (TH) </b></font>
+       </p>
+     </div>
+     </div>
+     </footer>
+  	</html>

@@ -8,6 +8,8 @@ background-repeat: no-repeat;
   /*font:100% RSU text;*/
 }
 
+
+
 .headcontainer {
   /*จุดคือเรียกใช้ class*/
   width: 1174px;
@@ -683,4 +685,24 @@ section .section {
 .headnews{
 	height: 315px;
 	width: auto;
+}
+
+.title
+{
+	font : 30px Superspace !important;
+	font-weight: bold !important;
+}
+
+.subtitle
+{
+	font : 26px RSU text !important;
+}
+
+.time
+{
+	color: black;
+	font : 20px Superspace !important;
+	font-weight: bold !important;
+	margin-top: -10px;
+	margin-bottom: -20px;
 }

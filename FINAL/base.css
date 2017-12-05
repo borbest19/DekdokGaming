@@ -499,7 +499,7 @@ div.img1-resize img {
 }
 
 line {
-  height: 3px;
+  height: 30px;
   background-color: #ffffff;
   margin-bottom: 20px;
 }
@@ -544,7 +544,7 @@ h4 {
 }
 
 .big .card {
-  height: 680px;
+  height: 700px;
   width: 630px;
 }
 
@@ -689,8 +689,8 @@ section .section {
 
 .title
 {
-	font : 30px Superspace !important;
-	font-weight: bold !important;
+	font : 30px Superspace;
+	font-weight: bold;
 }
 
 .subtitle

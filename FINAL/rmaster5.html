@@ -4,111 +4,155 @@
     <meta charset="utf-8">
     <title>Dek-Dok Gaming</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
-    <link rel="stylesheet" href="\ReVewwwww\assets\home.css">
-    <link rel="icon" href="/DDG/static/assets/images/Berm.ico">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="home.js">
+    <link rel="icon" href="assets/Berm.ico">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   </head>
   <header>
-    <style>
-    input[type=search] {
-      width: 40px;
-      box-sizing: border-box;
-      border: 2px hidden #8c000a;
-      font-size: 16px;
-      background-image:url(/assets/images/search.png);
-      background-color: #202020;
-      background-repeat: no-repeat;
-      height: 40px;
-      -webkit-transition: width 0.4s ease-in-out;
-      transition: width 0.4s ease-in-out;
-      cursor: pointer;
-    }
+  	<style>
+  	input[type=search] {
+  		width: 40px;
+  		box-sizing: border-box;
+  		border: 2px hidden #8c000a;
+  		font-size: 16px;
+  		background-image:url(/assets/images/search.png);
+  		background-color: #202020;
+  		background-repeat: no-repeat;
+  		height: 40px;
+  		-webkit-transition: width 0.4s ease-in-out;
+  		transition: width 0.4s ease-in-out;
+  		cursor: pointer;
+  	}
 
-    input[type=search]:focus {
-      width: 200px;
-      border: solid;
-      background-color: #505050;
-      background-image: none;
-      cursor: grab;
-    }
-    input:focus{
-    cursor: grab !important;
-    }
-    </style><style>
-    input[type=search] {
-    width: 40px;
-    box-sizing: border-box;
-    border: 2px hidden #8c000a;
-    font-size: 16px;
-    background-image:url(/assets/images/search.png);
-    background-color: #202020;
-    background-repeat: no-repeat;
-    height: 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-    cursor: pointer;
+  	input[type=search]:focus {
+  		width: 200px;
+  		border: solid;
+  		background-color: #505050;
+  		background-image: none;
+  		cursor: grab;
+  	}
+  	input:focus{
+  	cursor: grab !important;
+  	}
+  	</style><style>
+  	input[type=search] {
+  	width: 40px;
+  	box-sizing: border-box;
+  	border: 2px hidden #8c000a;
+  	font-size: 16px;
+  	background-image:url(assets/search.png);
+  	background-color: #202020;
+  	background-repeat: no-repeat;
+  	height: 40px;
+  	-webkit-transition: width 0.4s ease-in-out;
+  	transition: width 0.4s ease-in-out;
+  	cursor: pointer;
     margin-top: 28px;
-    }
+  	}
 
-    input[type=search]:focus {
-    width: 200px;
-    border: solid;
-    background-color: #505050;
-    background-image: none;
-    cursor: grab;
-    }
-    input:focus{
-    cursor: grab !important;
-    }
-    </style>
-    <script>
-      function statusChangeCallback(response) {
-        console.log('statusChangeCallback');
-        console.log(response);
-        if (response.status === 'connected') {
-          testAPI();
-        } else {
-          document.getElementById('status').innerHTML = 'Please log ' +
-            'into this app.';
-        }
-      }
+  	input[type=search]:focus {
+  	width: 200px;
+  	border: solid;
+  	background-color: #505050;
+  	background-image: none;
+  	cursor: grab;
+  	}
+  	input:focus{
+  	cursor: grab !important;
+  	}
+  	</style>
+    <style>
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
 
-      function checkLoginState() {
-        FB.getLoginStatus(function(response) {
-          statusChangeCallback(response);
-        });
-      }
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId: '1490167914363614',
-          cookie: true,
-          xfbml: true,
-          version: 'v2.8'
-        });
-        FB.Event.subscribe('auth.login', function() {
-          window.location.reload();
-        });
-        FB.getLoginStatus(function(response) {
-          statusChangeCallback(response);
-        });
-      };
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
 
-      function testAPI() {
-        console.log('Welcome!  Fetching your information.... ');
-        FB.api('/me', function(response) {
-          console.log('Successful login for: ' + response.name);
-          document.getElementById('status').innerHTML =
-            'Thanks for logging in, ' + response.name + '!';
-        });
-      }
-    </script>
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #202020;
+    color: white;
+    align-items: center;
+    width: autop;
+    height: auto;
+}
+.modal-header img {
+  height: auto;
+  width: 300px;
+}
+.modal-body {
+  padding: 2px 16px;
+  background-color: #8c0009;
+  font: 24px Superspace;
+  color: #ffffff;
+  text-align: center;
+  width: auto;
+  height: auto;
+}
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #202020;
+    color: white;
+    width: auto;
+    height: 150px;
+}
+.loginBtn{
+  cursor: pointer;
+}
+</style>
     <div class="column is-multiline">
       <div class="headcontainer">
         <!--ถ้าใช้ id จะอ้าง java script ได้-->
@@ -116,8 +160,8 @@
         <div class="head">
           <div class="columns is-multiline">
             <div class="column is-4" align="right" style="margin-top:-50px">
-              <a ahref="/index.html">
-              <img  src="/DDG/static/assets/LogoWeb/dekdoklogowhite.png" alt="" width="270" height="auto">
+              <a ahref="index.html">
+              <img  src="assets/dekdoklogowhite.png" alt="" width="270" height="auto">
               </a>
               <!--แทรกรูป กำหนดขนาด-->
             </div>
@@ -129,59 +173,74 @@
               </div>
     <div class="column is-2" align="left" >
       <br><br>
-      <a onclick="document.getElementById('modal-wrapper').style.display='block'">
-      <img src="/DDG/static/assets/images/log-in.png" alt="" width="100px"></a>
-
-
+      <div class="loginBtn">
+      <div id="myBtn"><img src="assets/log-in.png" alt="" width="100px"></div>
+      </div>
           </div>
         </div>
       </div>
       </div>
     </div>
-    <div id="modal-wrapper" class="modal">
+    <div id="myModal" class="modal">
 
-      <form class="modal-content animate" action="#">
-        <!-- #หน้าหลังล็อกอิน-->
-
-        <div class="imgcontainer">
-          <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
-          <img src="/DDG/static/assets/LogoWeb/dekdoklogoblack.png" alt="Avatar" class="avatar">
-          <h1 style="text-align:center">เข้าสู่ระบบ</h1>
-        </div>
-        <div class="has-text-centered">
-          <h3>——————————  หรือ  ——————————</h3>
-          <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div>
-          <div id="status"></div>
-          <input type="text" placeholder="อีเมล์" name="uname">
-          <input type="password" placeholder="รหัสผ่าน" name="psw">
-          <br></br>
-          <button type="submit">เข้าสู่ระบบ</button><br>
-          <input type="checkbox" style="margin:26px 30px;"> จดจำฉัน</input>
-          <a class="has-text-centered" href="#" style="text-align:center;">ลืมรหัสผ่าน?</a>
-          <br><button class="regis" type="submit">สมัครเลย</button>
-        </div>
-      </form>
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header has-text-centered">
+      <span class="close">&times;</span>
+      <img src="assets/dekdoklogowhite.png">
+    </div>
+    <div class="modal-body">
+      <br><br>
+      <p>&nbsp;&nbsp;Username&nbsp;&nbsp;&nbsp;<input type="text" placeholder="username" name="un"></p><br>
+      <p>&nbsp;&nbsp;Password&nbsp;&nbsp;&nbsp;<input type="password" placeholder="Password" name="psw"></p><br>
+      <button>Login</button><br><br><br>
+      <p>You don't have account? Just click ----> <a href="register.html" style="bold">Register</a></p>
+      <br><br>
+    </div>
+    <div class="modal-footer">
 
     </div>
+  </div>
 
-    <script>
-      // If user clicks anywhere outside of the modal, Modal will close
-      var modal = document.getElementById('modal-wrapper');
-      window.onclick = function(event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      }
-    </script>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+      modal.style.display = "none";
+  }
+}
+</script>
+
 
     <div class="navcontainer">
       <div class="nav-center">
         <nav class="navbar-tabs">
-          <a href="/index.html" class="nav-item">หน้าแรก</a>
-          <a href="/DEKDOK/index.html" class="nav-item">ข่าว</a>
-          <a href="/ReviewFront/index.html" class="nav-item">รีวิวเกม</a>
-          <a href="/topchart/index.html" class="nav-item">เกมยอดนิยม</a>
-          <a href="/Aboutus/index.html" class="nav-item">เกี่ยวกับเรา</a>
+          <a href="index.html" class="nav-item">หน้าแรก</a>
+          <a href="newshome.html" class="nav-item">ข่าว</a>
+          <a href="reviewhome.html" class="nav-item">รีวิวเกม</a>
+          <a href="topchart.html" class="nav-item">เกมยอดนิยม</a>
+
         </nav>
       </div>
     </div>
@@ -191,10 +250,10 @@
     <div class="bodycontainer">
       <div class="content has-text-centered has-text-black">
           <br></br>
-          <g class="content has-text-left">รีวิว เกม Kantai Collection Fall Event 2017 ด่าน E-4</g>
-          <img src="\FINAL\assets\Line.png" height="3px" width="1230px" >
-          <b class="content has-text-left">เมื่อ 9000+ ชม. ที่แล้ว</b>
-          <img src="\FINAL\assets\BBV_Night_Strait_Princesses_1767_Full.png" height="auto" width="900px">
+          <p align="middle"><font face="Superspace" size="7"><b>รีวิว เกม Kantai Collection Fall Event 2017 ด่าน E-4</b></font></p>
+          <div class="line" style="height: 5px;"></div><br>
+          <h5 align="left"><font face="RSU text" size="6">มากกว่า 9000 ชม. ที่แล้ว</font></h5><br>
+          <img src="assets\BBV_Night_Strait_Princesses_1767_Full.png" height="auto" width="900px">
           </br>
           <b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เนื่องจากนี่เป็นอีเว้นท์สั้นๆ จึงขอตัดรวบรัดไปด่านสุดท้ายเลยละกัน(เพราะนั่นคือไคลแมกซ์ ที่โลกจะไม่ลืม) เนื่องด้วยเหตุการณ์ที่นายทานากะ คนออกแบบด่านในเกม Kantai Collection หรือ คังโคเระ นั้น ได้ทำการสร้างแมพขึ้นมา โดยที่เขาไม่สามารถแยกคำว่าความยาก กับยุ่งยากนั้นต่างกัน
           จึงทำให้ผู้เล่นหลายคนเริ่มประสบปัญหากับการเล่นอีเว้นท์ไม่น้อยเลยทีเดียว โดยเฉพาะกับผู้เล่นหน้าใหม่ที่เพิ่งเริ่มได้ไม่นาน เพราะคนสร้างด่านนั้นได้สร้างด่านที่มีความซับซ้อน ซ่อนเงื่อน วนแล้ว วนอีก ไม่จบ ไม่สิ้นกันซักที โดยล่าสุดนี้เลยคือ
@@ -203,14 +262,14 @@
         แต่เป็นสองพี่น้องฟุโซคลาส (ที่หลายคนเก็บตกได้จากข้างทาง) ที่ย้อมแมวใหม่นั่นเอง แต่การสู้กับบอสนั้น ก็ไม่ได้ยากเย็นอะไร เพราะถึงแม้จะเป็นตัวย้อมแมว ที่เลือดมหาศาล แต่ ค่าโชคของคุณเธอก็ยังต่ำเตี้ยเรี่ยดินเหมือนเดิม ทำให้จัดการได้อย่างไม่ยากเย็นอะไรเลย
         แต่กว่าะไปถึงบอสเนี่ยสิครับ นรกแตกชัดๆ คุณต้องส่งตัวละครของคุณไปปราบบอสย่อยๆ ที่อยู่ตามข้างทาง(แบบไม่เหลือซาก?) ทั้งต้องคุ้มกันฐานทัพอากาศจากฝูงบินรบจำนวนมหาศาล โดยห้ามเสียหายแม้แต่รอยขีดข่วนเดียว หรืออาจต้องชนะการรบน่านฟ้าโดยห้ามใช้เรือบรรทุกเครื่องบิน!?
 </br>
-<div class="content has-text-centered"><img src="\FINAL\assets\Kan1.jpg" height="auto" width="900px"></div>
+<div class="content has-text-centered"><img src="assets\Kan1.jpg" height="auto" width="900px"></div>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ที่กล่าวมานั้น เป็นแค่เป้าหมายรองเท่านั้น คุณลองคิดดูซิว่าคุณต้องไปสู้กับหมาป่าบนยอดเขา โดยที่ข้างทางยังมีหมาน้อยชิวาว่าฝูงใหญ่ คอยไล่งับอยู่ตลอดเวลา ถ้าโชคร้ายอาจเจอบางแก้วพุ่งเข้าใส่ด้วย ใช่ครับ คุณจะทั้งเหนื่อย และ โทรม เลยทีเดียว แต่นั่นยังไม่จบ ยังเหลือบอสอยู่อีกนะ
-</br><div class="content has-text-centered"><img src="\FINAL\assets\Kan2.jpg" height="auto" width="900px"></div>
+</br><div class="content has-text-centered"><img src="assets\Kan2.jpg" height="auto" width="900px"></div>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;แต่นั่นก็ไม่จบอีกล่ะ เมื่อคุณจัดการพวกเธอได้แล้ว ขุ่นน้องยามาชิโระ ก็ดันหนีรอดจากห่ากระสุนได้ แล้วคุณก็ต้องสู้กับคุณเธออีกรอบ (WTF!) ผลสรุปคือ คุณผู้การกองเรือก็ไม่สามารถต้านทานความซาดิตถ์ของคนสร้างแมพได้จึงยอมลดมูลค่าของรางวัล เพื่อที่จะผ่านพ้น อีเว้นท์นรกแตกนี่ไปให้ได้
         (คนรีวิวยังเล่นไม่เคลียร์เลยจ้า)
-</br><div class="content has-text-centered"><img src="\FINAL\assets\BBV_Night_Strait_Princesses_Damaged_1770_Full.png" height="auto" width="900px"></div>
+</br><div class="content has-text-centered"><img src="assets\BBV_Night_Strait_Princesses_Damaged_1770_Full.png" height="auto" width="900px"></div>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ถ้าพูดแล้วบางคนอาจจะมองไม่เห็นภาพ เอาแผนที่ไปดูกันดีกว่า
-</br><div class="content has-text-centered"><img src="\FINAL\assets\Kan3.png" height="auto" width="900px"></div>
+</br><div class="content has-text-centered"><img src="assets\Kan3.png" height="auto" width="900px"></div>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;นั่นล่ะครับ ท่านผู้ชม ขนาดตัวอักษรภาษาอังกฤษ 26 ตัว มันยังไม่พอเลย "ดู ดู๊ ดู ดูเธอทำ ทำไมถึงทำกับฉันได้"
 </br>
 </br>

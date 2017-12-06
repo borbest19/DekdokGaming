@@ -4,111 +4,155 @@
     <meta charset="utf-8">
     <title>Dek-Dok Gaming</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
-    <link rel="stylesheet" href="\ReVewwwww\assets\home.css">
-    <link rel="icon" href="/DDG/static/assets/images/Berm.ico">
+    <link rel="stylesheet" href="/base.css">
+    <link rel="stylesheet" href="/home.js">
+    <link rel="icon" href="/assets/Berm.ico">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   </head>
   <header>
-    <style>
-    input[type=search] {
-      width: 40px;
-      box-sizing: border-box;
-      border: 2px hidden #8c000a;
-      font-size: 16px;
-      background-image:url(/assets/images/search.png);
-      background-color: #202020;
-      background-repeat: no-repeat;
-      height: 40px;
-      -webkit-transition: width 0.4s ease-in-out;
-      transition: width 0.4s ease-in-out;
-      cursor: pointer;
-    }
+  	<style>
+  	input[type=search] {
+  		width: 40px;
+  		box-sizing: border-box;
+  		border: 2px hidden #8c000a;
+  		font-size: 16px;
+  		background-image:url(/assets/images/search.png);
+  		background-color: #202020;
+  		background-repeat: no-repeat;
+  		height: 40px;
+  		-webkit-transition: width 0.4s ease-in-out;
+  		transition: width 0.4s ease-in-out;
+  		cursor: pointer;
+  	}
 
-    input[type=search]:focus {
-      width: 200px;
-      border: solid;
-      background-color: #505050;
-      background-image: none;
-      cursor: grab;
-    }
-    input:focus{
-    cursor: grab !important;
-    }
-    </style><style>
-    input[type=search] {
-    width: 40px;
-    box-sizing: border-box;
-    border: 2px hidden #8c000a;
-    font-size: 16px;
-    background-image:url(/assets/images/search.png);
-    background-color: #202020;
-    background-repeat: no-repeat;
-    height: 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-    cursor: pointer;
+  	input[type=search]:focus {
+  		width: 200px;
+  		border: solid;
+  		background-color: #505050;
+  		background-image: none;
+  		cursor: grab;
+  	}
+  	input:focus{
+  	cursor: grab !important;
+  	}
+  	</style><style>
+  	input[type=search] {
+  	width: 40px;
+  	box-sizing: border-box;
+  	border: 2px hidden #8c000a;
+  	font-size: 16px;
+  	background-image:url(/assets/search.png);
+  	background-color: #202020;
+  	background-repeat: no-repeat;
+  	height: 40px;
+  	-webkit-transition: width 0.4s ease-in-out;
+  	transition: width 0.4s ease-in-out;
+  	cursor: pointer;
     margin-top: 28px;
-    }
+  	}
 
-    input[type=search]:focus {
-    width: 200px;
-    border: solid;
-    background-color: #505050;
-    background-image: none;
-    cursor: grab;
-    }
-    input:focus{
-    cursor: grab !important;
-    }
-    </style>
-    <script>
-      function statusChangeCallback(response) {
-        console.log('statusChangeCallback');
-        console.log(response);
-        if (response.status === 'connected') {
-          testAPI();
-        } else {
-          document.getElementById('status').innerHTML = 'Please log ' +
-            'into this app.';
-        }
-      }
+  	input[type=search]:focus {
+  	width: 200px;
+  	border: solid;
+  	background-color: #505050;
+  	background-image: none;
+  	cursor: grab;
+  	}
+  	input:focus{
+  	cursor: grab !important;
+  	}
+  	</style>
+    <style>
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
 
-      function checkLoginState() {
-        FB.getLoginStatus(function(response) {
-          statusChangeCallback(response);
-        });
-      }
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId: '1490167914363614',
-          cookie: true,
-          xfbml: true,
-          version: 'v2.8'
-        });
-        FB.Event.subscribe('auth.login', function() {
-          window.location.reload();
-        });
-        FB.getLoginStatus(function(response) {
-          statusChangeCallback(response);
-        });
-      };
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
 
-      function testAPI() {
-        console.log('Welcome!  Fetching your information.... ');
-        FB.api('/me', function(response) {
-          console.log('Successful login for: ' + response.name);
-          document.getElementById('status').innerHTML =
-            'Thanks for logging in, ' + response.name + '!';
-        });
-      }
-    </script>
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #202020;
+    color: white;
+    align-items: center;
+    width: autop;
+    height: auto;
+}
+.modal-header img {
+  height: auto;
+  width: 300px;
+}
+.modal-body {
+  padding: 2px 16px;
+  background-color: #8c0009;
+  font: 24px Superspace;
+  color: #ffffff;
+  text-align: center;
+  width: auto;
+  height: auto;
+}
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #202020;
+    color: white;
+    width: auto;
+    height: 150px;
+}
+.loginBtn{
+  cursor: pointer;
+}
+</style>
     <div class="column is-multiline">
       <div class="headcontainer">
         <!--ถ้าใช้ id จะอ้าง java script ได้-->
@@ -116,8 +160,8 @@
         <div class="head">
           <div class="columns is-multiline">
             <div class="column is-4" align="right" style="margin-top:-50px">
-              <a ahref="/index.html">
-              <img  src="/DDG/static/assets/LogoWeb/dekdoklogowhite.png" alt="" width="270" height="auto">
+              <a ahref="index.html">
+              <img  src="assets/dekdoklogowhite.png" alt="" width="270" height="auto">
               </a>
               <!--แทรกรูป กำหนดขนาด-->
             </div>
@@ -129,59 +173,74 @@
               </div>
     <div class="column is-2" align="left" >
       <br><br>
-      <a onclick="document.getElementById('modal-wrapper').style.display='block'">
-      <img src="/DDG/static/assets/images/log-in.png" alt="" width="100px"></a>
-
-
+      <div class="loginBtn">
+      <div id="myBtn"><img src="/assets/log-in.png" alt="" width="100px"></div>
+      </div>
           </div>
         </div>
       </div>
       </div>
     </div>
-    <div id="modal-wrapper" class="modal">
+    <div id="myModal" class="modal">
 
-      <form class="modal-content animate" action="#">
-        <!-- #หน้าหลังล็อกอิน-->
-
-        <div class="imgcontainer">
-          <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
-          <img src="/DDG/static/assets/LogoWeb/dekdoklogoblack.png" alt="Avatar" class="avatar">
-          <h1 style="text-align:center">เข้าสู่ระบบ</h1>
-        </div>
-        <div class="has-text-centered">
-          <h3>——————————  หรือ  ——————————</h3>
-          <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div>
-          <div id="status"></div>
-          <input type="text" placeholder="อีเมล์" name="uname">
-          <input type="password" placeholder="รหัสผ่าน" name="psw">
-          <br></br>
-          <button type="submit">เข้าสู่ระบบ</button><br>
-          <input type="checkbox" style="margin:26px 30px;"> จดจำฉัน</input>
-          <a class="has-text-centered" href="#" style="text-align:center;">ลืมรหัสผ่าน?</a>
-          <br><button class="regis" type="submit">สมัครเลย</button>
-        </div>
-      </form>
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header has-text-centered">
+      <span class="close">&times;</span>
+      <img src="/assets/dekdoklogowhite.png">
+    </div>
+    <div class="modal-body">
+      <br><br>
+      <p>&nbsp;&nbsp;Username&nbsp;&nbsp;&nbsp;<input type="text" placeholder="username" name="un"></p><br>
+      <p>&nbsp;&nbsp;Password&nbsp;&nbsp;&nbsp;<input type="password" placeholder="Password" name="psw"></p><br>
+      <button>Login</button><br><br><br>
+      <p>You don't have account? Just click ----> <a href="/register.html" style="bold">Register</a></p>
+      <br><br>
+    </div>
+    <div class="modal-footer">
 
     </div>
+  </div>
 
-    <script>
-      // If user clicks anywhere outside of the modal, Modal will close
-      var modal = document.getElementById('modal-wrapper');
-      window.onclick = function(event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      }
-    </script>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+      modal.style.display = "none";
+  }
+}
+</script>
+
 
     <div class="navcontainer">
       <div class="nav-center">
         <nav class="navbar-tabs">
           <a href="/index.html" class="nav-item">หน้าแรก</a>
-          <a href="/DEKDOK/index.html" class="nav-item">ข่าว</a>
-          <a href="/ReviewFront/index.html" class="nav-item">รีวิวเกม</a>
-          <a href="/topchart/index.html" class="nav-item">เกมยอดนิยม</a>
-          <a href="/Aboutus/index.html" class="nav-item">เกี่ยวกับเรา</a>
+          <a href="/newshome.html" class="nav-item">ข่าว</a>
+          <a href="/reviewhome.html" class="nav-item">รีวิวเกม</a>
+          <a href="/topchart.html" class="nav-item">เกมยอดนิยม</a>
+
         </nav>
       </div>
     </div>
@@ -191,12 +250,12 @@
     <div class="bodycontainer">
       <div class="content has-text-centered has-text-black">
           <br></br>
-          <g class="content has-text-left">(RPG / Tactical / Short Review) รีวิวเกม Hyperdimension <strong class="has-text-info">Neptunia</strong> Re;Birth1 </br><strong class="has-text-info">เนปจูน</strong> เทพธิดาตกสวรรค์</g>
-          <img src="/assets/Line.png" height="3px" width="1230px" >
-          <b class="content has-text-left">เมื่อ 9000+ ชม. ที่แล้ว</b>
-          <img src="/assets/Hyperdimension_Neptunia_Re_Birth1.jpg" height="auto" width="900px">
+          <p align="middle"><font face="Superspace" size="7"><b>(RPG / Tactical / Short Review) รีวิวเกม Hyperdimension <strong class="has-text-info">Neptunia</strong> Re;Birth1 </br><strong class="has-text-info">เนปจูน</strong> เทพธิดาตกสวรรค์</b></font></p>
+          <div class="line" style="height: 5px;"></div><br>
+          <h5 align="left"><font face="RSU text" size="6">มากกว่า 9000 ชม. ที่แล้ว</font></h5><br>
+          <img src="assets/Hyperdimension_Neptunia_Re_Birth1.jpg" height="auto" width="900px">
           </br>
-<g class="content has-text-left">เนื้อเรื่องคร่าวๆ</g>
+<g class="content has-text-left">เนื้อเรื่องคร่าวๆ</g><br><br>
           <b class="content has-text-left">
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ในโลกของ Gamindustry มีอาณาจักรทั้ง 4 อาณาจักร ซึ่งทั้งสี่จะมีเทพธิดา (CPU) ต่อสู้กันมานานนับสิบๆปีเพื่อแย่งชิงอาณาจักรกัน แต่ว่าวันหนึ่ง มีเสียงดังขึ้นในหัวของบรรดา CPU ให้ช่วยกันรุม Lady Purple จนทำให้ตัวเอกของเราต้องหล่นจากโลกเบื้องบนลงมายังเมืองของตัวเอง แถมยังเกิดอาการลืมความทรงจำอีกด้วย
 
@@ -204,8 +263,8 @@
 
 โดยเนื้อหาภายในเกมนั้นจะเป็นเนื้อหาเบาสมอง มีมุขตลกๆแทรกเข้ามาแทบทุกช่วง ซึ่งตัวยิงมุขของเราคือตัวเอก(Neptune)นั่นแหละครับ ซึ่งนอกจากจะเป็นการเดินทางตามหาความทรงจำแล้ว ยังมีการไขปริศนาที่ถูกปูไว้แต่แรกว่าเจ้าของเสียงที่ยั่วยุตั้งแต่แรกเป็นเสียงใคร หรือแม้กระทั้งการแปลงร่าง (HDD Mode) ซึ่งเป็นสิทธิ์เฉพาะสำหรับบรรดา CPU นั้นทำไมถึงกลายเป็นเรื่องราวสำคัญในการดำเนินเรื่อง
           </b>
-          <img src="/assets/HDR_Jun102014_03.jpg" height="auto" width="900px">
-          <g class="content has-text-left">ระบบเกมคร่าวๆ</g>
+          <img src="assets/HDR_Jun102014_03.jpg" height="auto" width="900px"><br><br>
+          <g class="content has-text-left">ระบบเกมคร่าวๆ</g><br><br>
           <b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;จะแบ่งออกเป็นสองระบบหลักดังนี้คือ 1. ระบบภายในแผนที่ และ 2. ระบบภายในดันเจี้ยน</b>
           <g1 class="content has-text-left">รูปแบบของเกมเป็นรูปแบบ : Dungeon</g1>
           <b class="content has-text-left">
@@ -217,14 +276,14 @@
 </br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– ระบบ Plan : เป็นจุดเด่นเลยก็ว่าได้สำหรับเกมนี้ โดย Npc ต่างๆในแมพจะคอยมอบ Plan ให้เราเอาไปสร้างไอเทมต่างๆ , ปลดล็อกไอเทมใหม่ๆ , ดรอปไอเทมแปลกๆ , สร้างศัตรูใหม่ๆในดันเจี้ยนเก่า , อัพเกรดความเทพของเรา , และอื่นๆอีกมากมายนับร้อยๆอย่าง โดยจะใช้ไอเทมที่ดรอปจากศัตรูมาสร้าง Plan นั่นเองครับ
 </br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– Event : คือการดำเนินเนื้อเรื่องฉบับ Novel ญี่ปุ่น คือดูสาวๆนั่งคุยกันยาวๆ ใครชอบก็อ่าน ใครไม่ชอบก็กดข้ามได้ เพราะบางครั้งการเล่นมุขของหนูเนปจูนก็เยอะจนน่ารำคาญเหมือนกันครับ</b>
-<img src="/assets/hnr1_may012014_05.jpg" height="auto" width="900px">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– Event : คือการดำเนินเนื้อเรื่องฉบับ Novel ญี่ปุ่น คือดูสาวๆนั่งคุยกันยาวๆ ใครชอบก็อ่าน ใครไม่ชอบก็กดข้ามได้ เพราะบางครั้งการเล่นมุขของหนูเนปจูนก็เยอะจนน่ารำคาญเหมือนกันครับ</b><br><br>
+<img src="assets/hnr1_may012014_05.jpg" height="auto" width="900px"><br><br>
           <b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. ระบบภายในดันเจี้ยน : เมื่อเข้ามาในดัน เราสามารถใช้ปุ่ม สแกน เพื่อหาไอเทมลับ หรือเดินเก็บไอเทมต่างๆเพื่อไปผสม Plan , หา Chips ครับ
 </br>
 <g1 class="content has-text-left">รูปแบบการเจอศัตรู : เดินชน – เข้าฉากต่อสู้</g1>ระหว่างทางจะมีบรรดาศัตรูเดินวนไปวนมา เราสามารถเข้าไปสับด้านหลังเพื่อตัดเข้าฉากต่อสู้ได้</br>
 <g1 class="content has-text-left">ภายในฉากปะทะกัน เป็นรูปแบบ : Action – Turn base ที่สามรถมองเห็นว่าใครเริ่มก่อนเริ่มหลัง</g1></b>
-<img src="/assets/rebirth1_screen_eng32.jpg" height="auto" width="900px">
-          <g class="content has-text-left">จุดเด่น</g>
+<img src="assets/rebirth1_screen_eng32.jpg" height="auto" width="900px"><br><br>
+          <g class="content has-text-left">จุดเด่น</g><br><br>
           <b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– เป็นเกมที่มีระบบแปลกๆ เยอะแยะเพื่อใช้ในการพัฒนาตัวละครหลายรูปแบบ
 </br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– เลเวลอัพไม่ยาก ไม่ง่ายจนเกินไป
@@ -237,8 +296,8 @@
 </br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– ระบบ Plan เป็นอะไรที่ชวนตื่นเต้นมากๆ
 </br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– บอสไม่ยาก ไม่ง่าย
-<g class="content has-text-left">จุดด้อย</g> <b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– เกมนับว่ามีความ Complex ต่ำมากๆ มีแค่เก็บเลเวลเพื่อพัฒนาตัวละครไปยังด่านที่ยากขึ้น แค่นั้นจริงๆ
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– บอสไม่ยาก ไม่ง่าย<br><br>
+<g class="content has-text-left">จุดด้อย</g><br><br> <b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– เกมนับว่ามีความ Complex ต่ำมากๆ มีแค่เก็บเลเวลเพื่อพัฒนาตัวละครไปยังด่านที่ยากขึ้น แค่นั้นจริงๆ
 </br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– เนื้อเรื่องสดใสไม่เครียด ไม่เครียดเลยครับ ปล่อยมุขถี่จนบางคนอาจรำคาญได้
 </br>
@@ -252,9 +311,9 @@
 </br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– ดันเจี้ยนไม่มีลูกเล่นเลย แพทเทิร์นเดิมๆซ้ำ แค่เปลี่ยนมอน เปลี่ยนจุด Event
 </br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– แรกๆยากมาก หลังๆง่ายมากกก</b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– แรกๆยากมาก หลังๆง่ายมากกก</b><br><br>
 </br>
-<g class="content has-text-left">เหมาะสำหรับ</g> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– คนที่อยากใช้เวลาในการเล่นสูงๆ เพราะนอกจากเล่นเพื่อจบแล้วยังมีดันเจี้ยนลับบอสลับอีกเป็นกองงงง เยอะมากกก
+<g class="content has-text-left">เหมาะสำหรับ</g><br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– คนที่อยากใช้เวลาในการเล่นสูงๆ เพราะนอกจากเล่นเพื่อจบแล้วยังมีดันเจี้ยนลับบอสลับอีกเป็นกองงงง เยอะมากกก
 </br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– คนที่ชื่นชอบเกม RPG พัฒนาตัวละครได้อย่างกว้างขวาง
 </br>

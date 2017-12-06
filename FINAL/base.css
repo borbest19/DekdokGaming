@@ -761,3 +761,86 @@ section .section {
 .top1,.top2_2,.top3_2{
 		border-bottom: 5px solid #ffffff;
 }
+
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.top5_1:hover .image,.top5_2:hover .image,.top5_3:hover .image,.top5_4:hover .image,.top5_5:hover .image{
+  opacity: 0.3;
+  transition: 0.5s;
+}
+
+.top5_1:hover .middle,.top5_2:hover .middle,.top5_3:hover .middle,.top5_4:hover .middle,.top5_5:hover .middle{
+  opacity: 1;
+}
+  .top5_1 .text{
+    background-color: #8c000a;
+    color: #ffffff;
+    font: 60px Superspace;
+  }
+  .top5_2 .text,.top5_3 .text,.top5_4 .text,.top5_5 .text{
+    background-color: #8c000a;
+    color: #ffffff;
+    font: 40px Superspace;
+  }
+  .top5_1,.top5_2,.top5_3,.top5_4,.top5_5{
+       position: relative;
+  }
+.top5_1{
+    height: auto;
+    width: 600px;
+}
+.top5_2{
+  height: 300px;
+  width: 300px;
+}
+.top5_3{
+  height: 300px;
+  width: 300px;
+}
+
+.top5_4{
+  height: 300px;
+  width: 300px;
+}
+.top5_5{
+  height: 300px;
+  width: 300px;
+}
+
+
+#chart figure img {
+	align-items: center;
+	float: center;
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	padding-bottom: 22px;
+	padding-right: 22px;
+}
+
+#chart figure:hover img {
+	opacity: .5;
+}
+
+#chart figure1 img {
+	opacity: .5;
+}
+
+hr{
+  width: 1240px;
+}
+g{
+  margin-right: 100px;
+    font: 40pt Superspace;
+}
+h2{
+  font: 40pt Superspace;
+  font-weight: bold;
+  margin-top: 15px;
+}

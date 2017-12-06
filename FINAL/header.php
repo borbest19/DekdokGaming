@@ -54,7 +54,7 @@
         font-size: 16px;
         background-image:url(images/search.png);
         background-size: 33px;
-        background-color: #8c000a;
+        background-color: #202020;
         background-repeat: no-repeat;
         height: 40px;
         -webkit-transition: width 0.4s ease-in-out;

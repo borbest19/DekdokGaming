@@ -1,6 +1,7 @@
 body { /*ไม่มีไรนำหน้าคือ tag ปกติ*/
 
-background-image:url("/DDG/static/assets/images/bg.jpg");
+background-color: #202020;
+    /* background-image:url("/DDG/static/assets/images/bg9.jpg");
 background-repeat: no-repeat;
  background-size: 100% 100%;
  background-position: center; */

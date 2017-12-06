@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <title>Dek-Dok Gaming</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
-    <link rel="stylesheet" href="/News/assets/home.css">
-    <link rel="stylesheet" href="/News/assets/home.js">
+    <link rel="stylesheet" href="\ReVewwwww\assets\home.css">
     <link rel="icon" href="/DDG/static/assets/images/Berm.ico">
   </head>
   <header>
@@ -192,19 +191,32 @@
     <div class="bodycontainer">
       <div class="content has-text-centered has-text-black">
           <br></br>
-          <g class="content has-text-left">วีดีโอฟุตเทจแรก ตัวเกม Pre-Alpha ของ Fallout 4 New Vegas</g>
-          <img src="/assets/Line.png" height="3px" width="1230px" >
-          <b class="content has-text-left">มากกว่า 9000 ชม. ที่แล้ว</b>
-          <img src="/assets/24131620_697974533729295_8961600690008189209_o.png" height="auto" width="900px">
+          <g class="content has-text-left">รีวิว Neko Para Vol.1 (ENG)</g>
+          <img src="\assets\Line.png" height="3px" width="1230px" >
+          <b class="content has-text-left">เมื่อ 9000+ ชม. ที่แล้ว</b>
+          <img src="\assets\Nekopara.jpg" height="auto" width="900px">
           </br>
-          <br></br>
-          <b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;วีดีโอฟุตเทจแรก ตัวเกม Pre-Alpha ของ Fallout 4 New Vegas หรือก็คือม็อดที่นำเอา Fallout: New Vegas หรือ Fallout ของ Obsidian ที่แฟนๆยกย่องว่าเป็น Fallout ที่ดีที่สุดในแฟรนไชส์ ใส่ลงไปใน Fallout 4 นั่นเอง
-ซึ่งก่อนหน้านี้มีแค่ตัวอย่างเป็นภาพเดี่ยวๆ ตอนนี้มีเป็นฟุตเทจวีดีโอแล้ว
-<div class="content has-text-centered"><iframe width="900px" height="600px" src="https://www.youtube.com/embed/-s0HeS4cliY" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;อย่างไรก็ดีทีมงานยังไม่เปิดเผยว่าเมื่อไหร่จะปล่อยให้โหลดม็อดนี้ แต่ตามที่ทางทีมงานเคยกล่าวไว้ ม็อดนี้ต้องการชิ้นส่วนเข้าไปประกอบปริมาณมหาศาล รวมถึงทีมออกแบบเลเวลเพิ่งจะเริ่มทำพื้นที่ Goodsprings ใน Fallout: New Vegas ซึ่งเบื้องต้นก็คงจะอยู่ในช่วงต้นของการพัฒนา เพราะงั้นก็อย่าหวังว่ามันจะออกมาเร็วๆนี้</b>
-          <b></b>
+          <b class="content has-text-left"></br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สวัสดีครับ ผม ninetail01 กลับมาอีกครั้งวันนี้จะมาขอรีวิวเกมที่ผมบอกเลยว่า รักเลย!! เกมนี้รักเลยครับ!!
+Neko Para Vol.1 (ENG)
+เป็นผมขอยอมรับเลยครับว่าเป็นเพียงไม่กี่เกมที่ผมเล่นครั้งแรกแล้วชอบเลยแบบนี้<br></br>
+<g class="content has-text-left">เนื้อเรื่อง</g>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เป็นเรื่องของเรา คาโชยู (มั้งนะอ่านออกเสี่ยงไม่ค่อยถูกนะครับ) ได้ออกจากบ้านมาเปิดร้านเบเกอรี่ Patisserie La Soleil และในวันที่กำลังจะเปิดร้านครั้งแรกอยู่นั้น เราได้พบกับกล่องปริศนา 2 กล่องอยุ่ด้วย ซึ่งภายในก้คือ แมวสาวที่เราเลียงเอาไว้ที่บ้าน ช๊อกโกล่า และ วานิลา นั้นเอง เรื่องราววุ่นๆ ของหนึ่งเจ้านายหนุ่ม กับสองแมวสาว ภายในร้านเบเกอรี่แห่งนี้จึงได้เริ่มขึ้น
+<br></br>
+<div class="has-text-centered"><img src="\assets\20171204234641_1.jpg" height="auto" width="900px"></div>
+<g class="content has-text-left">ระบบของเกม</g>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เป็นเกมแนวจีบสาวแบบนิยายภาพเหมือนเกมจีบสาวทั่วไป แต่สิ่งที่เป็นจุดเด่นเลยก็คือ ตัวละครจะเคลื่อนไหวอยุ่ตลอดเวลา ไม่ว่าจะเป็นปาก ตา หู หาง ใบหน้า ลำตัว เช่นถ้าตัวละครพูดปากก็จะขยับตาม ว่าแล้วตัวละครเดิน ก็จะขยับตัวเหมือนกำลังเดินอยู่จริงๆ เวลาตัวละครเศร้าสีหน้าก็จะเศร้าจริงๆ ราวกับว่ากำลังมีชีวิตอยู่จริงๆ (ตัวฉาก H นั้นยังเล่นไม่ถึงนะครับ)
+<div class="has-text-centered"><img src="\assets\NekoPara_02.gif" height="auto" width="900px"></div>
+<g class="content has-text-left">ความเห็นส่วนตัวหลังจากเล่นครั้งแรก(ถึงจะไม่จบก็เถอะ)</g>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ถึงผมจะเล่นไม่จบก็ตามแต่ 10 เต็ม ผมให้ 10 เต็มไปก่อนเลยครับ อาจเพราะส่วนตัวเป็นสาวหูสัตว์และเสพเนื้อเรื่องอยู่แล้วก็ได้ (เป็นภาษาอังกฤษแบบนี้อ่านออกแปลได้สบายผมละ) ตัวละครทำออกมามาได้น่ารัก ภาพเองก็สวยสดใส ตัวเนื้อเรื่อง(จากเริ่มจนถึงฉากเปิด) ทำออกมาได้โดนใจ รวมถึงลูกเล่นการเครื่องไหวอีก ทำให้ผมยก 10 เต็ม ไปก่อนไปเลย ใครที่เป็นคอสายหูสัตว์หรือสายเนื้อเรื่อง ไม่ควรพลาดอย่างยิ่งครับ ถ้าพลาดจะเสียใจแน่อนครับ ตัวผมเองก็จะตามเก้บให้ครบทุกVol เลยครับ ไม่เเปลกใจเลยที่ตัวสตรีม จะเอามาลงด้วยเหมือนกัน(แต่ไม่Hนะครับ)
+<br>
+<br>
+</b>
+<div class="has-text-centered"><img src="\assets\20171204234015_1.jpg" height="auto" width="900px"></div>
+
+            <br></br>
           <b1>
-            <strong>แหล่งข้อมูลจาก</strong> <A href="https://www.facebook.com/goodgamecheapprice/" style="color:red">เพจ เกมถูกบอกด้วย</A>
+            <strong>แหล่งข้อมูลจาก</strong> <A href="https://2th.me/a/h_game/f1030/147072" style="color:red">ninetail01</A>
           </b1>
       </div>
     </div>

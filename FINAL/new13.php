@@ -192,19 +192,19 @@
     <div class="bodycontainer">
       <div class="content has-text-centered has-text-black">
           <br></br>
-          <g class="content has-text-left">วีดีโอฟุตเทจแรก ตัวเกม Pre-Alpha ของ Fallout 4 New Vegas</g>
+          <g class="content has-text-left">ตัวอย่างใหม่ของ Past Cure เกมแนวแอ็คชั่นลอบเร้นตัวใหม่จากทีม Phantom 8</g>
           <img src="/assets/Line.png" height="3px" width="1230px" >
           <b class="content has-text-left">มากกว่า 9000 ชม. ที่แล้ว</b>
-          <img src="/assets/24131620_697974533729295_8961600690008189209_o.png" height="auto" width="900px">
+          <img src="/assets/attach-1512359475089.jpg" height="auto" width="900px">
           </br>
           <br></br>
-          <b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;วีดีโอฟุตเทจแรก ตัวเกม Pre-Alpha ของ Fallout 4 New Vegas หรือก็คือม็อดที่นำเอา Fallout: New Vegas หรือ Fallout ของ Obsidian ที่แฟนๆยกย่องว่าเป็น Fallout ที่ดีที่สุดในแฟรนไชส์ ใส่ลงไปใน Fallout 4 นั่นเอง
-ซึ่งก่อนหน้านี้มีแค่ตัวอย่างเป็นภาพเดี่ยวๆ ตอนนี้มีเป็นฟุตเทจวีดีโอแล้ว
-<div class="content has-text-centered"><iframe width="900px" height="600px" src="https://www.youtube.com/embed/-s0HeS4cliY" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;อย่างไรก็ดีทีมงานยังไม่เปิดเผยว่าเมื่อไหร่จะปล่อยให้โหลดม็อดนี้ แต่ตามที่ทางทีมงานเคยกล่าวไว้ ม็อดนี้ต้องการชิ้นส่วนเข้าไปประกอบปริมาณมหาศาล รวมถึงทีมออกแบบเลเวลเพิ่งจะเริ่มทำพื้นที่ Goodsprings ใน Fallout: New Vegas ซึ่งเบื้องต้นก็คงจะอยู่ในช่วงต้นของการพัฒนา เพราะงั้นก็อย่าหวังว่ามันจะออกมาเร็วๆนี้</b>
-          <b></b>
+          <b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ทีมพัฒนาเกมอย่าง Phantom 8 ในที่สุดก็ปล่อยตัวอย่างแรกของเกมที่พวกเขากำลังพัฒนากันอยู่อย่าง Past Cure ออกมาแล้วครับ โดยสิ่งที่ตัวอย่างนี้นำเสนอเป็น Gameplay Trailer ที่นำเสนอรูปแบบการเล่นของเกมเป็นแนวลอบเร้นและมีการใช้พลังพิเศษของตัวละครด้วย
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;โดยสิ่งที่ตัวอย่างตั้งใจจะนำเสนอคือรูปแบบการต่อสู้ที่ตัวเอกของเกมใช้ โดยส่วนมากจะเป็นวิธีการ Stealh มากกว่าเน้นบู๊แบบแอ็คชั่นล้างผลาญครับ และในส่วนของพลังพิเศษของตัวละครก็ดูเหมือนจะเน้นไปที่การก่อกวนศัตรูมากกว่าการทำร้ายศัตรูให้ถึงตาย เพื่อเข้าไปโจมตีต่อในระยะประชิดอีกทีหนึ่ง สำหรับตัวอย่างเกมดูได้ที่นี่เลยครับ
+<div class="content has-text-centered"><br><iframe width="900px" height="600px" src="https://www.youtube.com/embed/nR1gCEz4vmw" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หลายฉากและหลายระดับของตัวเกม สามารถหาวิธีเคลียร์ได้ในหลายรูปแบบด้วยความสามารถของตัวละครทำให้ผู้เล่นเลือกวิธีที่ที่จะเคลียร์ฉากได้อย่างเต็มที่ แต่รูปแบบเกมที่ทางทีมผู้พัฒนานำเสนอตั้งใจที่จะเป็นแบบลอบเร้นมากกว่าแอ็คชั่น โดยเราจะมีพลังพิเศษต่างๆที่ช่วยให้การลอบเร้นนั้นง่ายขึ้น เช่นก่อกวนคลื่นวิทยุฝั่งตรงข้ามหรือแม้แต่การตัดภาพระบบกล้องรักษาความปลอดภัย โดยตัวเกมนั้นมีกำหนดวางจำหน่ายอยู่ที่ 2 กุมภาพันธ์ 2018 ครับ
+</b>
           <b1>
-            <strong>แหล่งข้อมูลจาก</strong> <A href="https://www.facebook.com/goodgamecheapprice/" style="color:red">เพจ เกมถูกบอกด้วย</A>
+            <strong>แหล่งข้อมูลจาก</strong> <A href="http://www.playulti.com/content/page/5a24c78bc2cb9db725aeb6e3//" style="color:red">Aisoon</A>
           </b1>
       </div>
     </div>

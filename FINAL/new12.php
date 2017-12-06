@@ -192,19 +192,23 @@
     <div class="bodycontainer">
       <div class="content has-text-centered has-text-black">
           <br></br>
-          <g class="content has-text-left">วีดีโอฟุตเทจแรก ตัวเกม Pre-Alpha ของ Fallout 4 New Vegas</g>
-          <img src="/assets/Line.png" height="3px" width="1230px" >
+          <g class="content has-text-left">Civilization VI : Rise & Fall เตรียมออกส่วนเสริมใหม่กุมภาพันธ์ปีหน้า!!</g>
+          <img src="/assets/images/Line.png" height="3px" width="1230px" >
           <b class="content has-text-left">มากกว่า 9000 ชม. ที่แล้ว</b>
-          <img src="/assets/24131620_697974533729295_8961600690008189209_o.png" height="auto" width="900px">
+          <img src="/assets/images/attach-1512389849685.jpg" height="auto" width="900px">
           </br>
           <br></br>
-          <b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;วีดีโอฟุตเทจแรก ตัวเกม Pre-Alpha ของ Fallout 4 New Vegas หรือก็คือม็อดที่นำเอา Fallout: New Vegas หรือ Fallout ของ Obsidian ที่แฟนๆยกย่องว่าเป็น Fallout ที่ดีที่สุดในแฟรนไชส์ ใส่ลงไปใน Fallout 4 นั่นเอง
-ซึ่งก่อนหน้านี้มีแค่ตัวอย่างเป็นภาพเดี่ยวๆ ตอนนี้มีเป็นฟุตเทจวีดีโอแล้ว
-<div class="content has-text-centered"><iframe width="900px" height="600px" src="https://www.youtube.com/embed/-s0HeS4cliY" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;อย่างไรก็ดีทีมงานยังไม่เปิดเผยว่าเมื่อไหร่จะปล่อยให้โหลดม็อดนี้ แต่ตามที่ทางทีมงานเคยกล่าวไว้ ม็อดนี้ต้องการชิ้นส่วนเข้าไปประกอบปริมาณมหาศาล รวมถึงทีมออกแบบเลเวลเพิ่งจะเริ่มทำพื้นที่ Goodsprings ใน Fallout: New Vegas ซึ่งเบื้องต้นก็คงจะอยู่ในช่วงต้นของการพัฒนา เพราะงั้นก็อย่าหวังว่ามันจะออกมาเร็วๆนี้</b>
+          <b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Firaxis Games และ 2K ได้ออกมาเปิดเผยว่าจะมีการออกส่วนเสริมใหม่ของเกมกลยุทธ์สร้างเมืองซีรี่ส์ดังอย่าง Civilization VI โดยส่วนเสริมนี้ใช้ชื่อว่า Rise & Fall และมีกำหนดเปิดวางจำหน่ายในวันที่ 8 กุมภาพันธ์ 2018 !! เพื่อนๆ ที่สนใจ สามารถเข้าไปดูรายละเอียดเพิ่มเติมได้ที่ลิ้งค์นี้เลยค่ะ : Civilization VI: Rise & Fall
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สำหรับฟีเจอร์เด่นๆ ในส่วนเสริมนี้จะประกอบไปด้วย Great Ages mechanic ซึ่งจะมีการเพิ่มโบนัสแบบใหม่ให้กับผู้เล่น เมื่อเริ่มเข้าสู่ยุคทอง และยุคมืด ในแต่ละช่วงของประวัติศาสตร์
+<div class="content has-text-centered"><br><img src="/assets/images/916ee630-d1b4-40aa-b10d-91a3ed4ca553_2KGMKT_CivilizationVI-RF_Game-Image_Announce_Tundra_1-768x432.jpg" height="auto" width="900px"></div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  นอกจากนี้เมืองแต่ละเมืองจะมีค่าความจงรักภักดี ซึ่งถ้าเมืองยิ่งมีความแข็งแกร่งมากก็จะทำให้ทรัพยากรในเมืองอุดมสมบูรณ์มากขึ้น เหล่าข้าราชการในเมืองก็จะส่งผลต่อค่าความจงรักภักดี เพราะความสามารถของยูนิตเหล่านี้จะมีความจำเป็นต่อการพัฒนาเมืองด้วย
+
+<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ส่วนทางด้านของระบบพันธมิตร จะมีการปรับปรุงใหม่ โดยเราสามารถจัดประเภทของพันธมิตรได้ นอกจากนี้เรายังสามารถนำเมืองของเราเข้าสู่สถานะฉุกเฉิน เพื่อร่วมกันสร้างพันธมิตรกับรัฐข้างเคียง ซึ่งจะช่วยลดภัยคุกคามจากอาณาจักรอื่นได้อีกต่างหาก เจ๋งไปเลยใช่มั้ยล่าเกมนี้ ใครที่ชื่นชอบเกมแนวสร้างเมืองวางแผนกลยุทธ์ภาพสวยๆ เตรียมเก็บเงินเตรียมเปย์กันได้เลยจ้าา >//< </b>
           <b></b>
           <b1>
-            <strong>แหล่งข้อมูลจาก</strong> <A href="https://www.facebook.com/goodgamecheapprice/" style="color:red">เพจ เกมถูกบอกด้วย</A>
+            <strong>แหล่งข้อมูลจาก</strong> <A href="http://www.playulti.com/content/page/5a253faac2cb9db725aeb739//" style="color:red">Chomismama</A>
           </b1>
       </div>
     </div>

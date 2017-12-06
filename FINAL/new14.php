@@ -192,19 +192,17 @@
     <div class="bodycontainer">
       <div class="content has-text-centered has-text-black">
           <br></br>
-          <g class="content has-text-left">วีดีโอฟุตเทจแรก ตัวเกม Pre-Alpha ของ Fallout 4 New Vegas</g>
+          <g class="content has-text-left">Marvel Vs. Capcom Infinite เตรียมอัพเดทชุดคอสตูม Set ใหม่ให้ตัวละครภายในเกม</g>
           <img src="/assets/Line.png" height="3px" width="1230px" >
           <b class="content has-text-left">มากกว่า 9000 ชม. ที่แล้ว</b>
-          <img src="/assets/24131620_697974533729295_8961600690008189209_o.png" height="auto" width="900px">
+          <img src="/assets/attach-1511519017735.jpg" height="auto" width="900px">
           </br>
           <br></br>
-          <b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;วีดีโอฟุตเทจแรก ตัวเกม Pre-Alpha ของ Fallout 4 New Vegas หรือก็คือม็อดที่นำเอา Fallout: New Vegas หรือ Fallout ของ Obsidian ที่แฟนๆยกย่องว่าเป็น Fallout ที่ดีที่สุดในแฟรนไชส์ ใส่ลงไปใน Fallout 4 นั่นเอง
-ซึ่งก่อนหน้านี้มีแค่ตัวอย่างเป็นภาพเดี่ยวๆ ตอนนี้มีเป็นฟุตเทจวีดีโอแล้ว
-<div class="content has-text-centered"><iframe width="900px" height="600px" src="https://www.youtube.com/embed/-s0HeS4cliY" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;อย่างไรก็ดีทีมงานยังไม่เปิดเผยว่าเมื่อไหร่จะปล่อยให้โหลดม็อดนี้ แต่ตามที่ทางทีมงานเคยกล่าวไว้ ม็อดนี้ต้องการชิ้นส่วนเข้าไปประกอบปริมาณมหาศาล รวมถึงทีมออกแบบเลเวลเพิ่งจะเริ่มทำพื้นที่ Goodsprings ใน Fallout: New Vegas ซึ่งเบื้องต้นก็คงจะอยู่ในช่วงต้นของการพัฒนา เพราะงั้นก็อย่าหวังว่ามันจะออกมาเร็วๆนี้</b>
-          <b></b>
+          <b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หลังจากที่อัพเดทตัวละครใหม่อย่าง Winter Soldier, Black Widow และ Venom ไปก่อนหน้านี้กับเกม Fighting สุดมันส์อย่าง Marvel Vs. Capcom Infinite ล่าสุดทาง Capcom ได้เผยตัวละครชุดคอสตูมใหม่ของเหล่าตัวละครภายในเกม รอบนี้มีทั้งหมด 2 ชุดด้วยกันประกอบไปด้วย "Cosmic Crusaders Costume Pack" จะเป็นชุดคอสตูมที่จะอัพเดทให้กับตัวละคร Rocket Raccoon, Gamora, Nova, X, Zero และ Strider แล้วอีกชุดก็คือ "Stone Seekers Costume Pack" เป็นชุดคอสตูมที่จะอัพเดทให้กับตัวละคร Ultron, Thanos, Spider-Man, Frank West, Haggar และ Jedah โดยราคาเนื้อหาเสริม [DLC] สนนราคาอยู่ที่ราวๆ $3.99 หรือตีเป็นเงินไทย 140 บาทต่อชุด ซึ่งจะวางจำหน่ายอย่างเป็นทางการในวันที่ 5 ธันวาคมที่จะถึงนี้ทุกแพลทฟอร์มทั้ง PC, PlayStation 4 และ Xbox One</b>
+          <div class="content has-text-centered"><iframe width="900" height="600" src="https://www.youtube.com/embed/lUHOkPBT47o" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+          <br></br><iframe width="900" height="600" src="https://www.youtube.com/embed/E23xsJzanGE" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>
           <b1>
-            <strong>แหล่งข้อมูลจาก</strong> <A href="https://www.facebook.com/goodgamecheapprice/" style="color:red">เพจ เกมถูกบอกด้วย</A>
+            <strong>แหล่งข้อมูลจาก</strong> <A href="http://www.playulti.com/content/page/5a2252dda00f58b325114717//" style="color:red">onkami</A>
           </b1>
       </div>
     </div>

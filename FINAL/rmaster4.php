@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Dek-Dok Gaming</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
+    <link rel="stylesheet" href="\ReVewwwww\assets\home.css">
+    <link rel="icon" href="/DDG/static/assets/images/Berm.ico">
+  </head>
+  <header>
+    <style>
+    input[type=search] {
+      width: 40px;
+      box-sizing: border-box;
+      border: 2px hidden #8c000a;
+      font-size: 16px;
+      background-image:url(/assets/images/search.png);
+      background-color: #202020;
+      background-repeat: no-repeat;
+      height: 40px;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
+      cursor: pointer;
+    }
+
+    input[type=search]:focus {
+      width: 200px;
+      border: solid;
+      background-color: #505050;
+      background-image: none;
+      cursor: grab;
+    }
+    input:focus{
+    cursor: grab !important;
+    }
+    </style><style>
+    input[type=search] {
+    width: 40px;
+    box-sizing: border-box;
+    border: 2px hidden #8c000a;
+    font-size: 16px;
+    background-image:url(/assets/images/search.png);
+    background-color: #202020;
+    background-repeat: no-repeat;
+    height: 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    cursor: pointer;
+    margin-top: 28px;
+    }
+
+    input[type=search]:focus {
+    width: 200px;
+    border: solid;
+    background-color: #505050;
+    background-image: none;
+    cursor: grab;
+    }
+    input:focus{
+    cursor: grab !important;
+    }
+    </style>
+    <script>
+      function statusChangeCallback(response) {
+        console.log('statusChangeCallback');
+        console.log(response);
+        if (response.status === 'connected') {
+          testAPI();
+        } else {
+          document.getElementById('status').innerHTML = 'Please log ' +
+            'into this app.';
+        }
+      }
+
+      function checkLoginState() {
+        FB.getLoginStatus(function(response) {
+          statusChangeCallback(response);
+        });
+      }
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId: '1490167914363614',
+          cookie: true,
+          xfbml: true,
+          version: 'v2.8'
+        });
+        FB.Event.subscribe('auth.login', function() {
+          window.location.reload();
+        });
+        FB.getLoginStatus(function(response) {
+          statusChangeCallback(response);
+        });
+      };
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
+      function testAPI() {
+        console.log('Welcome!  Fetching your information.... ');
+        FB.api('/me', function(response) {
+          console.log('Successful login for: ' + response.name);
+          document.getElementById('status').innerHTML =
+            'Thanks for logging in, ' + response.name + '!';
+        });
+      }
+    </script>
+    <div class="column is-multiline">
+      <div class="headcontainer">
+        <!--ถ้าใช้ id จะอ้าง java script ได้-->
+        <br>
+        <div class="head">
+          <div class="columns is-multiline">
+            <div class="column is-4" align="right" style="margin-top:-50px">
+              <a ahref="/index.html">
+              <img  src="/DDG/static/assets/LogoWeb/dekdoklogowhite.png" alt="" width="270" height="auto">
+              </a>
+              <!--แทรกรูป กำหนดขนาด-->
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <div class="column is-5" align="right">
+  <br>
+    <input type="search" name="search" placeholder="       Search..">
+              </div>
+    <div class="column is-2" align="left" >
+      <br><br>
+      <a onclick="document.getElementById('modal-wrapper').style.display='block'">
+      <img src="/DDG/static/assets/images/log-in.png" alt="" width="100px"></a>
+
+
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div id="modal-wrapper" class="modal">
+
+      <form class="modal-content animate" action="#">
+        <!-- #หน้าหลังล็อกอิน-->
+
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
+          <img src="/DDG/static/assets/LogoWeb/dekdoklogoblack.png" alt="Avatar" class="avatar">
+          <h1 style="text-align:center">เข้าสู่ระบบ</h1>
+        </div>
+        <div class="has-text-centered">
+          <h3>——————————  หรือ  ——————————</h3>
+          <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div>
+          <div id="status"></div>
+          <input type="text" placeholder="อีเมล์" name="uname">
+          <input type="password" placeholder="รหัสผ่าน" name="psw">
+          <br></br>
+          <button type="submit">เข้าสู่ระบบ</button><br>
+          <input type="checkbox" style="margin:26px 30px;"> จดจำฉัน</input>
+          <a class="has-text-centered" href="#" style="text-align:center;">ลืมรหัสผ่าน?</a>
+          <br><button class="regis" type="submit">สมัครเลย</button>
+        </div>
+      </form>
+
+    </div>
+
+    <script>
+      // If user clicks anywhere outside of the modal, Modal will close
+      var modal = document.getElementById('modal-wrapper');
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+
+    <div class="navcontainer">
+      <div class="nav-center">
+        <nav class="navbar-tabs">
+          <a href="/index.html" class="nav-item">หน้าแรก</a>
+          <a href="/DEKDOK/index.html" class="nav-item">ข่าว</a>
+          <a href="/ReviewFront/index.html" class="nav-item">รีวิวเกม</a>
+          <a href="/topchart/index.html" class="nav-item">เกมยอดนิยม</a>
+          <a href="/Aboutus/index.html" class="nav-item">เกี่ยวกับเรา</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <br><br>
+    <div class="bodycontainer">
+      <div class="content has-text-centered has-text-black">
+          <br></br>
+          <g class="content has-text-left">รีวิว ฟีฟ่า 17 : ดีแล้วแต่ยังดีไม่สุด</g>
+          <img src="\assets\Line.png" height="3px" width="1230px" >
+          <b class="content has-text-left">เมื่อ 9000+ ชม. ที่แล้ว</b>
+          <img src="\assets\marco-reus-is-the-cover-star-of-fifa-17.jpg" height="auto" width="900px">
+          </br>
+          <b class="content has-text-left"></br>
+            <g1 class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;ดังที่เรารายงานไปเมื่ออาทิตย์ที่ผ่านมาว่า PES2017 คือภาคที่ดีที่สุดที่โคนามิเคยสร้างขึ้นมา ขณะเดียวกัน ฟีฟ่า 17 ก็ทำออกมาได้ไม่เลวเลย และนี่คือสาเหตุว่าทำไม</g1>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หากใครได้ติดตามข่าวสารของวงการเกมฟุตบอลสุดฮิตอย่าง ฟีฟ่า ละก็ คงจะเคยได้ยินข่าวสุดเซอร์ไพรส์เกี่ยวกับการที่ฟีฟ่าจะใช้เอนจิ้นใหม่อย่าง ฟรอสไบท์ ซึ่งมันส่งผลให้หน้านักฟุตบอลในเกมมีความคล้ายคลึงกับของจริงมากขึ้นหลายเท่าตัวจากภาคก่อนหน้านี้  ทว่านอกเหนือจากการเคลื่อนไหว ท่าทาง และระบบแสงเงาที่ดีขึ้น ฟีฟ่า 17 นี้ก็ไม่ได้แตกต่างจากภาคเดิมมากนัก ยิ่งถ้าหากคุณเป็นเซียนที่เล่นภาคก่อนจนชินมือแล้ว คุณอาจจะไม่รู้สึกแปลกใหม่เลยก็ได้ ทว่าในอีกความหมายก็คือ บรรดาผู้เล่นเก่าก็จะไม่ต้องปรับตัวอะไรมากและพร้อมเชิดฉายในภาคใหม่นี้แล้ว แม้ว่าเกมเพิ่งจะออกมาไม่กี่วันก็ตาม
+</br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;อีกหนึ่งเรื่องที่ทางผู้ผลิตได้มีการปรับใหม่คือการเล่นลูกตั้งเตะ ทว่ารูปแบบนั้นก็มีทั้งที่ทำออกมาดีและที่ทำออกมาได้น่าผิดหวัง ส่วนที่ดีคือคุณสามารถปรับมุมการยืนของคนเล่นลูกฟรีคิกได้ ขณะที่ลูกเตะมุมก็เป็นมุมกว้างเพื่อคุณสามารถเห็นนักเตะในกรอบเขตโทษทั้งหมด ส่วนลูกทุ่ม คุณก็สามารถขยับตัวคนทุ่มไปตามแนวข้างสนามได้เช่นกัน ทว่าสำหรับลูกจุดโทษ เราขอบอกว่า “สอบตก” เพราะการที่ต้องใช้อนาล็อคข้างซ้ายที่ค่อนข้างไวต่อการเคลื่อนไหวบวกกับต้องกำหนดแรงเตะและทิศทางในขณะที่ผู้เล่นวิ่งเข้าหาบอล ผลคือ บอลหลุดออกไปไกล หรือไม่ก็เบาหวิว ดังนั้นเราหวังว่าปีหน้า พวกเขาจะแก้ไขเรื่องนี้เป็นอันดับแรก
+</b>
+<img src="\assets\442newanimation.jpg" height="auto" width="900px">
+<g1>ท่าทางใหม่ๆ ในเกมส์</g1>
+          <g class="content has-text-left">โหมดต่างๆ</g>
+          <b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สำหรับโหมดสะสมเหรียญและการ์ดนักเตะสุดฮิตนี้ ถือว่าทำได้ดีทีเดียวสำหรับในภาคใหม่ที่มีภารกิจใหม่ให้ผู้เล่นพิชิตอย่าง “Squard Building Challengs” ซึ่งมันเปิดโอกาสให้ผู้เล่นสามารถแลกเปลี่ยนการ์ดต่างๆ ตามเงื่อนไขที่เกมกำหนดเพื่อแลกกับรางวัลในเกม ยกตัวอย่างเช่น ใช้นักเตะจาก 3 ลีกโดยมีค่าเคมีมากกว่า 65 เพื่อแลกกับชุดการ์ดเงิน นอกจากนั้นยังมีชุดแข่งสวยๆ ที่ออกแบบโดยศิลปินดังอย่าง เมเจอร์ เลเซอร์ และ ดาเมียน มาร์ลีย์ ปรากฏอยู่ในเกมด้วย และที่สำคัญ โหมดใหม่อย่าง “The Journey” เองก็ทำออกมาได้แปลกใหม่มากๆ แถม อเล็กซ์ ฮันเตอร์ ตัวเอกของโหมดนั้นก็ยังสามาถใช้แข่งในโหมดปกติได้ถ้าหากคุณสามารถพิชิตโหมดเนื้อเรื่องได้</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;อย่างไรก็ตาม เราจะไม่สปอยว่าตอนจบของเนื้อเรื่องจะเป็นอย่างไร แต่ขอบอกเลยว่ามันคุ้มค่ากับ 15 ชั่วโมงที่เสียไป โดยเราจะขอเล่าคราวๆ ถึงที่มาที่ไปของมัน โดยเรื่องราวเกิดขึ้นสมัยที่ ฮันเตอร์ และ แกเร็ธ วอล์คเกอร์ เพื่อนรักที่ค้าแข้งด้วยกันตั้งแต่อยู่ในทีม ยู-11 และค่อยๆ ไต่เต้าขึ้นมาถึงทีมชุดใหญ่ที่โลดแล่นอยู่ในพรีเมียร์ลีก โดยในช่วงหนึ่งของเนื้อเรื่อง คุณจะถูกปล่อยตัวออกไปให้สโมสรต่างๆ ยืมตัวด้วย ขณะที่ รีซ อ็อกฟอร์ด กองหลังดาวรุ่งของเวสต์แฮม เองก็จะมีส่วนร่วมกับเนื้อเรื่องนี้ โดยเขาจะทำหน้าที่เป็นที่ปรึกษาให้กับคุณ อีกทั้งในระหว่างนัดต่างๆ มันจะมีตัวเลือกให้คุณตอบคำถามต่างๆ ทั้งในห้องแต่งตัว บทสัมภาษณ์หลังเกม ซึ่งล้วนแต่ส่งผลต่อตัวคุณทั้งสิ้น</br>
+</b>
+<img src="\assets\PREVIEW_SCREENSHOT4_117401.jpg" height="auto" width="900px">
+
+          <b class="content has-text-left">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;นอกจาก 2 โหมดที่เรากล่าวมาแล้ว อีกโหมดหนึ่งที่น่าสนใจก็คือโหมด “career” ซึ่งโอเค...สำหรับคนที่เล่นภาคก่อนๆ มาแล้วก็คงจะคุ้นไม่รู้สึกแปลกใหม่มากนัก ทว่าต้องบอกว่าในภาคนี้ ได้เพิ่มลูกเล่นเรื่องปัจจัยในด้านต่างๆ เข้ามาด้วย เช่น ความสำเร็จในประเทศ/ความสำเร็จในระดับทวีป, ภาพลักษณ์ของทีม, การเงิน และ การพัฒนาดาวรุ่ง ซึ่งยกตัวอย่างเช่น สโมสรเบิร์นลีย์อาจจะสนใจเพียงแต่เรื่องของการเงิน  หรือ หากคุณอยากคุมเชลซี คุณก็ต้องพาพวกเขาคว้าแชมป์ทั้งในและนอกประเทศให้ได้ ซึ่งสิ่งเหล่านี้จะช่วยเพิ่มิติต่างๆ ในการเล่นให้กับคุณได้อย่างแน่นอน</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;อยากได้มากกว่านี้? เราขอแนะนำให้คุณลองโหมด “Pro Club” หรือ “Women’s International Cup” (เพิ่มทีมชาติ เนเธอร์แลนดืและนอร์เวย์) หรืออีก 50 ทัวร์นาเมนต์ที่มีให้คุณเลือกเล่น ซึ่งต้องยอมรับว่าฟีฟ่าทำออกมาได้ดีทีเดียวสำหรับภาคนี้ มันทำให้พวกเขายังเป็นตัวเลือกที่น่าสนใจไม่น้อยสำหรับคนที่คุ้นชินกับเกมฟุตบอล ขณะที่ PES 2017 นั้นก็ให้สัมผัสใหม่ๆ สำหรับคนที่เบื่อรูปแบบเดิมๆ ทว่าสิ่งหนึ่งที่ 2 เกมนี้แตกต่างกัน คือเรื่องของลิขสิทธิ์ ซึ่งต้องยอมรับเลยว่าสิ่งนี้มีความสำคัญมากๆ เพราะสำหรับคนที่บอกว่าไม่สำคัญ ขอให้คุณลองมาเล่นฟีฟ่า แล้วเล่นศึกดาร์บี้แมตช์ระหว่าง แมนฯ ยูและแมนฯ ซิตี้ เพราะมันจะทำให้คุณเห็นถึงความสุดยอดของบรรยากาศ กุนซืออย่างเป๊ป กวาร์ดิโอลา และโชเซ่ มูรินโญยืนอยู่ที่ข้างสนาม เราของบอกเลยว่า คุณจะต้องติดใจ
+</b>
+          <img src="\assets\fifa-17-matchup.jpg" height="auto" width="900px">
+          <g class="content has-text-left">4 เรื่องที่เราชอบ</g>
+          <g1 class="content has-text-left">1. รายละเอียดปลีกย่อย</g1>
+          <b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;นอกจากการที่ผู้ผลิตเพิ่มบรรดาผู้จัดการทีมเข้าไปยืนข้างสนามแล้ว นอกจากนั้นพวกเขายังเพิ่มรายละเอียดปลีกย่อยเข้าไปอีกมากมาย ยกตัวอย่างเช่น ในช่วงท้ายการแข่งขัน ผู้บรรยายก็จะมีการประกาศชื่อนักเตะยอดเยี่ยมประจำการแข่งขันนัดนั้น
+ </b><img src="\assets\Fifa177.jpg" height="auto" width="900px">
+ <g1 class="content has-text-left">2. เมนูใหม่ ไฉไลกว่าเดิม</g1>
+ <b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ต้องบอกว่าพวกเขาทำได้ดีทีเดียว แถมยังคงความเรียบง่ายไว้อีกด้วย โดยเฉพาะในหน้าจอเลือกชุดแข่งที่ถือว่าออกแบบได้ฉลาดทีเดียว การเลือกชุดโดยหมุนชุดที่เลือกมาไว้ด้านหน้า ขณะที่อีก 2 ชุดก็เป็นเงาอยู่ด้านหลัง
+</b><img src="\assets\7FEPSl1.jpg" height="auto" width="900px">
+<g1 class="content has-text-left">3. ดาวดังในโหมดเนื้อเรื่อง</g1>
+<b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;แฮร์รี เคน, มาร์โก รอยส์ และอังเคล ดิ มาเรีย ต่างได้โผล่หน้ามาให้แฟนๆ ได้เห็นกันในโหมดเนื้อเรื่อง ซึ่งทุกช่วงที่พวกเขาโผล่มา ก็ไม่ได้ทำให้รู้สึกแปลกหรือไม่สมจริงแต่อย่างใด
+</b><img src="\assets\fifa17_thejourney_pdp_prefeature_3840x1600_en_ww_v2.jpg" height="auto" width="900px">
+<g1 class="content has-text-left">4. อัพเดทสุด</g1>
+<b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ทาง FFT ได้มีโอกาสสัมผัสเกมก่อนที่จะวางแผนจริง 2 อาทิตย์ ซึ่งต้องบอกว่าจากตอนนั้นจนถึงตอนนี้ มีการอัพเดทตลาดซื้อขายนักเตะครบทุกคน เรียกได้ว่าเหมือนจริงเป๊ะๆ ไม่ว่าจะะเป็นโจ ฮาร์ทย้ายไปค้าแข้งในอิตาลีก็ตาม น่าประทับใจจริงๆ
+</b><img src="\assets\442transfers.jpg" height="auto" width="900px">
+<g1 class="content has-text-left">สิ่งหนึ่งที่ขัดใจ...ความหลากหลายในลีกล่าง</g1>
+<b class="content has-text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การเล่นทีมเล็กๆ ในโหมด “career” นั้นมีเรื่องขัดใจเราอยู่อย่างหนึ่งคือ คู่แข่งทุกทีมต่างอยากเป็นบาร์เซโลนากันทั้งนั้น ซึ่งคำถามก็คือ การเพิ่มแนวทางการเล่นแบบโยนบอลยาวนั้นมันยากขนาดนั้นเลยหรือ?
+</b><img src="\assets\442lowerleagues_0.jpg" height="auto" width="900px">
+<br></br>
+<g1>Score: 4.5/5</g1
+            <br></br>
+          <b1>
+            <strong>แหล่งข้อมูลจาก</strong> <A href="https://www.fourfourtwo.com/th/features/riiwiw-fiifaa-17-diiaelwaetyangdiiaimsud" style="color:red">Ben Wilson</A>
+          </b1>
+      </div>
+    </div>
+
+   </main>
+   <footer class="footer" background-color="#8c0009">
+<div class="container">
+  <div class="content has-text-centered has-text-white">
+    <p>
+       <img src="/DDG/static/assets/LogoWeb/dekdoklogoblack.png" alt="logo" width="150px" align="center">
+
+    </p>
+  </div>
+</div>
+ </footer>
+  </body>
+</html>

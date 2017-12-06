@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Dek-Dok Gaming</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
+    <link rel="stylesheet" href="/base.css">
+    <link rel="stylesheet" href="/home.js">
+    <link rel="icon" href="/assets/Berm.ico">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  </head>
+  <header>
+  	<style>
+  	input[type=search] {
+  		width: 40px;
+  		box-sizing: border-box;
+  		border: 2px hidden #8c000a;
+  		font-size: 16px;
+  		background-image:url(/assets/images/search.png);
+  		background-color: #202020;
+  		background-repeat: no-repeat;
+  		height: 40px;
+  		-webkit-transition: width 0.4s ease-in-out;
+  		transition: width 0.4s ease-in-out;
+  		cursor: pointer;
+  	}
+
+  	input[type=search]:focus {
+  		width: 200px;
+  		border: solid;
+  		background-color: #505050;
+  		background-image: none;
+  		cursor: grab;
+  	}
+  	input:focus{
+  	cursor: grab !important;
+  	}
+  	</style><style>
+  	input[type=search] {
+  	width: 40px;
+  	box-sizing: border-box;
+  	border: 2px hidden #8c000a;
+  	font-size: 16px;
+  	background-image:url(/assets/search.png);
+  	background-color: #202020;
+  	background-repeat: no-repeat;
+  	height: 40px;
+  	-webkit-transition: width 0.4s ease-in-out;
+  	transition: width 0.4s ease-in-out;
+  	cursor: pointer;
+    margin-top: 28px;
+  	}
+
+  	input[type=search]:focus {
+  	width: 200px;
+  	border: solid;
+  	background-color: #505050;
+  	background-image: none;
+  	cursor: grab;
+  	}
+  	input:focus{
+  	cursor: grab !important;
+  	}
+  	</style>
+    <style>
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #202020;
+    color: white;
+    align-items: center;
+    width: autop;
+    height: auto;
+}
+.modal-header img {
+  height: auto;
+  width: 300px;
+}
+.modal-body {
+  padding: 2px 16px;
+  background-color: #8c0009;
+  font: 24px Superspace;
+  color: #ffffff;
+  text-align: center;
+  width: auto;
+  height: auto;
+}
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #202020;
+    color: white;
+    width: auto;
+    height: 150px;
+}
+.loginBtn{
+  cursor: pointer;
+}
+</style>
+    <div class="column is-multiline">
+      <div class="headcontainer">
+        <!--ถ้าใช้ id จะอ้าง java script ได้-->
+        <br>
+        <div class="head">
+          <div class="columns is-multiline">
+            <div class="column is-4" align="right" style="margin-top:-50px">
+              <a ahref="/index.html">
+              <img  src="/assets/dekdoklogowhite.png" alt="" width="270" height="auto">
+              </a>
+              <!--แทรกรูป กำหนดขนาด-->
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <div class="column is-5" align="right">
+  <br>
+    <input type="search" name="search" placeholder="       Search..">
+              </div>
+    <div class="column is-2" align="left" >
+      <br><br>
+      <div class="loginBtn">
+      <div id="myBtn"><img src="/assets/log-in.png" alt="" width="100px"></div>
+      </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header has-text-centered">
+      <span class="close">&times;</span>
+      <img src="/assets/dekdoklogowhite.png">
+    </div>
+    <div class="modal-body">
+      <br><br>
+      <p>&nbsp;&nbsp;Username&nbsp;&nbsp;&nbsp;<input type="text" placeholder="username" name="un"></p><br>
+      <p>&nbsp;&nbsp;Password&nbsp;&nbsp;&nbsp;<input type="password" placeholder="Password" name="psw"></p><br>
+      <button>Login</button><br><br><br>
+      <p>You don't have account? Just click ----> <a href="/register.html" style="bold">Register</a></p>
+      <br><br>
+    </div>
+    <div class="modal-footer">
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+      modal.style.display = "none";
+  }
+}
+</script>
+
+
+    <div class="navcontainer">
+      <div class="nav-center">
+        <nav class="navbar-tabs">
+          <a href="/index.html" class="nav-item">หน้าแรก</a>
+          <a href="/newshome.html" class="nav-item">ข่าว</a>
+          <a href="/reviewhome.html" class="nav-item">รีวิวเกม</a>
+          <a href="/topchart.html" class="nav-item">เกมยอดนิยม</a>
+
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <br><br>
+    <div class="bodycontainer">
+      <div class="content has-text-centered has-text-black">
+          <br></br>
+          <h1 align="left"><font face="Superspace" style="font-size:50pt"><b>เตรียมตัวให้พร้อม Monster Hunter: World เปิด Beta Test แล้วเสาร์นี้!!</g></b></font></h1>
+          <div class="line" style="height: 5px;"></div><br>
+          <h5 align="left"><font face="RSU text" size="6">มากกว่า 9000 ชม. ที่แล้ว</font></h5><br>
+          <img src="/assets/attach-1512396358343.jpg" height="auto" width="900px">
+          </br>
+          <br></br>
+          <font face="RSU text" size="18px">
+            <p align="left">
+
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Monster Hunter: World เป็นผลงานเกมแนว Action Hunting ล่ามอนสเตอร์ขนาดยักษ์จากทาง Capcom ที่ล่าสุดทาง Capcom ก็ได้ประกาศกันตรงๆเลยว่าภาคล่าสุดนี้ จะลงให้ PS4 PC และ XboxOne ด้วย
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ภายในเกมมอนฮันฉบับคอนโซล New - Gen นี้ จะเป็นการเขียนเนื้อหาใหม่ โลกใบใหม่ที่ไม่เกี่ยวกับภาคก่อนๆ โดยผู้เล่นจะได้รับบทเป็น “นักล่า” (Hunter -ฮันเตอร์) ที่ได้รับภารกิจจากสมาคมฮันเตอร์ไปยังเกาะร้างแห่งหนึ่ง
+
+<<<<<<< HEAD
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;แน่นอนว่ามันเป็นเกาะที่ยังไม่มีการสำรวจ และนี่คือหน้าที่ของฮันเตอร์ที่รับภารกิจในการบันทึก สำรวจ และสังเกตุการณ์เหล่ามอนสเตอร์สายพันธุ์ใหม่ที่ยังไม่ได้รับการบันทึกลงใส่หนังสือของสมาคมฮันเตอร์</p>
+  <p align="middle"><br><img src="/assets/attach-1512396677471.jpg" height="auto" width="900px"></p></div>
+          <g class="content has-text-left">Gameplay</g><br>
+          <p align="left">
+=======
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;แน่นอนว่ามันเป็นเกาะที่ยังไม่มีการสำรวจ และนี่คือหน้าที่ของฮันเตอร์ที่รับภารกิจในการบันทึก สำรวจ และสังเกตุการณ์เหล่ามอนสเตอร์สายพันธุ์ใหม่ที่ยังไม่ได้รับการบันทึกลงใส่หนังสือของสมาคมฮันเตอร์
+<div class="content has-text-centered"><br><img src="/assets/attach-1512396677471.jpg" height="auto" width="900px"></div>
+          <g class="content has-text-left">Gameplay</g>
+>>>>>>> 355a361c6b746c638dbc7d6fd2ec7e4ee8913883
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ตัวเกมจะให้ผู้เล่นได้สวมบทฮันเตอร์ (นักล่า) ผจญโลกกว้างที่มีภูมิทัศน์ และสภาพแวดล้อมที่ต่างออกไป (ภาคนี้จะเล่นกันในโลกที่เปิดกว้าง ไม่มีการโหลดแผนที่ใหม่ซ้ำๆ หรือการซอยแผนที่ยิบย่อยอีกต่อไป)  โดยเริ่มเกมจากการรับภารกิจ – ออกล่า – แล่ชิ้นส่วน – และกลับมารายงานผล ตามแบบมอนฮันที่เราเคยเล่นกัน
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;แต่การออกล่าในเกมมอนฮันภาคใหม่นี้ จะเล่นกับสภาพบรรยากาศมากขึ้น ทั้งการโหนเถาวัลย์ (หรือทำกับดักเถาวัลย์เพื่อรั้งมอนสเตอร์) การทำลายสิ่งปลูกสร้างเพื่อสกัดการเคลื่อนไหว หรือสร้างค่าความเสียหายต่อมอนสเตอร์ได้ ซึ่งมอนสเตอร์แต่ละชนิดก็จะอาศัยอยู่ตามท้องที่ๆต่างกันออกไป และผู้เล่นจำเป็นจะต้องเดินทางไปหามันด้วยตัวเองอีกเช่นกัน
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;และด้วยความต่างของสายพันธุ์ และระบบนิเวศน์ ทำให้มอนเตอร์บางชนิดต้องต่อสู้กันเองเพื่อความอยู่รอด ซึ่งในจุดนี้ผู้เล่นสามารถวางแผนให้พวกมันสู้กันเอง แล้วเก็บตัวที่เหลือก็สามารถทำได้เช่นกัน
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;นอกจากนี้ ตัวเกมยังคงระบบการสร้างไอเทม จากการชำแหละชิ้นส่วน มาทำอาวุธสุดทรงพลัง และในภาคนี้จะเพิ่มอาวุธประเภท Machine Gun หรือ “ปืนกล”เข้ามาด้วย แถมยังมี “อาวุธลับ”ที่ยังไม่เปิดเผยอีก 13 ชนิดเพิ่มเข้ามาอีก
+
+<<<<<<< HEAD
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;แต่ฟีเจอร์ที่เป็นไฮไลท์ของเกมนี้ คงหนีไม่พ้นระบบออนไลน์ร่วมผจญภัยกับเพื่อนๆในการทำเควส สามารถรวมทีมกับเพื่อนอีกสามคน ซึ่งเกมนี้จะใช้ระบบมัลติเพลเยอร์ออนไลน์แบบ drop-in ที่ได้รับการออกแบบใหม่ (นึกภาพ จุดไฟแบบ Dark Soul หรือ Ni-Ohดูได้ครับ) ซึ่งจะช่วยให้การเล่นเกมมีลูกเล่นมากขึ้นในกรณีสู้คนเดียวไม่ไหว ผู้เล่นก็แค่จุดพลุอัญเชิญเพื่อนมาเข้าปาร์ตี้ นอกจากนี้ ตัวเกมสามารถเล่นข้ามภูมิภาคระหว่างโซนญี่ปุ่นและโซนตะวันตก (เซิฟรวมทั่วโลก) เป็นครั้งแรกอีกด้วย <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สำหรับใครที่ชื่นชอบเกมแนวนี้ สามารถไปร่วมทดสอบในช่วง Beta Test ได้ในวันเสาร์ที่ 9 ธันวาคม 2560 ที่จะถึงนี้เลยค่า ^^ </p>
+<p align="middle"><br><img src="/News/assets/images/attach-1512396453984.jpg" height="auto" width="900px"></p>
+=======
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;แต่ฟีเจอร์ที่เป็นไฮไลท์ของเกมนี้ คงหนีไม่พ้นระบบออนไลน์ร่วมผจญภัยกับเพื่อนๆในการทำเควส สามารถรวมทีมกับเพื่อนอีกสามคน ซึ่งเกมนี้จะใช้ระบบมัลติเพลเยอร์ออนไลน์แบบ drop-in ที่ได้รับการออกแบบใหม่ (นึกภาพ จุดไฟแบบ Dark Soul หรือ Ni-Ohดูได้ครับ) ซึ่งจะช่วยให้การเล่นเกมมีลูกเล่นมากขึ้นในกรณีสู้คนเดียวไม่ไหว ผู้เล่นก็แค่จุดพลุอัญเชิญเพื่อนมาเข้าปาร์ตี้ นอกจากนี้ ตัวเกมสามารถเล่นข้ามภูมิภาคระหว่างโซนญี่ปุ่นและโซนตะวันตก (เซิฟรวมทั่วโลก) เป็นครั้งแรกอีกด้วย <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สำหรับใครที่ชื่นชอบเกมแนวนี้ สามารถไปร่วมทดสอบในช่วง Beta Test ได้ในวันเสาร์ที่ 9 ธันวาคม 2560 ที่จะถึงนี้เลยค่า ^^
+<div class="content has-text-centered"><br><img src="/assets/attach-1512396453984.jpg" height="auto" width="900px"></div>
+>>>>>>> 355a361c6b746c638dbc7d6fd2ec7e4ee8913883
+</p>
+</font>
+
+
+<p align="right">
+  <strong>แหล่งข้อมูลจาก</strong><A href="http://www.playulti.com/content/page/5a255426c2cb9db725aeb73d//" style="color:red">Chomismama</A>
+</p>
+      </div>
+    </div>
+
+  </main></body>
+  <footer class="footer" background-color="#8c0009">
+  <div class="container">
+  <div class="content has-text-centered has-text-white">
+   <p>
+     <a href=/aboutus.html>
+      <img src="/assets/dekdoklogoblack.png" alt="logo" width="150px" align="center" style="margin-top:-40px;"> </a><br>
+      <a href="/aboutus.html" target="_blank">
+  <font face="RSU" size="2" color="black"><b>&#9658; About us</b></font></a>
+  <font face="RSU" size="4" color="black" ><b>l</b></font>
+  <font face="RSU" size="2" color="black"><b>Berm and his friends © 1997 Thailand (TH) </b></font>
+   </p>
+  </div>
+  </div>
+  </footer>
+
+  </html>

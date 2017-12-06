@@ -268,42 +268,6 @@
             <div class="logobox">
               <img class="logo"src="assets/dekdoklogowhite.png" alt="logo">
             </div>
-            <div class="rightbar">
-                <div  class="loginbar" id="myBtn">
-                  <?php
-                      if (isset($_SESSION['u_id'])) {
-                        echo '            <form action="includes/logout.inc.php" method="POST">
-                                          <button type="submit" name="submit" class="loginBtn">ลงชื่อออก</button>
-                                          </form>';
-                      }
-                      else {
-                        echo '<button class="loginBtn">ลงชื่อเข้าใช้</button>';
-                      }
-                   ?>
-                   <div id="myModal" class="modal">
-                 <!-- Modal content -->
-                 <div id="modalcontent"class="modal-content">
-                   <div class="modal-header has-text-centered">
-                     <span class="close">&times;</span>
-                     <img src="assets/dekdoklogowhite.png">
-                   </div>
-                   <div class="modal-body">
-                     <br><br>
-                     <form class="" action="includes/login.inc.php" method="POST">
-                       <input type="text" placeholder="  username" name="uid"><br><br>
-                       <input type="password" placeholder="  password" name="pwd"><br><br>
-                       <button class="login2" type="submit" name="submit">Login</button><br><br><br>
-                       <p>You don't have account? <a href="register.php" class="regisbtn" style="bold">Register</a></p>
-                     </form>
-
-                     <br><br>
-                   </div>
-                     <div class="modal-footer">
-                     </div>
-                   </div>
-                 </div>
-                </div>
-              </div>
             </div>
           <div class="main-wrapper">
             <div class="navmenus is-center">
